@@ -1,0 +1,39 @@
+/**
+ *
+ * t - applies the spacing for margin-top
+ * b - applies the spacing for margin-bottom
+ * l - applies the spacing for margin-left
+ * r - applies the spacing for margin-right
+ * x - applies the spacing for both *-left and *-right
+ * y - applies the spacing for both *-top and *-bottom
+ * a - applies the spacing for the property in all directions
+ *
+ * @param {Array<name,value>[]} measure-list - postfix name and value
+ */
+@mixin create-helper-margin($measure-list: (), $important: false, $prefix: "") {
+  @each $name, $val in $measure-list {
+    .#{$prefix}mt-#{$name} {
+      margin-top: #{$val} #{if($important == true, "!important", "")};
+    }
+    .#{$prefix}mb-#{$name} {
+      margin-bottom: #{$val} #{if($important == true, "!important", "")};
+    }
+    .#{$prefix}ml-#{$name} {
+      margin-left: #{$val} #{if($important == true, "!important", "")};
+    }
+    .#{$prefix}mr-#{$name} {
+      margin-right: #{$val} #{if($important == true, "!important", "")};
+    }
+    .#{$prefix}mx-#{$name} {
+      margin-right: #{$val} #{if($important == true, "!important", "")};
+      margin-left: #{$val} #{if($important == true, "!important", "")};
+    }
+    .#{$prefix}my-#{$name} {
+      margin-top: #{$val} #{if($important == true, "!important", "")};
+      margin-bottom: #{$val} #{if($important == true, "!important", "")};
+    }
+    .#{$prefix}ma-#{$name} {
+      margin: #{$val} #{if($important == true, "!important", "")};
+    }
+  }
+}

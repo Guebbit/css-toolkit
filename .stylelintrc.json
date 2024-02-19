@@ -1,0 +1,24 @@
+{
+  "customSyntax": "postcss-scss",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "reporters": [
+    {
+      "formatter": "stylelint-mocha-formatter"
+    }
+  ],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "scss/no-global-function-names": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "scss/dollar-variable-empty-line-before": null,
+    "no-descending-specificity": null,
+    "scss/at-extend-no-missing-placeholder": null,
+    "scss/percent-placeholder-pattern": null,
+    "scss/dollar-variable-pattern": "^([a-z][a-z0-9]*)(-{1,2}[a-z0-9]+)*$"
+  }
+}

@@ -1,0 +1,28 @@
+/**
+*	Compatibility mode for browsers
+*	@param string $browser: target browser
+*	@content
+**/
+@mixin build-compatibility($browser) {
+  // INTERNET EXPLORER
+  @if $browser == "ie" {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+    }
+  }
+  // MICROSOFT EDGE
+  @if $browser == "edge" {
+    @supports (-ms-ime-align:auto) {
+      @content;
+    }
+  }
+  // FIREFOX
+  @if $browser == "firefox" {
+    @supports (-moz-appearance:none) {
+      @content;
+    }
+  }
+
+  // OPERA TODO
+  // SAFARI TODO
+}

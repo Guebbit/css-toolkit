@@ -1,0 +1,119 @@
+@use "sass:list";
+@use "sass:string";
+@use "../functions/colors" as color-functions;
+
+/**
+ *  Create all the needed classes for the requested colors
+ *  $color-list     - list of colors (like $colors-collection: ("branch": ( "leaf: $color" )))
+ *  $branch-list:   - when filled: becomes a whitelist (aka: include only listed brands)
+ *  $feature-list:  - when filled: becomes a whitelist. May become cumbersome and many are not needed. Use with care.
+ *    - root
+ *    - on-root (color's "best contrast" partner color)
+ *    - color
+ *    - background
+ *    - border
+ *    - pseudo (bg only, color very rarely used)
+ *    - hover
+ *    $prefix: prefix that applies to classes
+ */
+@mixin create-colors($color-list: (), $branch-list: (), $feature-list: (), $prefix: "") {
+  // for every branch
+  @each $branch-name, $branch in $color-list {
+    // check that there is no $branch-list or, if present, it's correctly whitelisted
+    @if list.length($branch-list) < 1 or list.index($branch-list, $branch-name) {
+
+      // for every leaf
+      @each $sname, $scolor in $branch {
+
+        @if not list.index($branch-name, "advanced"){
+          @if list.length($feature-list) < 1 or list.index($feature-list, "color") {
+            .#{$prefix}#{$branch-name}-#{$sname}-text {
+              color: $scolor !important;
+            }
+          }
+          @if list.length($feature-list) < 1 or list.index($feature-list, "border") {
+            .#{$prefix}#{$branch-name}-#{$sname}-border {
+              border-color: $scolor !important;
+            }
+          }
+        }
+
+        @if list.length($feature-list) < 1 or list.index($feature-list, "background") {
+          .#{$prefix}#{$branch-name}-#{$sname}-bg {
+            background: $scolor !important;
+          }
+        }
+
+        @if list.length($feature-list) < 1 or list.index($feature-list, "pseudo") {
+          .#{$prefix}#{$branch-name}-#{$sname}-pseudo-bg {
+            &::after,
+            &::before {
+              background: $scolor !important;
+            }
+          }
+        }
+
+        @if list.length($feature-list) < 1 or list.index($feature-list, "hover"){
+
+          @if not list.index($branch-name, "advanced"){
+            @if list.length($feature-list) < 1 or list.index($feature-list, "color"){
+              .#{$prefix}#{$branch-name}-#{$sname}-hover-text {
+                &:hover {
+                  color: $scolor !important;
+                }
+              }
+            }
+            @if list.length($feature-list) < 1 or list.index($feature-list, "border"){
+              .#{$prefix}#{$branch-name}-#{$sname}-hover-border {
+                &:hover {
+                  border-color: $scolor !important;
+                }
+              }
+            }
+          }
+
+          @if list.length($feature-list) < 1 or list.index($feature-list, "background") {
+            .#{$prefix}#{$branch-name}-#{$sname}-hover-bg {
+              &:hover {
+                background: $scolor !important;
+              }
+            }
+          }
+
+          @if list.length($feature-list) < 1 or list.index($feature-list, "pseudo") {
+            .#{$prefix}#{$branch-name}-#{$sname}-hover-pseudo-bg {
+              &:hover{
+                &::after,
+                &::before {
+                  background: $scolor !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * CSS VARS on root (they will be translated in "RGB" instead of "HEX"
+   */
+  :root{
+    @if list.length($feature-list) < 1 or list.index($feature-list, "root"){
+      @each $branch-name, $branch in $color-list {
+        @each $sname, $scolor in $branch {
+          --#{$prefix}#{$branch-name}-#{$sname}: #{color-functions.hex2rgb($scolor)};
+        }
+      }
+    }
+    @if list.length($feature-list) < 1 or list.index($feature-list, "on-root"){
+      @each $branch-name, $branch in $color-list {
+        @each $sname, $scolor in $branch {
+          // @if type-of($scolor) == color {
+          --#{$prefix}on-#{$branch-name}-#{$sname}: #{color-functions.hex2rgb(color-functions.color-contrast($scolor))};
+          // _}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/**
+ *	Builder - scrollbars of element
+ *	@param string $color
+ *	@param pixels $size
+ *	@param $background: if false, has default lighten 40%
+ */
+@mixin build-scrollbar($size: "4px", $color: "#fff", $bg: "auto", $radius: "10px") {
+  $fallback-color: #fff;
+  $fallback-bg: transparent;
+
+  @if $bg == "auto" {
+    $bg: $fallback-bg;
+  }
+
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    background-color: $fallback-bg;
+    background-color: $bg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $radius;
+    background-color: $fallback-color;
+    background-color: $color;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: $fallback-bg;
+    background-color: $bg;
+  }
+}

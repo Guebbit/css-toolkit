@@ -1,0 +1,23 @@
+/**
+ * Giving a list of variables and values,
+ * from start to end, try all the values until a non-null is found
+ */
+@function no-null-var($list: ()){
+  @each $value in $list {
+    // stylelint-disable-next-line scss/at-if-no-null
+    @if $value != null{
+      @return $value;
+    }
+  }
+  @return null;
+}
+
+/*
+ * If the color is transparent, return inherit
+ */
+@function no-transparent-var($color: transparent){
+  @if $color == transparent {
+    @return inherit;
+  }
+  @return $color;
+}

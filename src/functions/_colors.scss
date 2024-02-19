@@ -1,0 +1,111 @@
+@use "sass:color";
+@use "sass:math";
+@use "sass:string";
+
+/*
+ * Return opaque color
+ * color-opaque(#fff, rgba(0, 0, 0, .5)) => #808080
+ * function credited to https://getbootstrap.com/
+ */
+@function color-opaque($background, $foreground) {
+  @return mix(rgba($foreground, 1), $background, opacity($foreground) * 100%);
+}
+
+
+/*
+ * Tint a color: mix a color with white
+ * function credited to https://getbootstrap.com/
+ */
+@function color-tint($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+
+/*
+ * Shade a color: mix a color with black
+ * function credited to https://getbootstrap.com/
+ */
+@function color-shade($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+
+/*
+ * Shade the color if the weight is positive, else tint it
+ * function credited to https://getbootstrap.com/
+ */
+@function color-shift($color, $weight) {
+  @return if($weight > 0, color-shade($color, $weight), color-tint($color, -$weight));
+}
+
+
+/**
+ * Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+ */
+@function color-contrast($color: #fff, $dark: #000, $light: #fff) {
+  @if type-of($color) != color or $color == transparent {
+    @return inherit;
+  }
+  $color-brightness: color-brightness($color);
+  $light-text-brightness: color-brightness($light);
+  $dark-text-brightness: color-brightness($dark);
+
+  @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+}
+
+
+
+// Return WCAG2.1 relative luminance
+// See https://www.w3.org/TR/WCAG/#dfn-relative-luminance
+// See https://en.wikipedia.org/wiki/Relative_luminance
+// Gives %, less than 50 darker is better, less than 50, lighter.
+@function color-brightness($color) {
+  // fallback
+  @if $color == transparent or type-of($color) != color {
+    @return 100;
+  }
+  @return math.div(((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)), 255 * 100%);
+}
+
+
+/**
+ * Hex to RGB (only numbers, transparentize would add rgba(*))
+ */
+@function hex2rgb($color: #fff){
+  @if $color == transparent or type-of($color) != color {
+    @return $color;
+  }
+  @return red($color), green($color), blue($color);
+}
+
+
+/**
+ * RGB to Hex
+ */
+@function rgb2hex($color: rgb(255,255,255)){
+  @if $color == transparent or type-of($color) != color {
+    @return $color;
+  }
+  $ie-hex: ie_hex_str($color);
+  @return string.unquote('#' + string.slice(color.ie-hex-str($color), 4));
+}
+
+
+/**
+ * Create default collection
+ */
+@function create-collection($color){
+  $list: (
+          "100": color-tint($color, 80%),
+          "200": color-tint($color, 60%),
+          "300": color-tint($color, 40%),
+          "400": color-tint($color, 20%),
+          "500": $color,
+          "600": color-shade($color, 20%),
+          "700": color-shade($color, 40%),
+          "800": color-shade($color, 60%),
+          "900": color-shade($color, 80%)
+  );
+
+  @return $list
+}

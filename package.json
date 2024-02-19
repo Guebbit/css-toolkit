@@ -1,0 +1,58 @@
+{
+  "name": "@guebbit/scss-library",
+  "type": "module",
+  "version": "1.1.0",
+  "description": "SCSS library",
+  "main": "vite.config.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "stylelint \"**/*.scss\" --fix",
+    "docs:dev": "vitepress dev docs --port 8080",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs --port 8080",
+    "prepublish": "npm run lint && npm run test && npm run docs:build",
+    "publish:public": "npm publish --access public"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "autoprefixer": "^10.4.16",
+    "breakpoint-sass": "^3.0.0",
+    "css-loader": "^6.9.0",
+    "cssnano": "^6.0.3",
+    "mocha": "^10.1.0",
+    "postcss": "^8.4.33",
+    "postcss-loader": "^7.3.4",
+    "postcss-prefix-selector": "^1.16.0",
+    "sass": "^1.69.7",
+    "style-loader": "^3.3.4",
+    "stylelint": "^16.1.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-scss": "^6.0.0",
+    "vite": "^5.0.11",
+    "vitepress": "^1.0.0-rc.36"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guebbit/css-toolkit.git"
+  },
+  "keywords": [
+    "SCSS",
+    "Library"
+  ],
+  "author": {
+    "name": "Guebbit",
+    "email": "guerzoni.andrea91@gmail.com",
+    "url": "https://guebbit.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guebbit/css-toolkit/issues"
+  },
+  "homepage": "https://github.com/Guebbit/css-toolkit#readme"
+}

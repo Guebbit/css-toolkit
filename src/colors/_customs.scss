@@ -1,0 +1,53 @@
+@use "../functions/colors" as color-functions;
+
+$flatrica-green: #06a763 !default;
+$manga-red: #d41816 !default;
+
+$flatrica-green-100: color-functions.color-tint($flatrica-green, 80%);
+$flatrica-green-200: color-functions.color-tint($flatrica-green, 60%);
+$flatrica-green-300: color-functions.color-tint($flatrica-green, 40%);
+$flatrica-green-400: color-functions.color-tint($flatrica-green, 20%);
+$flatrica-green-500: $flatrica-green;
+$flatrica-green-600: color-functions.color-shade($flatrica-green, 20%);
+$flatrica-green-700: color-functions.color-shade($flatrica-green, 40%);
+$flatrica-green-800: color-functions.color-shade($flatrica-green, 60%);
+$flatrica-green-900: color-functions.color-shade($flatrica-green, 80%);
+
+$manga-red-100: color-functions.color-tint($manga-red, 80%);
+$manga-red-200: color-functions.color-tint($manga-red, 60%);
+$manga-red-300: color-functions.color-tint($manga-red, 40%);
+$manga-red-400: color-functions.color-tint($manga-red, 20%);
+$manga-red-500: $manga-red;
+$manga-red-600: color-functions.color-shade($manga-red, 20%);
+$manga-red-700: color-functions.color-shade($manga-red, 40%);
+$manga-red-800: color-functions.color-shade($manga-red, 60%);
+$manga-red-900: color-functions.color-shade($manga-red, 80%);
+
+$colors-collection: (
+        "core": (
+                "flatrica-green": $flatrica-green,
+                "manga-red": $manga-red,
+        ),
+        "flatrica-green": (
+                "100": $flatrica-green-100,
+                "200": $flatrica-green-200,
+                "300": $flatrica-green-300,
+                "400": $flatrica-green-400,
+                "500": $flatrica-green-500,
+                "600": $flatrica-green-600,
+                "700": $flatrica-green-700,
+                "800": $flatrica-green-800,
+                "900": $flatrica-green-900,
+        ),
+        "manga-red": (
+                "100": $manga-red-100,
+                "200": $manga-red-200,
+                "300": $manga-red-300,
+                "400": $manga-red-400,
+                "500": $manga-red-500,
+                "600": $manga-red-600,
+                "700": $manga-red-700,
+                "800": $manga-red-800,
+                "900": $manga-red-900,
+        ),
+);
