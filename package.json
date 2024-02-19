@@ -1,8 +1,8 @@
 {
-  "name": "@guebbit/scss-library",
+  "name": "@guebbit/css-toolkit",
   "type": "module",
-  "version": "1.1.0",
-  "description": "SCSS library",
+  "version": "1.0.0",
+  "description": "A repository containing helpful SCSS functions, mixins, and utilities for streamlining and standardizing CSS development",
   "main": "vite.config.js",
   "scripts": {
     "test": "mocha",
