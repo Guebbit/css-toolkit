@@ -1,7 +1,7 @@
 {
   "name": "@guebbit/css-toolkit",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A repository containing helpful SCSS functions, mixins, and utilities for streamlining and standardizing CSS development",
   "main": "vite.config.js",
   "scripts": {
@@ -45,12 +45,8 @@
     "SCSS",
     "Library"
   ],
-  "author": {
-    "name": "Guebbit",
-    "email": "guerzoni.andrea91@gmail.com",
-    "url": "https://guebbit.com/"
-  },
-  "license": "MIT",
+  "author": "Guebbit <guerzoni.andrea91@gmail.com> (https://guebbit.com/)",
+  "license": "AGPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/Guebbit/css-toolkit/issues"
   },
