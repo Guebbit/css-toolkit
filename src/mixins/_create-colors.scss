@@ -102,7 +102,7 @@
     @if list.length($feature-list) < 1 or list.index($feature-list, "root"){
       @each $branch-name, $branch in $color-list {
         @each $sname, $scolor in $branch {
-          --#{$prefix}#{$branch-name}-#{$sname}: #{color-functions.hex2rgb($scolor)};
+          --#{$prefix}#{$branch-name}-#{$sname}: #{color-functions.extract-colors($scolor)};
         }
       }
     }
@@ -110,7 +110,7 @@
       @each $branch-name, $branch in $color-list {
         @each $sname, $scolor in $branch {
           // @if type-of($scolor) == color {
-          --#{$prefix}on-#{$branch-name}-#{$sname}: #{color-functions.hex2rgb(color-functions.color-contrast($scolor))};
+          --#{$prefix}on-#{$branch-name}-#{$sname}: #{color-functions.extract-colors(color-functions.color-contrast($scolor))};
           // _}
         }
       }

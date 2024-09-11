@@ -2,7 +2,7 @@
   CSS single instructions generator
   @param {Array<name,value>[]} measure-list - postfix name and value
  */
-@mixin create-instruction($instruction, $measure-list: (), $important: false, $prefix: "", $delimiter: "-") {
+@mixin create-instructions($instruction, $measure-list: (), $important: false, $prefix: "", $delimiter: "-") {
   @each $name, $val in $measure-list {
     .#{$prefix}#{$instruction}#{$delimiter}#{$name} {
       #{$instruction}: #{$val} #{if($important == true, "!important", "")}

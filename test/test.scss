@@ -1,0 +1,148 @@
+@use "../src/index" as guebbit;
+
+@include guebbit.create-colors(guebbit.$colors-collection);
+
+@include guebbit.create-helper-margin((
+  (auto, auto),
+  (6, 6px),
+  (12, 12px),
+  (24, 24px),
+  (36, 36px),
+  (48, 48px),
+));
+
+@include guebbit.create-helper-padding((
+  (6, 6px),
+  (12, 12px),
+  (24, 24px),
+  (36, 36px),
+  (48, 48px),
+));
+
+@include guebbit.create-instructions("font-size", (
+  (n2, 0.6em),
+  (n1, 0.8em),
+  (1, 1.2em),
+  (2, 1.5em),
+  (3, 2em),
+));
+
+@include guebbit.create-instructions("opacity", (
+  (0, 0),
+  (25, 0.25),
+  (50, 0.50),
+  (75, 0.75),
+  (100, 1),
+));
+
+@include guebbit.create-instructions("width", (
+  (25, 25%),
+  (50, 50%),
+  (75, 75%),
+  (100, 100%),
+  (p25, 25px),
+  (p50, 50px),
+  (p75, 75px),
+  (p100, 100px)
+), true);
+
+@include guebbit.create-instructions("min-width", (
+  (25, 25%),
+  (50, 50%),
+  (75, 75%),
+  (100, 100%),
+  (p25, 25px),
+  (p50, 50px),
+  (p75, 75px),
+  (p100, 100px)
+), true);
+
+@include guebbit.create-instructions("gap", (
+  (6, 6px),
+  (12, 12px),
+  (24, 24px),
+), true, "flex-");
+
+.aspect-ratio-1-1{
+  @include guebbit.build-aspect-ratio(100%);
+}
+
+.aspect-ratio-16-9{
+  @include guebbit.build-aspect-ratio-container(56%);
+
+  .content{
+    @include guebbit.build-aspect-ratio-anchor;
+  }
+}
+
+
+.test-compatibility{
+  @include guebbit.build-compatibility("ie"){
+    &::after{
+      content: "this is internet explorer";
+    }
+  }
+  
+  @include guebbit.build-compatibility("edge"){
+    &::after{
+      content: "this is microsoft edge";
+    }
+  }
+
+  @include guebbit.build-compatibility("firefox"){
+    &::after{
+      content: "this is firefox";
+    }
+  }
+}
+
+// check functions
+$test-color--light: #222;
+$test-color--dark: #ddd;
+$map-deep-get-test: (
+        'size': (
+                'sml': 10px
+        )
+);
+
+$map-deep-get-var: guebbit.map-deep-get($map-deep-get-test, 'size', 'sml');
+
+:root{
+  // ---
+  --color-opaque-1: #{guebbit.color-opaque(#000, rgba($test-color--light, 0.5))};
+  --color-opaque-2: #{guebbit.color-opaque(#000, rgba($test-color--dark, 0.5))};
+  // ---
+  --color-tint-1: #{guebbit.color-tint($test-color--light, 25%)};
+  --color-tint-2: #{guebbit.color-tint($test-color--dark, 25%)};
+  // ---
+  --color-shade-1: #{guebbit.color-shade($test-color--light, 25%)};
+  --color-shade-2: #{guebbit.color-shade($test-color--dark, 25%)};
+  // ---
+  --color-shift-1: #{guebbit.color-shift($test-color--light, 25%)};
+  --color-shift-2: #{guebbit.color-shift($test-color--dark, 25%)};
+  // ---
+  --color-contrast-1: #{guebbit.color-contrast($test-color--light)};
+  --color-contrast-2: #{guebbit.color-contrast($test-color--dark)};
+  // ---
+  --color-brightness-1: #{guebbit.color-contrast($test-color--light)};
+  --color-brightness-2: #{guebbit.color-contrast($test-color--dark)};
+  // ---
+  --extract-colors-1: #{guebbit.extract-colors($test-color--light)};
+  --extract-colors-2: #{guebbit.extract-colors($test-color--dark)};
+  --extract-colors-3: #{guebbit.extract-colors(rgb(0 255 0))};
+  --extract-colors-4: #{guebbit.extract-colors(rgba(0 255 0 / 0.5))};
+  --extract-colors-5: #{guebbit.extract-colors(rgba(0 255 0))};
+  --extract-colors-classic-1: #{guebbit.extract-colors-classic($test-color--light)};
+  --extract-colors-classic-2: #{guebbit.extract-colors-classic($test-color--dark)};
+  // ---
+  --no-null-1: #{guebbit.no-null-var((undefined, null, transparent, red))};
+  --no-null-2: #{guebbit.no-null-var((blue))};
+  // ---
+  --no-trasparent-1: #{guebbit.no-target-var(transparent, transparent)};
+  --no-trasparent-2: #{guebbit.no-target-var("test", "test")};
+  --no-trasparent-3: #{guebbit.no-target-var(transparent, #123456)};
+  // ---
+  --map-deep-get: #{$map-deep-get-var};
+  // --string-split: #{guebbit.string-split())};
+  // --string-split: #{guebbit.string-ends-with("find-this-word", "this"))};
+}

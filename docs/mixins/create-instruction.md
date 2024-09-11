@@ -6,7 +6,7 @@ Example: width and min-width
 ## Example
 
 ```scss
-@include create-instruction("width", (
+@include create-instructions("width", (
     (25, 25%),
     (50, 50%),
     (75, 75%),
@@ -20,7 +20,7 @@ Example: width and min-width
 
 ## Code
 
-<<< ../../src/mixins/_create-instruction.scss
+<<< ../../src/mixins/_create-instructions.scss
 
 ## SCSS variables
 

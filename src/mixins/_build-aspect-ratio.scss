@@ -1,20 +1,23 @@
+@use "../functions/strings" as guebbit;
+
 /**
  * Use in the parent\container, to be coupled with {build-aspect-ratio-anchor}
  */
 @mixin build-aspect-ratio-container($ratio: 100%){
   position: relative;
+  // aspect-ratio: #{$height} / #{$width};
 
   &::before{
     content: "";
     display: block;
-    padding-top: 100%;
+    padding-top: #{$ratio};
   }
 }
 
 /**
  * Use in the child that "gives" form to the parent that has the respective {build-aspect-ratio-container}
  */
-@mixin build-aspect-ratio-anchor($ratio: 100%){
+@mixin build-aspect-ratio-anchor{
   position: absolute;
   top: 0;
   left: 0;
@@ -29,6 +32,6 @@
   @include build-aspect-ratio-container($ratio);
 
   & > * {
-    @include build-aspect-ratio-anchor($ratio);
+    @include build-aspect-ratio-anchor;
   }
 }

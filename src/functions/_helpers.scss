@@ -5,19 +5,38 @@
 @function no-null-var($list: ()){
   @each $value in $list {
     // stylelint-disable-next-line scss/at-if-no-null
-    @if $value != null{
+    @if $value != null and $value != undefined {
       @return $value;
     }
   }
   @return null;
 }
 
-/*
- * If the color is transparent, return inherit
+/**
+ * If the color is the checked one, return inherit
  */
-@function no-transparent-var($color: transparent){
-  @if $color == transparent {
+@function no-target-var($check: transparent, $color: transparent){
+  @if $color == $check {
     @return inherit;
   }
   @return $color;
+}
+
+
+/**
+ * This function is to be used to return nested key values within a nested map
+ * @parameter {Variable} $map [null] - pass in map to be evaluated
+ * @parameter {Variable} $keys [null] - pass in keys to be evaluated
+ */
+//   $map: (
+//     'size': (
+//       'sml': 10px
+//     )
+//   );
+//   $var: map-deep-get($map, 'size', 'sml'); // => 10px
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
 }

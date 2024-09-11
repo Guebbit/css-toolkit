@@ -2,7 +2,7 @@
 @use "sass:math";
 @use "sass:string";
 
-/*
+/**
  * Return opaque color
  * color-opaque(#fff, rgba(0, 0, 0, .5)) => #808080
  * function credited to https://getbootstrap.com/
@@ -12,7 +12,7 @@
 }
 
 
-/*
+/**
  * Tint a color: mix a color with white
  * function credited to https://getbootstrap.com/
  */
@@ -21,7 +21,7 @@
 }
 
 
-/*
+/**
  * Shade a color: mix a color with black
  * function credited to https://getbootstrap.com/
  */
@@ -30,7 +30,7 @@
 }
 
 
-/*
+/**
  * Shade the color if the weight is positive, else tint it
  * function credited to https://getbootstrap.com/
  */
@@ -67,29 +67,47 @@
   @return math.div(((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)), 255 * 100%);
 }
 
-
 /**
+ * OLD annotation
  * Hex to RGB (only numbers, transparentize would add rgba(*))
+ * $color
+ * $alpha: boolean (4° digit or not)
  */
-@function hex2rgb($color: #fff){
+@function extract-colors-classic($color: #fff, $alpha: false){
+  // colors only
   @if $color == transparent or type-of($color) != color {
     @return $color;
   }
-  @return red($color), green($color), blue($color);
+  // remove alpha if not needed
+  @if not $alpha {
+    @return red($color), green($color), blue($color);
+  }
+  // Regular RGBA compliant result
+  @return red($color), green($color), blue($color), alpha($color);
 }
 
 
 /**
- * RGB to Hex
+ * NEW numeric annotation
+ * Hex to RGB (only numbers, transparentize would add rgba(*))
+ * $color
+ * $alpha:
+ *    - 0: never 4° digit
+ *    - 1: always 4° digit
+ *    - 2: 4° digit only when needed
  */
-@function rgb2hex($color: rgb(255,255,255)){
+@function extract-colors($color: #fff, $mode: 2){
+  // colors only
   @if $color == transparent or type-of($color) != color {
     @return $color;
   }
-  $ie-hex: ie_hex_str($color);
-  @return string.unquote('#' + string.slice(color.ie-hex-str($color), 4));
+  $alpha: alpha($color);
+  @if $mode == 1 or ($mode == 2 and $alpha == 1) {
+    @return red($color) green($color) blue($color);
+  }
+  // Regular RGBA compliant result ("number" notation)
+  @return red($color) green($color) blue($color) "/" alpha($color); // * 100%
 }
-
 
 /**
  * Create default collection
