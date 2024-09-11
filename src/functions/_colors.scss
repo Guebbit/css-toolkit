@@ -2,7 +2,7 @@
 @use "sass:math";
 @use "sass:string";
 
-/*
+/**
  * Return opaque color
  * color-opaque(#fff, rgba(0, 0, 0, .5)) => #808080
  * function credited to https://getbootstrap.com/
@@ -12,7 +12,7 @@
 }
 
 
-/*
+/**
  * Tint a color: mix a color with white
  * function credited to https://getbootstrap.com/
  */
@@ -21,7 +21,7 @@
 }
 
 
-/*
+/**
  * Shade a color: mix a color with black
  * function credited to https://getbootstrap.com/
  */
@@ -30,7 +30,7 @@
 }
 
 
-/*
+/**
  * Shade the color if the weight is positive, else tint it
  * function credited to https://getbootstrap.com/
  */
@@ -67,29 +67,36 @@
   @return math.div(((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)), 255 * 100%);
 }
 
-
 /**
+ * NEW numeric annotation
  * Hex to RGB (only numbers, transparentize would add rgba(*))
+ * $color
+ * $alpha:
+ *    - 0: never 4° digit
+ *    - 1: always 4° digit
+ *    - 2: 4° digit only when needed
+ * $classic: false = new number annotation
  */
-@function hex2rgb($color: #fff){
+@function extract-colors($color: #fff, $mode: 2, $classic: false){
+  // colors only
   @if $color == transparent or type-of($color) != color {
     @return $color;
   }
-  @return red($color), green($color), blue($color);
-}
-
-
-/**
- * RGB to Hex
- */
-@function rgb2hex($color: rgb(255,255,255)){
-  @if $color == transparent or type-of($color) != color {
-    @return $color;
+  // new annotation
+  $delimiter: " ";
+  $delimiter-alpha: " / ";
+  // old annotation
+  @if $classic{
+    $delimiter: ", ";
+    $delimiter-alpha: ", ";
   }
-  $ie-hex: ie_hex_str($color);
-  @return string.unquote('#' + string.slice(color.ie-hex-str($color), 4));
+  $alpha: alpha($color);
+  @if $mode == 1 or ($mode == 2 and $alpha == 1) {
+    @return red($color) + $delimiter + green($color) + $delimiter + blue($color);
+  }
+  // Regular RGBA compliant result ("number" notation)
+  @return red($color) + $delimiter + green($color) + $delimiter + blue($color) + $delimiter-alpha + alpha($color); // * 100%
 }
-
 
 /**
  * Create default collection
