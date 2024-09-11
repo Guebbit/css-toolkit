@@ -20,12 +20,6 @@
  * Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
  */
 /**
- * OLD annotation
- * Hex to RGB (only numbers, transparentize would add rgba(*))
- * $color
- * $alpha: boolean (4° digit or not)
- */
-/**
  * NEW numeric annotation
  * Hex to RGB (only numbers, transparentize would add rgba(*))
  * $color
@@ -33,6 +27,7 @@
  *    - 0: never 4° digit
  *    - 1: always 4° digit
  *    - 2: 4° digit only when needed
+ * $classic: false = new number annotation
  */
 /**
  * Create default collection
@@ -5800,13 +5795,19 @@
   --color-contrast-2: #000;
   --color-brightness-1: #fff;
   --color-brightness-2: #000;
-  --extract-colors-1: 34 34 34;
-  --extract-colors-2: 221 221 221;
-  --extract-colors-3: 0 255 0;
-  --extract-colors-4: 0 255 0 / 0.5;
-  --extract-colors-5: 0 255 0;
-  --extract-colors-classic-1: 34, 34, 34;
-  --extract-colors-classic-2: 221, 221, 221;
+  --extract-colors-1: 255 255 255;
+  --extract-colors-2: 34 34 34;
+  --extract-colors-3: 221 221 221;
+  --extract-colors-4: 34, 34, 34;
+  --extract-colors-5: 221, 221, 221;
+  --extract-colors-6: 0 255 0;
+  --extract-colors-7: 0 255 0 / 0.5;
+  --extract-colors-8: 0, 255, 0;
+  --extract-colors-9: 0, 255, 0, 0.5;
+  --extract-colors-10: 0 255 0;
+  --extract-colors-11: 0 255 0 / 0.5;
+  --extract-colors-12: 0, 255, 0;
+  --extract-colors-13: 0, 255, 0, 0.5;
   --no-null-1: transparent;
   --no-null-2: blue;
   --no-trasparent-1: inherit;

@@ -1,7 +1,7 @@
 {
   "name": "@guebbit/css-toolkit",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A repository containing helpful SCSS functions, mixins, and utilities for streamlining and standardizing CSS development",
   "main": "vite.config.js",
   "files": [
@@ -20,19 +20,19 @@
     "publish:public": "npm publish --access public"
   },
   "devDependencies": {
-    "@types/node": "^20.11.0",
+    "@types/node": "^22.5.4",
     "@vitejs/plugin-vue": "^5.0.3",
     "autoprefixer": "^10.4.16",
     "breakpoint-sass": "^3.0.0",
     "chai": "^5.1.1",
-    "css-loader": "^6.9.0",
-    "cssnano": "^6.0.3",
+    "css-loader": "^7.1.2",
+    "cssnano": "^7.0.6",
     "mocha": "^10.1.0",
     "postcss": "^8.4.33",
-    "postcss-loader": "^7.3.4",
+    "postcss-loader": "^8.1.1",
     "postcss-prefix-selector": "^1.16.0",
     "sass": "^1.69.7",
-    "style-loader": "^3.3.4",
+    "style-loader": "^4.0.0",
     "stylelint": "^16.1.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^13.0.0",

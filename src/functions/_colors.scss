@@ -68,26 +68,6 @@
 }
 
 /**
- * OLD annotation
- * Hex to RGB (only numbers, transparentize would add rgba(*))
- * $color
- * $alpha: boolean (4° digit or not)
- */
-@function extract-colors-classic($color: #fff, $alpha: false){
-  // colors only
-  @if $color == transparent or type-of($color) != color {
-    @return $color;
-  }
-  // remove alpha if not needed
-  @if not $alpha {
-    @return red($color), green($color), blue($color);
-  }
-  // Regular RGBA compliant result
-  @return red($color), green($color), blue($color), alpha($color);
-}
-
-
-/**
  * NEW numeric annotation
  * Hex to RGB (only numbers, transparentize would add rgba(*))
  * $color
@@ -95,18 +75,27 @@
  *    - 0: never 4° digit
  *    - 1: always 4° digit
  *    - 2: 4° digit only when needed
+ * $classic: false = new number annotation
  */
-@function extract-colors($color: #fff, $mode: 2){
+@function extract-colors($color: #fff, $mode: 2, $classic: false){
   // colors only
   @if $color == transparent or type-of($color) != color {
     @return $color;
   }
+  // new annotation
+  $delimiter: " ";
+  $delimiter-alpha: " / ";
+  // old annotation
+  @if $classic{
+    $delimiter: ", ";
+    $delimiter-alpha: ", ";
+  }
   $alpha: alpha($color);
   @if $mode == 1 or ($mode == 2 and $alpha == 1) {
-    @return red($color) green($color) blue($color);
+    @return red($color) + $delimiter + green($color) + $delimiter + blue($color);
   }
   // Regular RGBA compliant result ("number" notation)
-  @return red($color) green($color) blue($color) "/" alpha($color); // * 100%
+  @return red($color) + $delimiter + green($color) + $delimiter + blue($color) + $delimiter-alpha + alpha($color); // * 100%
 }
 
 /**

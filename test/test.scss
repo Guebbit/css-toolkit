@@ -127,13 +127,19 @@ $map-deep-get-var: guebbit.map-deep-get($map-deep-get-test, 'size', 'sml');
   --color-brightness-1: #{guebbit.color-contrast($test-color--light)};
   --color-brightness-2: #{guebbit.color-contrast($test-color--dark)};
   // ---
-  --extract-colors-1: #{guebbit.extract-colors($test-color--light)};
-  --extract-colors-2: #{guebbit.extract-colors($test-color--dark)};
-  --extract-colors-3: #{guebbit.extract-colors(rgb(0 255 0))};
-  --extract-colors-4: #{guebbit.extract-colors(rgba(0 255 0 / 0.5))};
-  --extract-colors-5: #{guebbit.extract-colors(rgba(0 255 0))};
-  --extract-colors-classic-1: #{guebbit.extract-colors-classic($test-color--light)};
-  --extract-colors-classic-2: #{guebbit.extract-colors-classic($test-color--dark)};
+  --extract-colors-1: #{guebbit.extract-colors()};
+  --extract-colors-2: #{guebbit.extract-colors($test-color--light)};
+  --extract-colors-3: #{guebbit.extract-colors($test-color--dark)};
+  --extract-colors-4: #{guebbit.extract-colors($test-color--light, 2, true)};
+  --extract-colors-5: #{guebbit.extract-colors($test-color--dark, 2, true)};
+  --extract-colors-6: #{guebbit.extract-colors(rgb(0 255 0))};
+  --extract-colors-7: #{guebbit.extract-colors(rgba(0 255 0 / 0.5))};
+  --extract-colors-8: #{guebbit.extract-colors(rgb(0 255 0), 2, true)};
+  --extract-colors-9: #{guebbit.extract-colors(rgba(0 255 0 / 0.5), 2, true)};
+  --extract-colors-10: #{guebbit.extract-colors(rgb(0, 255, 0))};
+  --extract-colors-11: #{guebbit.extract-colors(rgba(0, 255, 0, 0.5))};
+  --extract-colors-12: #{guebbit.extract-colors(rgb(0, 255, 0), 2, true)};
+  --extract-colors-13: #{guebbit.extract-colors(rgba(0, 255, 0, 0.5), 2, true)};
   // ---
   --no-null-1: #{guebbit.no-null-var((undefined, null, transparent, red))};
   --no-null-2: #{guebbit.no-null-var((blue))};

@@ -77,13 +77,19 @@ describe("COMPILE", function() {
         expect(cssCompiled).to.contain('--color-brightness-1: #fff;');
         expect(cssCompiled).to.contain('--color-brightness-2: #000;');
         // --
-        expect(cssCompiled).to.contain('--extract-colors-1: 34 34 34;');
-        expect(cssCompiled).to.contain('--extract-colors-2: 221 221 221;');
-        expect(cssCompiled).to.contain('--extract-colors-3: 0 255 0;');
-        expect(cssCompiled).to.contain('--extract-colors-4: 0 255 0 / 0.5;');
-        expect(cssCompiled).to.contain('--extract-colors-5: 0 255 0;');
-        expect(cssCompiled).to.contain('--extract-colors-classic-1: 34, 34, 34;');
-        expect(cssCompiled).to.contain('--extract-colors-classic-2: 221, 221, 221;');
+        expect(cssCompiled).to.contain('--extract-colors-1: 255 255 255;');
+        expect(cssCompiled).to.contain('--extract-colors-2: 34 34 34;');
+        expect(cssCompiled).to.contain('--extract-colors-3: 221 221 221;');
+        expect(cssCompiled).to.contain('--extract-colors-4: 34, 34, 34;');
+        expect(cssCompiled).to.contain('--extract-colors-5: 221, 221, 221;');
+        expect(cssCompiled).to.contain('--extract-colors-6: 0 255 0;');
+        expect(cssCompiled).to.contain('--extract-colors-7: 0 255 0 / 0.5;');
+        expect(cssCompiled).to.contain('--extract-colors-8: 0, 255, 0;');
+        expect(cssCompiled).to.contain('--extract-colors-9: 0, 255, 0, 0.5;');
+        expect(cssCompiled).to.contain('--extract-colors-10: 0 255 0;');
+        expect(cssCompiled).to.contain('--extract-colors-11: 0 255 0 / 0.5;');
+        expect(cssCompiled).to.contain('--extract-colors-12: 0, 255, 0;');
+        expect(cssCompiled).to.contain('--extract-colors-13: 0, 255, 0, 0.5;');
         // --
         expect(cssCompiled).to.contain('--no-null-1: transparent;');
         expect(cssCompiled).to.contain('--no-null-2: blue;');
