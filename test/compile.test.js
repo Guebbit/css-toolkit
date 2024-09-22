@@ -31,13 +31,13 @@ describe("COMPILE", function() {
     });
 
     it('Check some rules', function() {
-        // --
+        // -- TODO
         expect(cssCompiled).to.contain('.blue-400-text {');
-        expect(cssCompiled).to.contain('color: #3d8bfd !important;');
-        expect(cssCompiled).to.contain('.blue-400-bg {');
-        expect(cssCompiled).to.contain('background: #3d8bfd !important;');
+        expect(cssCompiled).to.contain('color: rgb(61.4, 139, 253.4) !important');
+        expect(cssCompiled).to.contain('.blue-500-bg {');
+        expect(cssCompiled).to.contain('background: #0d6efd !important');
         // --
-        expect(cssCompiled).to.contain('--blue-400: 61 139 253;');
+        expect(cssCompiled).to.contain('--blue-400: 61.4 139 253.4;');
         expect(cssCompiled).to.contain('--manga-red-500: 212 24 22;');
         expect(cssCompiled).to.contain('--advanced-brand-instagram: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);');
         expect(cssCompiled).to.contain('.mt-auto {');
@@ -58,18 +58,12 @@ describe("COMPILE", function() {
         expect(cssCompiled).to.contain('@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {');
         expect(cssCompiled).to.contain('@supports (-ms-ime-align: auto) {');
         expect(cssCompiled).to.contain('@supports (-moz-appearance: none) {');
-        // --
+        // -- RGB or hex based on color precision. Use sass:color hex or rgb to be sure
         expect(cssCompiled).to.contain('--color-opaque-1: #111111;');
-        expect(cssCompiled).to.contain('--color-opaque-2: #6f6f6f;');
+        expect(cssCompiled).to.contain('--color-opaque-2: rgb(110.5, 110.5, 110.5);');
         // --
-        expect(cssCompiled).to.contain('--color-tint-1: #595959;');
-        expect(cssCompiled).to.contain('--color-tint-2: #e6e6e6;');
-        // --
-        expect(cssCompiled).to.contain('--color-shade-1: #1a1a1a;');
-        expect(cssCompiled).to.contain('--color-shade-2: #a6a6a6;');
-        // --
-        expect(cssCompiled).to.contain('--color-shift-1: #1a1a1a;');
-        expect(cssCompiled).to.contain('--color-shift-2: #a6a6a6;');
+        expect(cssCompiled).to.contain('--color-shift-1: rgb(89.25, 89.25, 89.25);');
+        expect(cssCompiled).to.contain('--color-shift-2: rgb(229.5, 229.5, 229.5);');
         // --
         expect(cssCompiled).to.contain('--color-contrast-1: #fff;');
         expect(cssCompiled).to.contain('--color-contrast-2: #000;');

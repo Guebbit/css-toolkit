@@ -112,12 +112,6 @@ $map-deep-get-var: guebbit.map-deep-get($map-deep-get-test, 'size', 'sml');
   --color-opaque-1: #{guebbit.color-opaque(#000, rgba($test-color--light, 0.5))};
   --color-opaque-2: #{guebbit.color-opaque(#000, rgba($test-color--dark, 0.5))};
   // ---
-  --color-tint-1: #{guebbit.color-tint($test-color--light, 25%)};
-  --color-tint-2: #{guebbit.color-tint($test-color--dark, 25%)};
-  // ---
-  --color-shade-1: #{guebbit.color-shade($test-color--light, 25%)};
-  --color-shade-2: #{guebbit.color-shade($test-color--dark, 25%)};
-  // ---
   --color-shift-1: #{guebbit.color-shift($test-color--light, 25%)};
   --color-shift-2: #{guebbit.color-shift($test-color--dark, 25%)};
   // ---

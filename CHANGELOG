@@ -1,0 +1,2 @@
+REMOVED color-tint: use color.scale($color, $lightness: X%)
+REMOVED color-shade: use color.scale($color, $lightness: -X%)

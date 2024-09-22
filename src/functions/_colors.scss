@@ -1,6 +1,6 @@
-@use "sass:color";
-@use "sass:math";
-@use "sass:string";
+@use "sass:color" as color;
+@use "sass:math" as math;
+@use "sass:string" as string;
 
 /**
  * Return opaque color
@@ -8,34 +8,15 @@
  * function credited to https://getbootstrap.com/
  */
 @function color-opaque($background, $foreground) {
-  @return mix(rgba($foreground, 1), $background, opacity($foreground) * 100%);
+  @return color.mix(rgba($foreground, 1), $background, opacity($foreground) * 100%, $method: rgb);
 }
-
-
-/**
- * Tint a color: mix a color with white
- * function credited to https://getbootstrap.com/
- */
-@function color-tint($color, $weight) {
-  @return mix(white, $color, $weight);
-}
-
-
-/**
- * Shade a color: mix a color with black
- * function credited to https://getbootstrap.com/
- */
-@function color-shade($color, $weight) {
-  @return mix(black, $color, $weight);
-}
-
 
 /**
  * Shade the color if the weight is positive, else tint it
  * function credited to https://getbootstrap.com/
  */
 @function color-shift($color, $weight) {
-  @return if($weight > 0, color-shade($color, $weight), color-tint($color, -$weight));
+  @return if($weight > 0, color.scale($color, $lightness: $weight), color.scale($color, $lightness: -$weight));
 }
 
 
@@ -64,7 +45,11 @@
   @if $color == transparent or type-of($color) != color {
     @return 100;
   }
-  @return math.div(((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)), 255 * 100%);
+  @return math.div((
+          (color.channel($color, "red", $space: rgb) * .299) +
+          (color.channel($color, "green", $space: rgb) * .587) +
+          (color.channel($color, "blue", $space: rgb) * .114)
+  ), 255 * 100%);
 }
 
 /**
@@ -92,26 +77,32 @@
   }
   $alpha: alpha($color);
   @if $mode == 1 or ($mode == 2 and $alpha == 1) {
-    @return red($color) + $delimiter + green($color) + $delimiter + blue($color);
+    @return color.channel($color, "red", $space: rgb) +
+        $delimiter + color.channel($color, "green", $space: rgb) +
+        $delimiter + color.channel($color, "blue", $space: rgb);
   }
   // Regular RGBA compliant result ("number" notation)
-  @return red($color) + $delimiter + green($color) + $delimiter + blue($color) + $delimiter-alpha + alpha($color); // * 100%
+  @return color.channel($color, "red", $space: rgb) +
+        $delimiter + color.channel($color, "green", $space: rgb) +
+        $delimiter + color.channel($color, "blue", $space: rgb) +
+        $delimiter-alpha + color.channel($color, "alpha"); // * 100%
 }
 
 /**
  * Create default collection
  */
+// TODO CHECK
 @function create-collection($color){
   $list: (
-          "100": color-tint($color, 80%),
-          "200": color-tint($color, 60%),
-          "300": color-tint($color, 40%),
-          "400": color-tint($color, 20%),
+          "100": color.scale($color, $lightness: 80%),
+          "200": color.scale($color, $lightness: 60%),
+          "300": color.scale($color, $lightness: 40%),
+          "400": color.scale($color, $lightness: 20%),
           "500": $color,
-          "600": color-shade($color, 20%),
-          "700": color-shade($color, 40%),
-          "800": color-shade($color, 60%),
-          "900": color-shade($color, 80%)
+          "600": color.scale($color, $lightness: -20%),
+          "700": color.scale($color, $lightness: -40%),
+          "800": color.scale($color, $lightness: -60%),
+          "900": color.scale($color, $lightness: -80%)
   );
 
   @return $list

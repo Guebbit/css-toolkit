@@ -12,9 +12,7 @@ Gives %, less than 50 darker is better, less than 50, lighter.
 ```
 
 ```scss
-@function color-brightness($color) {
-  @return math.div(((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)), 255 * 100%);
-}
+TODO
 ```
 
 | Variable  | Description    | Accepted Values | Default |
