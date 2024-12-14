@@ -108,9 +108,12 @@ $map-deep-get-test: (
 $map-deep-get-var: guebbit.map-deep-get($map-deep-get-test, 'size', 'sml');
 
 :root{
-  // ---
-  --color-opaque-1: #{guebbit.color-opaque(#000, rgba($test-color--light, 0.5))};
+  // --- rgba + rgba = rgba
+  --color-opaque-1: #{guebbit.color-opaque(rgba(0,0,0,0.2), rgba($test-color--light, 0.8))};
+  // --- hex + rgba = rgb
   --color-opaque-2: #{guebbit.color-opaque(#000, rgba($test-color--dark, 0.5))};
+  // --- hex + hex = hex
+  --color-opaque-3: #{guebbit.color-opaque(#000, $test-color--dark)};
   // ---
   --color-tint-1: #{guebbit.color-tint($test-color--light, 25%)};
   --color-tint-2: #{guebbit.color-tint($test-color--dark, 25%)};
@@ -120,6 +123,8 @@ $map-deep-get-var: guebbit.map-deep-get($map-deep-get-test, 'size', 'sml');
   // ---
   --color-shift-1: #{guebbit.color-shift($test-color--light, 25%)};
   --color-shift-2: #{guebbit.color-shift($test-color--dark, 25%)};
+  --color-shift-3: #{guebbit.color-shift($test-color--light, -25%)};
+  --color-shift-4: #{guebbit.color-shift($test-color--dark, -25%)};
   // ---
   --color-contrast-1: #{guebbit.color-contrast($test-color--light)};
   --color-contrast-2: #{guebbit.color-contrast($test-color--dark)};

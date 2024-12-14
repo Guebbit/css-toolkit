@@ -1,6 +1,7 @@
 @use "sass:color";
 @use "sass:math";
 @use "sass:string";
+@use "sass:meta";
 
 /**
  * Return opaque color
@@ -17,7 +18,7 @@
  * function credited to https://getbootstrap.com/
  */
 @function color-tint($color, $weight) {
-  @return mix(white, $color, $weight);
+  @return mix(#fff, $color, $weight);
 }
 
 
@@ -26,7 +27,7 @@
  * function credited to https://getbootstrap.com/
  */
 @function color-shade($color, $weight) {
-  @return mix(black, $color, $weight);
+  @return mix(#000, $color, $weight);
 }
 
 
@@ -35,7 +36,10 @@
  * function credited to https://getbootstrap.com/
  */
 @function color-shift($color, $weight) {
-  @return if($weight > 0, color-shade($color, $weight), color-tint($color, -$weight));
+  @return if($weight > 0,
+          color-shade($color, $weight),
+          color-tint($color, -$weight)
+  );
 }
 
 
@@ -43,7 +47,7 @@
  * Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
  */
 @function color-contrast($color: #fff, $dark: #000, $light: #fff) {
-  @if type-of($color) != color or $color == transparent {
+  @if meta.type-of($color) != color or $color == transparent {
     @return inherit;
   }
   $color-brightness: color-brightness($color);
@@ -61,7 +65,7 @@
 // Gives %, less than 50 darker is better, less than 50, lighter.
 @function color-brightness($color) {
   // fallback
-  @if $color == transparent or type-of($color) != color {
+  @if $color == transparent or meta.type-of($color) != color {
     @return 100;
   }
   @return math.div(((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)), 255 * 100%);
@@ -79,7 +83,7 @@
  */
 @function extract-colors($color: #fff, $mode: 2, $classic: false){
   // colors only
-  @if $color == transparent or type-of($color) != color {
+  @if $color == transparent or meta.type-of($color) != color {
     @return $color;
   }
   // new annotation

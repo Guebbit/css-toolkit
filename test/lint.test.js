@@ -2,7 +2,6 @@ import { describe, it } from 'mocha';
 import { expect } from "chai";
 import stylelint from "stylelint";
 import path from "path";
-import styleLintFormatter from "stylelint-config-standard-scss";
 import { fileURLToPath } from "url";
 
 
@@ -18,7 +17,6 @@ describe("LINT", function() {
         return stylelint.lint({
             configFile: path.join(__dirname, '../.stylelintrc.json'),
             ignorePath: path.join(__dirname, '../.stylelintignore'),
-            formatter: styleLintFormatter,
             files: [
                 path.join(__dirname, './test.scss'),
             ],

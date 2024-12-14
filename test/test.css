@@ -401,131 +401,131 @@
 }
 
 .blue-100-text {
-  color: #cfe2ff !important;
+  color: rgb(206.6, 226, 254.6) !important;
 }
 
 .blue-100-border {
-  border-color: #cfe2ff !important;
+  border-color: rgb(206.6, 226, 254.6) !important;
 }
 
 .blue-100-bg {
-  background: #cfe2ff !important;
+  background: rgb(206.6, 226, 254.6) !important;
 }
 
 .blue-100-pseudo-bg::after, .blue-100-pseudo-bg::before {
-  background: #cfe2ff !important;
+  background: rgb(206.6, 226, 254.6) !important;
 }
 
 .blue-100-hover-text:hover {
-  color: #cfe2ff !important;
+  color: rgb(206.6, 226, 254.6) !important;
 }
 
 .blue-100-hover-border:hover {
-  border-color: #cfe2ff !important;
+  border-color: rgb(206.6, 226, 254.6) !important;
 }
 
 .blue-100-hover-bg:hover {
-  background: #cfe2ff !important;
+  background: rgb(206.6, 226, 254.6) !important;
 }
 
 .blue-100-hover-pseudo-bg:hover::after, .blue-100-hover-pseudo-bg:hover::before {
-  background: #cfe2ff !important;
+  background: rgb(206.6, 226, 254.6) !important;
 }
 
 .blue-200-text {
-  color: #9ec5fe !important;
+  color: rgb(158.2, 197, 254.2) !important;
 }
 
 .blue-200-border {
-  border-color: #9ec5fe !important;
+  border-color: rgb(158.2, 197, 254.2) !important;
 }
 
 .blue-200-bg {
-  background: #9ec5fe !important;
+  background: rgb(158.2, 197, 254.2) !important;
 }
 
 .blue-200-pseudo-bg::after, .blue-200-pseudo-bg::before {
-  background: #9ec5fe !important;
+  background: rgb(158.2, 197, 254.2) !important;
 }
 
 .blue-200-hover-text:hover {
-  color: #9ec5fe !important;
+  color: rgb(158.2, 197, 254.2) !important;
 }
 
 .blue-200-hover-border:hover {
-  border-color: #9ec5fe !important;
+  border-color: rgb(158.2, 197, 254.2) !important;
 }
 
 .blue-200-hover-bg:hover {
-  background: #9ec5fe !important;
+  background: rgb(158.2, 197, 254.2) !important;
 }
 
 .blue-200-hover-pseudo-bg:hover::after, .blue-200-hover-pseudo-bg:hover::before {
-  background: #9ec5fe !important;
+  background: rgb(158.2, 197, 254.2) !important;
 }
 
 .blue-300-text {
-  color: #6ea8fe !important;
+  color: rgb(109.8, 168, 253.8) !important;
 }
 
 .blue-300-border {
-  border-color: #6ea8fe !important;
+  border-color: rgb(109.8, 168, 253.8) !important;
 }
 
 .blue-300-bg {
-  background: #6ea8fe !important;
+  background: rgb(109.8, 168, 253.8) !important;
 }
 
 .blue-300-pseudo-bg::after, .blue-300-pseudo-bg::before {
-  background: #6ea8fe !important;
+  background: rgb(109.8, 168, 253.8) !important;
 }
 
 .blue-300-hover-text:hover {
-  color: #6ea8fe !important;
+  color: rgb(109.8, 168, 253.8) !important;
 }
 
 .blue-300-hover-border:hover {
-  border-color: #6ea8fe !important;
+  border-color: rgb(109.8, 168, 253.8) !important;
 }
 
 .blue-300-hover-bg:hover {
-  background: #6ea8fe !important;
+  background: rgb(109.8, 168, 253.8) !important;
 }
 
 .blue-300-hover-pseudo-bg:hover::after, .blue-300-hover-pseudo-bg:hover::before {
-  background: #6ea8fe !important;
+  background: rgb(109.8, 168, 253.8) !important;
 }
 
 .blue-400-text {
-  color: #3d8bfd !important;
+  color: rgb(61.4, 139, 253.4) !important;
 }
 
 .blue-400-border {
-  border-color: #3d8bfd !important;
+  border-color: rgb(61.4, 139, 253.4) !important;
 }
 
 .blue-400-bg {
-  background: #3d8bfd !important;
+  background: rgb(61.4, 139, 253.4) !important;
 }
 
 .blue-400-pseudo-bg::after, .blue-400-pseudo-bg::before {
-  background: #3d8bfd !important;
+  background: rgb(61.4, 139, 253.4) !important;
 }
 
 .blue-400-hover-text:hover {
-  color: #3d8bfd !important;
+  color: rgb(61.4, 139, 253.4) !important;
 }
 
 .blue-400-hover-border:hover {
-  border-color: #3d8bfd !important;
+  border-color: rgb(61.4, 139, 253.4) !important;
 }
 
 .blue-400-hover-bg:hover {
-  background: #3d8bfd !important;
+  background: rgb(61.4, 139, 253.4) !important;
 }
 
 .blue-400-hover-pseudo-bg:hover::after, .blue-400-hover-pseudo-bg:hover::before {
-  background: #3d8bfd !important;
+  background: rgb(61.4, 139, 253.4) !important;
 }
 
 .blue-500-text {
@@ -561,259 +561,259 @@
 }
 
 .blue-600-text {
-  color: #0a58ca !important;
+  color: rgb(10.4, 88, 202.4) !important;
 }
 
 .blue-600-border {
-  border-color: #0a58ca !important;
+  border-color: rgb(10.4, 88, 202.4) !important;
 }
 
 .blue-600-bg {
-  background: #0a58ca !important;
+  background: rgb(10.4, 88, 202.4) !important;
 }
 
 .blue-600-pseudo-bg::after, .blue-600-pseudo-bg::before {
-  background: #0a58ca !important;
+  background: rgb(10.4, 88, 202.4) !important;
 }
 
 .blue-600-hover-text:hover {
-  color: #0a58ca !important;
+  color: rgb(10.4, 88, 202.4) !important;
 }
 
 .blue-600-hover-border:hover {
-  border-color: #0a58ca !important;
+  border-color: rgb(10.4, 88, 202.4) !important;
 }
 
 .blue-600-hover-bg:hover {
-  background: #0a58ca !important;
+  background: rgb(10.4, 88, 202.4) !important;
 }
 
 .blue-600-hover-pseudo-bg:hover::after, .blue-600-hover-pseudo-bg:hover::before {
-  background: #0a58ca !important;
+  background: rgb(10.4, 88, 202.4) !important;
 }
 
 .blue-700-text {
-  color: #084298 !important;
+  color: rgb(7.8, 66, 151.8) !important;
 }
 
 .blue-700-border {
-  border-color: #084298 !important;
+  border-color: rgb(7.8, 66, 151.8) !important;
 }
 
 .blue-700-bg {
-  background: #084298 !important;
+  background: rgb(7.8, 66, 151.8) !important;
 }
 
 .blue-700-pseudo-bg::after, .blue-700-pseudo-bg::before {
-  background: #084298 !important;
+  background: rgb(7.8, 66, 151.8) !important;
 }
 
 .blue-700-hover-text:hover {
-  color: #084298 !important;
+  color: rgb(7.8, 66, 151.8) !important;
 }
 
 .blue-700-hover-border:hover {
-  border-color: #084298 !important;
+  border-color: rgb(7.8, 66, 151.8) !important;
 }
 
 .blue-700-hover-bg:hover {
-  background: #084298 !important;
+  background: rgb(7.8, 66, 151.8) !important;
 }
 
 .blue-700-hover-pseudo-bg:hover::after, .blue-700-hover-pseudo-bg:hover::before {
-  background: #084298 !important;
+  background: rgb(7.8, 66, 151.8) !important;
 }
 
 .blue-800-text {
-  color: #052c65 !important;
+  color: rgb(5.2, 44, 101.2) !important;
 }
 
 .blue-800-border {
-  border-color: #052c65 !important;
+  border-color: rgb(5.2, 44, 101.2) !important;
 }
 
 .blue-800-bg {
-  background: #052c65 !important;
+  background: rgb(5.2, 44, 101.2) !important;
 }
 
 .blue-800-pseudo-bg::after, .blue-800-pseudo-bg::before {
-  background: #052c65 !important;
+  background: rgb(5.2, 44, 101.2) !important;
 }
 
 .blue-800-hover-text:hover {
-  color: #052c65 !important;
+  color: rgb(5.2, 44, 101.2) !important;
 }
 
 .blue-800-hover-border:hover {
-  border-color: #052c65 !important;
+  border-color: rgb(5.2, 44, 101.2) !important;
 }
 
 .blue-800-hover-bg:hover {
-  background: #052c65 !important;
+  background: rgb(5.2, 44, 101.2) !important;
 }
 
 .blue-800-hover-pseudo-bg:hover::after, .blue-800-hover-pseudo-bg:hover::before {
-  background: #052c65 !important;
+  background: rgb(5.2, 44, 101.2) !important;
 }
 
 .blue-900-text {
-  color: #031633 !important;
+  color: rgb(2.6, 22, 50.6) !important;
 }
 
 .blue-900-border {
-  border-color: #031633 !important;
+  border-color: rgb(2.6, 22, 50.6) !important;
 }
 
 .blue-900-bg {
-  background: #031633 !important;
+  background: rgb(2.6, 22, 50.6) !important;
 }
 
 .blue-900-pseudo-bg::after, .blue-900-pseudo-bg::before {
-  background: #031633 !important;
+  background: rgb(2.6, 22, 50.6) !important;
 }
 
 .blue-900-hover-text:hover {
-  color: #031633 !important;
+  color: rgb(2.6, 22, 50.6) !important;
 }
 
 .blue-900-hover-border:hover {
-  border-color: #031633 !important;
+  border-color: rgb(2.6, 22, 50.6) !important;
 }
 
 .blue-900-hover-bg:hover {
-  background: #031633 !important;
+  background: rgb(2.6, 22, 50.6) !important;
 }
 
 .blue-900-hover-pseudo-bg:hover::after, .blue-900-hover-pseudo-bg:hover::before {
-  background: #031633 !important;
+  background: rgb(2.6, 22, 50.6) !important;
 }
 
 .indigo-100-text {
-  color: #e0cffc !important;
+  color: rgb(224.4, 207.2, 252.4) !important;
 }
 
 .indigo-100-border {
-  border-color: #e0cffc !important;
+  border-color: rgb(224.4, 207.2, 252.4) !important;
 }
 
 .indigo-100-bg {
-  background: #e0cffc !important;
+  background: rgb(224.4, 207.2, 252.4) !important;
 }
 
 .indigo-100-pseudo-bg::after, .indigo-100-pseudo-bg::before {
-  background: #e0cffc !important;
+  background: rgb(224.4, 207.2, 252.4) !important;
 }
 
 .indigo-100-hover-text:hover {
-  color: #e0cffc !important;
+  color: rgb(224.4, 207.2, 252.4) !important;
 }
 
 .indigo-100-hover-border:hover {
-  border-color: #e0cffc !important;
+  border-color: rgb(224.4, 207.2, 252.4) !important;
 }
 
 .indigo-100-hover-bg:hover {
-  background: #e0cffc !important;
+  background: rgb(224.4, 207.2, 252.4) !important;
 }
 
 .indigo-100-hover-pseudo-bg:hover::after, .indigo-100-hover-pseudo-bg:hover::before {
-  background: #e0cffc !important;
+  background: rgb(224.4, 207.2, 252.4) !important;
 }
 
 .indigo-200-text {
-  color: #c29ffa !important;
+  color: rgb(193.8, 159.4, 249.8) !important;
 }
 
 .indigo-200-border {
-  border-color: #c29ffa !important;
+  border-color: rgb(193.8, 159.4, 249.8) !important;
 }
 
 .indigo-200-bg {
-  background: #c29ffa !important;
+  background: rgb(193.8, 159.4, 249.8) !important;
 }
 
 .indigo-200-pseudo-bg::after, .indigo-200-pseudo-bg::before {
-  background: #c29ffa !important;
+  background: rgb(193.8, 159.4, 249.8) !important;
 }
 
 .indigo-200-hover-text:hover {
-  color: #c29ffa !important;
+  color: rgb(193.8, 159.4, 249.8) !important;
 }
 
 .indigo-200-hover-border:hover {
-  border-color: #c29ffa !important;
+  border-color: rgb(193.8, 159.4, 249.8) !important;
 }
 
 .indigo-200-hover-bg:hover {
-  background: #c29ffa !important;
+  background: rgb(193.8, 159.4, 249.8) !important;
 }
 
 .indigo-200-hover-pseudo-bg:hover::after, .indigo-200-hover-pseudo-bg:hover::before {
-  background: #c29ffa !important;
+  background: rgb(193.8, 159.4, 249.8) !important;
 }
 
 .indigo-300-text {
-  color: #a370f7 !important;
+  color: rgb(163.2, 111.6, 247.2) !important;
 }
 
 .indigo-300-border {
-  border-color: #a370f7 !important;
+  border-color: rgb(163.2, 111.6, 247.2) !important;
 }
 
 .indigo-300-bg {
-  background: #a370f7 !important;
+  background: rgb(163.2, 111.6, 247.2) !important;
 }
 
 .indigo-300-pseudo-bg::after, .indigo-300-pseudo-bg::before {
-  background: #a370f7 !important;
+  background: rgb(163.2, 111.6, 247.2) !important;
 }
 
 .indigo-300-hover-text:hover {
-  color: #a370f7 !important;
+  color: rgb(163.2, 111.6, 247.2) !important;
 }
 
 .indigo-300-hover-border:hover {
-  border-color: #a370f7 !important;
+  border-color: rgb(163.2, 111.6, 247.2) !important;
 }
 
 .indigo-300-hover-bg:hover {
-  background: #a370f7 !important;
+  background: rgb(163.2, 111.6, 247.2) !important;
 }
 
 .indigo-300-hover-pseudo-bg:hover::after, .indigo-300-hover-pseudo-bg:hover::before {
-  background: #a370f7 !important;
+  background: rgb(163.2, 111.6, 247.2) !important;
 }
 
 .indigo-400-text {
-  color: #8540f5 !important;
+  color: rgb(132.6, 63.8, 244.6) !important;
 }
 
 .indigo-400-border {
-  border-color: #8540f5 !important;
+  border-color: rgb(132.6, 63.8, 244.6) !important;
 }
 
 .indigo-400-bg {
-  background: #8540f5 !important;
+  background: rgb(132.6, 63.8, 244.6) !important;
 }
 
 .indigo-400-pseudo-bg::after, .indigo-400-pseudo-bg::before {
-  background: #8540f5 !important;
+  background: rgb(132.6, 63.8, 244.6) !important;
 }
 
 .indigo-400-hover-text:hover {
-  color: #8540f5 !important;
+  color: rgb(132.6, 63.8, 244.6) !important;
 }
 
 .indigo-400-hover-border:hover {
-  border-color: #8540f5 !important;
+  border-color: rgb(132.6, 63.8, 244.6) !important;
 }
 
 .indigo-400-hover-bg:hover {
-  background: #8540f5 !important;
+  background: rgb(132.6, 63.8, 244.6) !important;
 }
 
 .indigo-400-hover-pseudo-bg:hover::after, .indigo-400-hover-pseudo-bg:hover::before {
-  background: #8540f5 !important;
+  background: rgb(132.6, 63.8, 244.6) !important;
 }
 
 .indigo-500-text {
@@ -849,259 +849,259 @@
 }
 
 .indigo-600-text {
-  color: #520dc2 !important;
+  color: rgb(81.6, 12.8, 193.6) !important;
 }
 
 .indigo-600-border {
-  border-color: #520dc2 !important;
+  border-color: rgb(81.6, 12.8, 193.6) !important;
 }
 
 .indigo-600-bg {
-  background: #520dc2 !important;
+  background: rgb(81.6, 12.8, 193.6) !important;
 }
 
 .indigo-600-pseudo-bg::after, .indigo-600-pseudo-bg::before {
-  background: #520dc2 !important;
+  background: rgb(81.6, 12.8, 193.6) !important;
 }
 
 .indigo-600-hover-text:hover {
-  color: #520dc2 !important;
+  color: rgb(81.6, 12.8, 193.6) !important;
 }
 
 .indigo-600-hover-border:hover {
-  border-color: #520dc2 !important;
+  border-color: rgb(81.6, 12.8, 193.6) !important;
 }
 
 .indigo-600-hover-bg:hover {
-  background: #520dc2 !important;
+  background: rgb(81.6, 12.8, 193.6) !important;
 }
 
 .indigo-600-hover-pseudo-bg:hover::after, .indigo-600-hover-pseudo-bg:hover::before {
-  background: #520dc2 !important;
+  background: rgb(81.6, 12.8, 193.6) !important;
 }
 
 .indigo-700-text {
-  color: #3d0a91 !important;
+  color: rgb(61.2, 9.6, 145.2) !important;
 }
 
 .indigo-700-border {
-  border-color: #3d0a91 !important;
+  border-color: rgb(61.2, 9.6, 145.2) !important;
 }
 
 .indigo-700-bg {
-  background: #3d0a91 !important;
+  background: rgb(61.2, 9.6, 145.2) !important;
 }
 
 .indigo-700-pseudo-bg::after, .indigo-700-pseudo-bg::before {
-  background: #3d0a91 !important;
+  background: rgb(61.2, 9.6, 145.2) !important;
 }
 
 .indigo-700-hover-text:hover {
-  color: #3d0a91 !important;
+  color: rgb(61.2, 9.6, 145.2) !important;
 }
 
 .indigo-700-hover-border:hover {
-  border-color: #3d0a91 !important;
+  border-color: rgb(61.2, 9.6, 145.2) !important;
 }
 
 .indigo-700-hover-bg:hover {
-  background: #3d0a91 !important;
+  background: rgb(61.2, 9.6, 145.2) !important;
 }
 
 .indigo-700-hover-pseudo-bg:hover::after, .indigo-700-hover-pseudo-bg:hover::before {
-  background: #3d0a91 !important;
+  background: rgb(61.2, 9.6, 145.2) !important;
 }
 
 .indigo-800-text {
-  color: #290661 !important;
+  color: rgb(40.8, 6.4, 96.8) !important;
 }
 
 .indigo-800-border {
-  border-color: #290661 !important;
+  border-color: rgb(40.8, 6.4, 96.8) !important;
 }
 
 .indigo-800-bg {
-  background: #290661 !important;
+  background: rgb(40.8, 6.4, 96.8) !important;
 }
 
 .indigo-800-pseudo-bg::after, .indigo-800-pseudo-bg::before {
-  background: #290661 !important;
+  background: rgb(40.8, 6.4, 96.8) !important;
 }
 
 .indigo-800-hover-text:hover {
-  color: #290661 !important;
+  color: rgb(40.8, 6.4, 96.8) !important;
 }
 
 .indigo-800-hover-border:hover {
-  border-color: #290661 !important;
+  border-color: rgb(40.8, 6.4, 96.8) !important;
 }
 
 .indigo-800-hover-bg:hover {
-  background: #290661 !important;
+  background: rgb(40.8, 6.4, 96.8) !important;
 }
 
 .indigo-800-hover-pseudo-bg:hover::after, .indigo-800-hover-pseudo-bg:hover::before {
-  background: #290661 !important;
+  background: rgb(40.8, 6.4, 96.8) !important;
 }
 
 .indigo-900-text {
-  color: #140330 !important;
+  color: rgb(20.4, 3.2, 48.4) !important;
 }
 
 .indigo-900-border {
-  border-color: #140330 !important;
+  border-color: rgb(20.4, 3.2, 48.4) !important;
 }
 
 .indigo-900-bg {
-  background: #140330 !important;
+  background: rgb(20.4, 3.2, 48.4) !important;
 }
 
 .indigo-900-pseudo-bg::after, .indigo-900-pseudo-bg::before {
-  background: #140330 !important;
+  background: rgb(20.4, 3.2, 48.4) !important;
 }
 
 .indigo-900-hover-text:hover {
-  color: #140330 !important;
+  color: rgb(20.4, 3.2, 48.4) !important;
 }
 
 .indigo-900-hover-border:hover {
-  border-color: #140330 !important;
+  border-color: rgb(20.4, 3.2, 48.4) !important;
 }
 
 .indigo-900-hover-bg:hover {
-  background: #140330 !important;
+  background: rgb(20.4, 3.2, 48.4) !important;
 }
 
 .indigo-900-hover-pseudo-bg:hover::after, .indigo-900-hover-pseudo-bg:hover::before {
-  background: #140330 !important;
+  background: rgb(20.4, 3.2, 48.4) !important;
 }
 
 .purple-100-text {
-  color: #e2d9f3 !important;
+  color: rgb(226.2, 217.2, 242.6) !important;
 }
 
 .purple-100-border {
-  border-color: #e2d9f3 !important;
+  border-color: rgb(226.2, 217.2, 242.6) !important;
 }
 
 .purple-100-bg {
-  background: #e2d9f3 !important;
+  background: rgb(226.2, 217.2, 242.6) !important;
 }
 
 .purple-100-pseudo-bg::after, .purple-100-pseudo-bg::before {
-  background: #e2d9f3 !important;
+  background: rgb(226.2, 217.2, 242.6) !important;
 }
 
 .purple-100-hover-text:hover {
-  color: #e2d9f3 !important;
+  color: rgb(226.2, 217.2, 242.6) !important;
 }
 
 .purple-100-hover-border:hover {
-  border-color: #e2d9f3 !important;
+  border-color: rgb(226.2, 217.2, 242.6) !important;
 }
 
 .purple-100-hover-bg:hover {
-  background: #e2d9f3 !important;
+  background: rgb(226.2, 217.2, 242.6) !important;
 }
 
 .purple-100-hover-pseudo-bg:hover::after, .purple-100-hover-pseudo-bg:hover::before {
-  background: #e2d9f3 !important;
+  background: rgb(226.2, 217.2, 242.6) !important;
 }
 
 .purple-200-text {
-  color: #c5b3e6 !important;
+  color: rgb(197.4, 179.4, 230.2) !important;
 }
 
 .purple-200-border {
-  border-color: #c5b3e6 !important;
+  border-color: rgb(197.4, 179.4, 230.2) !important;
 }
 
 .purple-200-bg {
-  background: #c5b3e6 !important;
+  background: rgb(197.4, 179.4, 230.2) !important;
 }
 
 .purple-200-pseudo-bg::after, .purple-200-pseudo-bg::before {
-  background: #c5b3e6 !important;
+  background: rgb(197.4, 179.4, 230.2) !important;
 }
 
 .purple-200-hover-text:hover {
-  color: #c5b3e6 !important;
+  color: rgb(197.4, 179.4, 230.2) !important;
 }
 
 .purple-200-hover-border:hover {
-  border-color: #c5b3e6 !important;
+  border-color: rgb(197.4, 179.4, 230.2) !important;
 }
 
 .purple-200-hover-bg:hover {
-  background: #c5b3e6 !important;
+  background: rgb(197.4, 179.4, 230.2) !important;
 }
 
 .purple-200-hover-pseudo-bg:hover::after, .purple-200-hover-pseudo-bg:hover::before {
-  background: #c5b3e6 !important;
+  background: rgb(197.4, 179.4, 230.2) !important;
 }
 
 .purple-300-text {
-  color: #a98eda !important;
+  color: rgb(168.6, 141.6, 217.8) !important;
 }
 
 .purple-300-border {
-  border-color: #a98eda !important;
+  border-color: rgb(168.6, 141.6, 217.8) !important;
 }
 
 .purple-300-bg {
-  background: #a98eda !important;
+  background: rgb(168.6, 141.6, 217.8) !important;
 }
 
 .purple-300-pseudo-bg::after, .purple-300-pseudo-bg::before {
-  background: #a98eda !important;
+  background: rgb(168.6, 141.6, 217.8) !important;
 }
 
 .purple-300-hover-text:hover {
-  color: #a98eda !important;
+  color: rgb(168.6, 141.6, 217.8) !important;
 }
 
 .purple-300-hover-border:hover {
-  border-color: #a98eda !important;
+  border-color: rgb(168.6, 141.6, 217.8) !important;
 }
 
 .purple-300-hover-bg:hover {
-  background: #a98eda !important;
+  background: rgb(168.6, 141.6, 217.8) !important;
 }
 
 .purple-300-hover-pseudo-bg:hover::after, .purple-300-hover-pseudo-bg:hover::before {
-  background: #a98eda !important;
+  background: rgb(168.6, 141.6, 217.8) !important;
 }
 
 .purple-400-text {
-  color: #8c68cd !important;
+  color: rgb(139.8, 103.8, 205.4) !important;
 }
 
 .purple-400-border {
-  border-color: #8c68cd !important;
+  border-color: rgb(139.8, 103.8, 205.4) !important;
 }
 
 .purple-400-bg {
-  background: #8c68cd !important;
+  background: rgb(139.8, 103.8, 205.4) !important;
 }
 
 .purple-400-pseudo-bg::after, .purple-400-pseudo-bg::before {
-  background: #8c68cd !important;
+  background: rgb(139.8, 103.8, 205.4) !important;
 }
 
 .purple-400-hover-text:hover {
-  color: #8c68cd !important;
+  color: rgb(139.8, 103.8, 205.4) !important;
 }
 
 .purple-400-hover-border:hover {
-  border-color: #8c68cd !important;
+  border-color: rgb(139.8, 103.8, 205.4) !important;
 }
 
 .purple-400-hover-bg:hover {
-  background: #8c68cd !important;
+  background: rgb(139.8, 103.8, 205.4) !important;
 }
 
 .purple-400-hover-pseudo-bg:hover::after, .purple-400-hover-pseudo-bg:hover::before {
-  background: #8c68cd !important;
+  background: rgb(139.8, 103.8, 205.4) !important;
 }
 
 .purple-500-text {
@@ -1137,259 +1137,259 @@
 }
 
 .purple-600-text {
-  color: #59359a !important;
+  color: rgb(88.8, 52.8, 154.4) !important;
 }
 
 .purple-600-border {
-  border-color: #59359a !important;
+  border-color: rgb(88.8, 52.8, 154.4) !important;
 }
 
 .purple-600-bg {
-  background: #59359a !important;
+  background: rgb(88.8, 52.8, 154.4) !important;
 }
 
 .purple-600-pseudo-bg::after, .purple-600-pseudo-bg::before {
-  background: #59359a !important;
+  background: rgb(88.8, 52.8, 154.4) !important;
 }
 
 .purple-600-hover-text:hover {
-  color: #59359a !important;
+  color: rgb(88.8, 52.8, 154.4) !important;
 }
 
 .purple-600-hover-border:hover {
-  border-color: #59359a !important;
+  border-color: rgb(88.8, 52.8, 154.4) !important;
 }
 
 .purple-600-hover-bg:hover {
-  background: #59359a !important;
+  background: rgb(88.8, 52.8, 154.4) !important;
 }
 
 .purple-600-hover-pseudo-bg:hover::after, .purple-600-hover-pseudo-bg:hover::before {
-  background: #59359a !important;
+  background: rgb(88.8, 52.8, 154.4) !important;
 }
 
 .purple-700-text {
-  color: #432874 !important;
+  color: rgb(66.6, 39.6, 115.8) !important;
 }
 
 .purple-700-border {
-  border-color: #432874 !important;
+  border-color: rgb(66.6, 39.6, 115.8) !important;
 }
 
 .purple-700-bg {
-  background: #432874 !important;
+  background: rgb(66.6, 39.6, 115.8) !important;
 }
 
 .purple-700-pseudo-bg::after, .purple-700-pseudo-bg::before {
-  background: #432874 !important;
+  background: rgb(66.6, 39.6, 115.8) !important;
 }
 
 .purple-700-hover-text:hover {
-  color: #432874 !important;
+  color: rgb(66.6, 39.6, 115.8) !important;
 }
 
 .purple-700-hover-border:hover {
-  border-color: #432874 !important;
+  border-color: rgb(66.6, 39.6, 115.8) !important;
 }
 
 .purple-700-hover-bg:hover {
-  background: #432874 !important;
+  background: rgb(66.6, 39.6, 115.8) !important;
 }
 
 .purple-700-hover-pseudo-bg:hover::after, .purple-700-hover-pseudo-bg:hover::before {
-  background: #432874 !important;
+  background: rgb(66.6, 39.6, 115.8) !important;
 }
 
 .purple-800-text {
-  color: #2c1a4d !important;
+  color: rgb(44.4, 26.4, 77.2) !important;
 }
 
 .purple-800-border {
-  border-color: #2c1a4d !important;
+  border-color: rgb(44.4, 26.4, 77.2) !important;
 }
 
 .purple-800-bg {
-  background: #2c1a4d !important;
+  background: rgb(44.4, 26.4, 77.2) !important;
 }
 
 .purple-800-pseudo-bg::after, .purple-800-pseudo-bg::before {
-  background: #2c1a4d !important;
+  background: rgb(44.4, 26.4, 77.2) !important;
 }
 
 .purple-800-hover-text:hover {
-  color: #2c1a4d !important;
+  color: rgb(44.4, 26.4, 77.2) !important;
 }
 
 .purple-800-hover-border:hover {
-  border-color: #2c1a4d !important;
+  border-color: rgb(44.4, 26.4, 77.2) !important;
 }
 
 .purple-800-hover-bg:hover {
-  background: #2c1a4d !important;
+  background: rgb(44.4, 26.4, 77.2) !important;
 }
 
 .purple-800-hover-pseudo-bg:hover::after, .purple-800-hover-pseudo-bg:hover::before {
-  background: #2c1a4d !important;
+  background: rgb(44.4, 26.4, 77.2) !important;
 }
 
 .purple-900-text {
-  color: #160d27 !important;
+  color: rgb(22.2, 13.2, 38.6) !important;
 }
 
 .purple-900-border {
-  border-color: #160d27 !important;
+  border-color: rgb(22.2, 13.2, 38.6) !important;
 }
 
 .purple-900-bg {
-  background: #160d27 !important;
+  background: rgb(22.2, 13.2, 38.6) !important;
 }
 
 .purple-900-pseudo-bg::after, .purple-900-pseudo-bg::before {
-  background: #160d27 !important;
+  background: rgb(22.2, 13.2, 38.6) !important;
 }
 
 .purple-900-hover-text:hover {
-  color: #160d27 !important;
+  color: rgb(22.2, 13.2, 38.6) !important;
 }
 
 .purple-900-hover-border:hover {
-  border-color: #160d27 !important;
+  border-color: rgb(22.2, 13.2, 38.6) !important;
 }
 
 .purple-900-hover-bg:hover {
-  background: #160d27 !important;
+  background: rgb(22.2, 13.2, 38.6) !important;
 }
 
 .purple-900-hover-pseudo-bg:hover::after, .purple-900-hover-pseudo-bg:hover::before {
-  background: #160d27 !important;
+  background: rgb(22.2, 13.2, 38.6) !important;
 }
 
 .pink-100-text {
-  color: #f7d6e6 !important;
+  color: rgb(246.8, 214.2, 230.4) !important;
 }
 
 .pink-100-border {
-  border-color: #f7d6e6 !important;
+  border-color: rgb(246.8, 214.2, 230.4) !important;
 }
 
 .pink-100-bg {
-  background: #f7d6e6 !important;
+  background: rgb(246.8, 214.2, 230.4) !important;
 }
 
 .pink-100-pseudo-bg::after, .pink-100-pseudo-bg::before {
-  background: #f7d6e6 !important;
+  background: rgb(246.8, 214.2, 230.4) !important;
 }
 
 .pink-100-hover-text:hover {
-  color: #f7d6e6 !important;
+  color: rgb(246.8, 214.2, 230.4) !important;
 }
 
 .pink-100-hover-border:hover {
-  border-color: #f7d6e6 !important;
+  border-color: rgb(246.8, 214.2, 230.4) !important;
 }
 
 .pink-100-hover-bg:hover {
-  background: #f7d6e6 !important;
+  background: rgb(246.8, 214.2, 230.4) !important;
 }
 
 .pink-100-hover-pseudo-bg:hover::after, .pink-100-hover-pseudo-bg:hover::before {
-  background: #f7d6e6 !important;
+  background: rgb(246.8, 214.2, 230.4) !important;
 }
 
 .pink-200-text {
-  color: #efadce !important;
+  color: rgb(238.6, 173.4, 205.8) !important;
 }
 
 .pink-200-border {
-  border-color: #efadce !important;
+  border-color: rgb(238.6, 173.4, 205.8) !important;
 }
 
 .pink-200-bg {
-  background: #efadce !important;
+  background: rgb(238.6, 173.4, 205.8) !important;
 }
 
 .pink-200-pseudo-bg::after, .pink-200-pseudo-bg::before {
-  background: #efadce !important;
+  background: rgb(238.6, 173.4, 205.8) !important;
 }
 
 .pink-200-hover-text:hover {
-  color: #efadce !important;
+  color: rgb(238.6, 173.4, 205.8) !important;
 }
 
 .pink-200-hover-border:hover {
-  border-color: #efadce !important;
+  border-color: rgb(238.6, 173.4, 205.8) !important;
 }
 
 .pink-200-hover-bg:hover {
-  background: #efadce !important;
+  background: rgb(238.6, 173.4, 205.8) !important;
 }
 
 .pink-200-hover-pseudo-bg:hover::after, .pink-200-hover-pseudo-bg:hover::before {
-  background: #efadce !important;
+  background: rgb(238.6, 173.4, 205.8) !important;
 }
 
 .pink-300-text {
-  color: #e685b5 !important;
+  color: rgb(230.4, 132.6, 181.2) !important;
 }
 
 .pink-300-border {
-  border-color: #e685b5 !important;
+  border-color: rgb(230.4, 132.6, 181.2) !important;
 }
 
 .pink-300-bg {
-  background: #e685b5 !important;
+  background: rgb(230.4, 132.6, 181.2) !important;
 }
 
 .pink-300-pseudo-bg::after, .pink-300-pseudo-bg::before {
-  background: #e685b5 !important;
+  background: rgb(230.4, 132.6, 181.2) !important;
 }
 
 .pink-300-hover-text:hover {
-  color: #e685b5 !important;
+  color: rgb(230.4, 132.6, 181.2) !important;
 }
 
 .pink-300-hover-border:hover {
-  border-color: #e685b5 !important;
+  border-color: rgb(230.4, 132.6, 181.2) !important;
 }
 
 .pink-300-hover-bg:hover {
-  background: #e685b5 !important;
+  background: rgb(230.4, 132.6, 181.2) !important;
 }
 
 .pink-300-hover-pseudo-bg:hover::after, .pink-300-hover-pseudo-bg:hover::before {
-  background: #e685b5 !important;
+  background: rgb(230.4, 132.6, 181.2) !important;
 }
 
 .pink-400-text {
-  color: #de5c9d !important;
+  color: rgb(222.2, 91.8, 156.6) !important;
 }
 
 .pink-400-border {
-  border-color: #de5c9d !important;
+  border-color: rgb(222.2, 91.8, 156.6) !important;
 }
 
 .pink-400-bg {
-  background: #de5c9d !important;
+  background: rgb(222.2, 91.8, 156.6) !important;
 }
 
 .pink-400-pseudo-bg::after, .pink-400-pseudo-bg::before {
-  background: #de5c9d !important;
+  background: rgb(222.2, 91.8, 156.6) !important;
 }
 
 .pink-400-hover-text:hover {
-  color: #de5c9d !important;
+  color: rgb(222.2, 91.8, 156.6) !important;
 }
 
 .pink-400-hover-border:hover {
-  border-color: #de5c9d !important;
+  border-color: rgb(222.2, 91.8, 156.6) !important;
 }
 
 .pink-400-hover-bg:hover {
-  background: #de5c9d !important;
+  background: rgb(222.2, 91.8, 156.6) !important;
 }
 
 .pink-400-hover-pseudo-bg:hover::after, .pink-400-hover-pseudo-bg:hover::before {
-  background: #de5c9d !important;
+  background: rgb(222.2, 91.8, 156.6) !important;
 }
 
 .pink-500-text {
@@ -1425,259 +1425,259 @@
 }
 
 .pink-600-text {
-  color: #ab296a !important;
+  color: rgb(171.2, 40.8, 105.6) !important;
 }
 
 .pink-600-border {
-  border-color: #ab296a !important;
+  border-color: rgb(171.2, 40.8, 105.6) !important;
 }
 
 .pink-600-bg {
-  background: #ab296a !important;
+  background: rgb(171.2, 40.8, 105.6) !important;
 }
 
 .pink-600-pseudo-bg::after, .pink-600-pseudo-bg::before {
-  background: #ab296a !important;
+  background: rgb(171.2, 40.8, 105.6) !important;
 }
 
 .pink-600-hover-text:hover {
-  color: #ab296a !important;
+  color: rgb(171.2, 40.8, 105.6) !important;
 }
 
 .pink-600-hover-border:hover {
-  border-color: #ab296a !important;
+  border-color: rgb(171.2, 40.8, 105.6) !important;
 }
 
 .pink-600-hover-bg:hover {
-  background: #ab296a !important;
+  background: rgb(171.2, 40.8, 105.6) !important;
 }
 
 .pink-600-hover-pseudo-bg:hover::after, .pink-600-hover-pseudo-bg:hover::before {
-  background: #ab296a !important;
+  background: rgb(171.2, 40.8, 105.6) !important;
 }
 
 .pink-700-text {
-  color: #801f4f !important;
+  color: rgb(128.4, 30.6, 79.2) !important;
 }
 
 .pink-700-border {
-  border-color: #801f4f !important;
+  border-color: rgb(128.4, 30.6, 79.2) !important;
 }
 
 .pink-700-bg {
-  background: #801f4f !important;
+  background: rgb(128.4, 30.6, 79.2) !important;
 }
 
 .pink-700-pseudo-bg::after, .pink-700-pseudo-bg::before {
-  background: #801f4f !important;
+  background: rgb(128.4, 30.6, 79.2) !important;
 }
 
 .pink-700-hover-text:hover {
-  color: #801f4f !important;
+  color: rgb(128.4, 30.6, 79.2) !important;
 }
 
 .pink-700-hover-border:hover {
-  border-color: #801f4f !important;
+  border-color: rgb(128.4, 30.6, 79.2) !important;
 }
 
 .pink-700-hover-bg:hover {
-  background: #801f4f !important;
+  background: rgb(128.4, 30.6, 79.2) !important;
 }
 
 .pink-700-hover-pseudo-bg:hover::after, .pink-700-hover-pseudo-bg:hover::before {
-  background: #801f4f !important;
+  background: rgb(128.4, 30.6, 79.2) !important;
 }
 
 .pink-800-text {
-  color: #561435 !important;
+  color: rgb(85.6, 20.4, 52.8) !important;
 }
 
 .pink-800-border {
-  border-color: #561435 !important;
+  border-color: rgb(85.6, 20.4, 52.8) !important;
 }
 
 .pink-800-bg {
-  background: #561435 !important;
+  background: rgb(85.6, 20.4, 52.8) !important;
 }
 
 .pink-800-pseudo-bg::after, .pink-800-pseudo-bg::before {
-  background: #561435 !important;
+  background: rgb(85.6, 20.4, 52.8) !important;
 }
 
 .pink-800-hover-text:hover {
-  color: #561435 !important;
+  color: rgb(85.6, 20.4, 52.8) !important;
 }
 
 .pink-800-hover-border:hover {
-  border-color: #561435 !important;
+  border-color: rgb(85.6, 20.4, 52.8) !important;
 }
 
 .pink-800-hover-bg:hover {
-  background: #561435 !important;
+  background: rgb(85.6, 20.4, 52.8) !important;
 }
 
 .pink-800-hover-pseudo-bg:hover::after, .pink-800-hover-pseudo-bg:hover::before {
-  background: #561435 !important;
+  background: rgb(85.6, 20.4, 52.8) !important;
 }
 
 .pink-900-text {
-  color: #2b0a1a !important;
+  color: rgb(42.8, 10.2, 26.4) !important;
 }
 
 .pink-900-border {
-  border-color: #2b0a1a !important;
+  border-color: rgb(42.8, 10.2, 26.4) !important;
 }
 
 .pink-900-bg {
-  background: #2b0a1a !important;
+  background: rgb(42.8, 10.2, 26.4) !important;
 }
 
 .pink-900-pseudo-bg::after, .pink-900-pseudo-bg::before {
-  background: #2b0a1a !important;
+  background: rgb(42.8, 10.2, 26.4) !important;
 }
 
 .pink-900-hover-text:hover {
-  color: #2b0a1a !important;
+  color: rgb(42.8, 10.2, 26.4) !important;
 }
 
 .pink-900-hover-border:hover {
-  border-color: #2b0a1a !important;
+  border-color: rgb(42.8, 10.2, 26.4) !important;
 }
 
 .pink-900-hover-bg:hover {
-  background: #2b0a1a !important;
+  background: rgb(42.8, 10.2, 26.4) !important;
 }
 
 .pink-900-hover-pseudo-bg:hover::after, .pink-900-hover-pseudo-bg:hover::before {
-  background: #2b0a1a !important;
+  background: rgb(42.8, 10.2, 26.4) !important;
 }
 
 .red-100-text {
-  color: #f8d7da !important;
+  color: rgb(248, 214.6, 217.8) !important;
 }
 
 .red-100-border {
-  border-color: #f8d7da !important;
+  border-color: rgb(248, 214.6, 217.8) !important;
 }
 
 .red-100-bg {
-  background: #f8d7da !important;
+  background: rgb(248, 214.6, 217.8) !important;
 }
 
 .red-100-pseudo-bg::after, .red-100-pseudo-bg::before {
-  background: #f8d7da !important;
+  background: rgb(248, 214.6, 217.8) !important;
 }
 
 .red-100-hover-text:hover {
-  color: #f8d7da !important;
+  color: rgb(248, 214.6, 217.8) !important;
 }
 
 .red-100-hover-border:hover {
-  border-color: #f8d7da !important;
+  border-color: rgb(248, 214.6, 217.8) !important;
 }
 
 .red-100-hover-bg:hover {
-  background: #f8d7da !important;
+  background: rgb(248, 214.6, 217.8) !important;
 }
 
 .red-100-hover-pseudo-bg:hover::after, .red-100-hover-pseudo-bg:hover::before {
-  background: #f8d7da !important;
+  background: rgb(248, 214.6, 217.8) !important;
 }
 
 .red-200-text {
-  color: #f1aeb5 !important;
+  color: rgb(241, 174.2, 180.6) !important;
 }
 
 .red-200-border {
-  border-color: #f1aeb5 !important;
+  border-color: rgb(241, 174.2, 180.6) !important;
 }
 
 .red-200-bg {
-  background: #f1aeb5 !important;
+  background: rgb(241, 174.2, 180.6) !important;
 }
 
 .red-200-pseudo-bg::after, .red-200-pseudo-bg::before {
-  background: #f1aeb5 !important;
+  background: rgb(241, 174.2, 180.6) !important;
 }
 
 .red-200-hover-text:hover {
-  color: #f1aeb5 !important;
+  color: rgb(241, 174.2, 180.6) !important;
 }
 
 .red-200-hover-border:hover {
-  border-color: #f1aeb5 !important;
+  border-color: rgb(241, 174.2, 180.6) !important;
 }
 
 .red-200-hover-bg:hover {
-  background: #f1aeb5 !important;
+  background: rgb(241, 174.2, 180.6) !important;
 }
 
 .red-200-hover-pseudo-bg:hover::after, .red-200-hover-pseudo-bg:hover::before {
-  background: #f1aeb5 !important;
+  background: rgb(241, 174.2, 180.6) !important;
 }
 
 .red-300-text {
-  color: #ea868f !important;
+  color: rgb(234, 133.8, 143.4) !important;
 }
 
 .red-300-border {
-  border-color: #ea868f !important;
+  border-color: rgb(234, 133.8, 143.4) !important;
 }
 
 .red-300-bg {
-  background: #ea868f !important;
+  background: rgb(234, 133.8, 143.4) !important;
 }
 
 .red-300-pseudo-bg::after, .red-300-pseudo-bg::before {
-  background: #ea868f !important;
+  background: rgb(234, 133.8, 143.4) !important;
 }
 
 .red-300-hover-text:hover {
-  color: #ea868f !important;
+  color: rgb(234, 133.8, 143.4) !important;
 }
 
 .red-300-hover-border:hover {
-  border-color: #ea868f !important;
+  border-color: rgb(234, 133.8, 143.4) !important;
 }
 
 .red-300-hover-bg:hover {
-  background: #ea868f !important;
+  background: rgb(234, 133.8, 143.4) !important;
 }
 
 .red-300-hover-pseudo-bg:hover::after, .red-300-hover-pseudo-bg:hover::before {
-  background: #ea868f !important;
+  background: rgb(234, 133.8, 143.4) !important;
 }
 
 .red-400-text {
-  color: #e35d6a !important;
+  color: rgb(227, 93.4, 106.2) !important;
 }
 
 .red-400-border {
-  border-color: #e35d6a !important;
+  border-color: rgb(227, 93.4, 106.2) !important;
 }
 
 .red-400-bg {
-  background: #e35d6a !important;
+  background: rgb(227, 93.4, 106.2) !important;
 }
 
 .red-400-pseudo-bg::after, .red-400-pseudo-bg::before {
-  background: #e35d6a !important;
+  background: rgb(227, 93.4, 106.2) !important;
 }
 
 .red-400-hover-text:hover {
-  color: #e35d6a !important;
+  color: rgb(227, 93.4, 106.2) !important;
 }
 
 .red-400-hover-border:hover {
-  border-color: #e35d6a !important;
+  border-color: rgb(227, 93.4, 106.2) !important;
 }
 
 .red-400-hover-bg:hover {
-  background: #e35d6a !important;
+  background: rgb(227, 93.4, 106.2) !important;
 }
 
 .red-400-hover-pseudo-bg:hover::after, .red-400-hover-pseudo-bg:hover::before {
-  background: #e35d6a !important;
+  background: rgb(227, 93.4, 106.2) !important;
 }
 
 .red-500-text {
@@ -1713,259 +1713,259 @@
 }
 
 .red-600-text {
-  color: #b02a37 !important;
+  color: rgb(176, 42.4, 55.2) !important;
 }
 
 .red-600-border {
-  border-color: #b02a37 !important;
+  border-color: rgb(176, 42.4, 55.2) !important;
 }
 
 .red-600-bg {
-  background: #b02a37 !important;
+  background: rgb(176, 42.4, 55.2) !important;
 }
 
 .red-600-pseudo-bg::after, .red-600-pseudo-bg::before {
-  background: #b02a37 !important;
+  background: rgb(176, 42.4, 55.2) !important;
 }
 
 .red-600-hover-text:hover {
-  color: #b02a37 !important;
+  color: rgb(176, 42.4, 55.2) !important;
 }
 
 .red-600-hover-border:hover {
-  border-color: #b02a37 !important;
+  border-color: rgb(176, 42.4, 55.2) !important;
 }
 
 .red-600-hover-bg:hover {
-  background: #b02a37 !important;
+  background: rgb(176, 42.4, 55.2) !important;
 }
 
 .red-600-hover-pseudo-bg:hover::after, .red-600-hover-pseudo-bg:hover::before {
-  background: #b02a37 !important;
+  background: rgb(176, 42.4, 55.2) !important;
 }
 
 .red-700-text {
-  color: #842029 !important;
+  color: rgb(132, 31.8, 41.4) !important;
 }
 
 .red-700-border {
-  border-color: #842029 !important;
+  border-color: rgb(132, 31.8, 41.4) !important;
 }
 
 .red-700-bg {
-  background: #842029 !important;
+  background: rgb(132, 31.8, 41.4) !important;
 }
 
 .red-700-pseudo-bg::after, .red-700-pseudo-bg::before {
-  background: #842029 !important;
+  background: rgb(132, 31.8, 41.4) !important;
 }
 
 .red-700-hover-text:hover {
-  color: #842029 !important;
+  color: rgb(132, 31.8, 41.4) !important;
 }
 
 .red-700-hover-border:hover {
-  border-color: #842029 !important;
+  border-color: rgb(132, 31.8, 41.4) !important;
 }
 
 .red-700-hover-bg:hover {
-  background: #842029 !important;
+  background: rgb(132, 31.8, 41.4) !important;
 }
 
 .red-700-hover-pseudo-bg:hover::after, .red-700-hover-pseudo-bg:hover::before {
-  background: #842029 !important;
+  background: rgb(132, 31.8, 41.4) !important;
 }
 
 .red-800-text {
-  color: #58151c !important;
+  color: rgb(88, 21.2, 27.6) !important;
 }
 
 .red-800-border {
-  border-color: #58151c !important;
+  border-color: rgb(88, 21.2, 27.6) !important;
 }
 
 .red-800-bg {
-  background: #58151c !important;
+  background: rgb(88, 21.2, 27.6) !important;
 }
 
 .red-800-pseudo-bg::after, .red-800-pseudo-bg::before {
-  background: #58151c !important;
+  background: rgb(88, 21.2, 27.6) !important;
 }
 
 .red-800-hover-text:hover {
-  color: #58151c !important;
+  color: rgb(88, 21.2, 27.6) !important;
 }
 
 .red-800-hover-border:hover {
-  border-color: #58151c !important;
+  border-color: rgb(88, 21.2, 27.6) !important;
 }
 
 .red-800-hover-bg:hover {
-  background: #58151c !important;
+  background: rgb(88, 21.2, 27.6) !important;
 }
 
 .red-800-hover-pseudo-bg:hover::after, .red-800-hover-pseudo-bg:hover::before {
-  background: #58151c !important;
+  background: rgb(88, 21.2, 27.6) !important;
 }
 
 .red-900-text {
-  color: #2c0b0e !important;
+  color: rgb(44, 10.6, 13.8) !important;
 }
 
 .red-900-border {
-  border-color: #2c0b0e !important;
+  border-color: rgb(44, 10.6, 13.8) !important;
 }
 
 .red-900-bg {
-  background: #2c0b0e !important;
+  background: rgb(44, 10.6, 13.8) !important;
 }
 
 .red-900-pseudo-bg::after, .red-900-pseudo-bg::before {
-  background: #2c0b0e !important;
+  background: rgb(44, 10.6, 13.8) !important;
 }
 
 .red-900-hover-text:hover {
-  color: #2c0b0e !important;
+  color: rgb(44, 10.6, 13.8) !important;
 }
 
 .red-900-hover-border:hover {
-  border-color: #2c0b0e !important;
+  border-color: rgb(44, 10.6, 13.8) !important;
 }
 
 .red-900-hover-bg:hover {
-  background: #2c0b0e !important;
+  background: rgb(44, 10.6, 13.8) !important;
 }
 
 .red-900-hover-pseudo-bg:hover::after, .red-900-hover-pseudo-bg:hover::before {
-  background: #2c0b0e !important;
+  background: rgb(44, 10.6, 13.8) !important;
 }
 
 .orange-100-text {
-  color: #ffe5d0 !important;
+  color: rgb(254.6, 229.2, 208) !important;
 }
 
 .orange-100-border {
-  border-color: #ffe5d0 !important;
+  border-color: rgb(254.6, 229.2, 208) !important;
 }
 
 .orange-100-bg {
-  background: #ffe5d0 !important;
+  background: rgb(254.6, 229.2, 208) !important;
 }
 
 .orange-100-pseudo-bg::after, .orange-100-pseudo-bg::before {
-  background: #ffe5d0 !important;
+  background: rgb(254.6, 229.2, 208) !important;
 }
 
 .orange-100-hover-text:hover {
-  color: #ffe5d0 !important;
+  color: rgb(254.6, 229.2, 208) !important;
 }
 
 .orange-100-hover-border:hover {
-  border-color: #ffe5d0 !important;
+  border-color: rgb(254.6, 229.2, 208) !important;
 }
 
 .orange-100-hover-bg:hover {
-  background: #ffe5d0 !important;
+  background: rgb(254.6, 229.2, 208) !important;
 }
 
 .orange-100-hover-pseudo-bg:hover::after, .orange-100-hover-pseudo-bg:hover::before {
-  background: #ffe5d0 !important;
+  background: rgb(254.6, 229.2, 208) !important;
 }
 
 .orange-200-text {
-  color: #fecba1 !important;
+  color: rgb(254.2, 203.4, 161) !important;
 }
 
 .orange-200-border {
-  border-color: #fecba1 !important;
+  border-color: rgb(254.2, 203.4, 161) !important;
 }
 
 .orange-200-bg {
-  background: #fecba1 !important;
+  background: rgb(254.2, 203.4, 161) !important;
 }
 
 .orange-200-pseudo-bg::after, .orange-200-pseudo-bg::before {
-  background: #fecba1 !important;
+  background: rgb(254.2, 203.4, 161) !important;
 }
 
 .orange-200-hover-text:hover {
-  color: #fecba1 !important;
+  color: rgb(254.2, 203.4, 161) !important;
 }
 
 .orange-200-hover-border:hover {
-  border-color: #fecba1 !important;
+  border-color: rgb(254.2, 203.4, 161) !important;
 }
 
 .orange-200-hover-bg:hover {
-  background: #fecba1 !important;
+  background: rgb(254.2, 203.4, 161) !important;
 }
 
 .orange-200-hover-pseudo-bg:hover::after, .orange-200-hover-pseudo-bg:hover::before {
-  background: #fecba1 !important;
+  background: rgb(254.2, 203.4, 161) !important;
 }
 
 .orange-300-text {
-  color: #feb272 !important;
+  color: rgb(253.8, 177.6, 114) !important;
 }
 
 .orange-300-border {
-  border-color: #feb272 !important;
+  border-color: rgb(253.8, 177.6, 114) !important;
 }
 
 .orange-300-bg {
-  background: #feb272 !important;
+  background: rgb(253.8, 177.6, 114) !important;
 }
 
 .orange-300-pseudo-bg::after, .orange-300-pseudo-bg::before {
-  background: #feb272 !important;
+  background: rgb(253.8, 177.6, 114) !important;
 }
 
 .orange-300-hover-text:hover {
-  color: #feb272 !important;
+  color: rgb(253.8, 177.6, 114) !important;
 }
 
 .orange-300-hover-border:hover {
-  border-color: #feb272 !important;
+  border-color: rgb(253.8, 177.6, 114) !important;
 }
 
 .orange-300-hover-bg:hover {
-  background: #feb272 !important;
+  background: rgb(253.8, 177.6, 114) !important;
 }
 
 .orange-300-hover-pseudo-bg:hover::after, .orange-300-hover-pseudo-bg:hover::before {
-  background: #feb272 !important;
+  background: rgb(253.8, 177.6, 114) !important;
 }
 
 .orange-400-text {
-  color: #fd9843 !important;
+  color: rgb(253.4, 151.8, 67) !important;
 }
 
 .orange-400-border {
-  border-color: #fd9843 !important;
+  border-color: rgb(253.4, 151.8, 67) !important;
 }
 
 .orange-400-bg {
-  background: #fd9843 !important;
+  background: rgb(253.4, 151.8, 67) !important;
 }
 
 .orange-400-pseudo-bg::after, .orange-400-pseudo-bg::before {
-  background: #fd9843 !important;
+  background: rgb(253.4, 151.8, 67) !important;
 }
 
 .orange-400-hover-text:hover {
-  color: #fd9843 !important;
+  color: rgb(253.4, 151.8, 67) !important;
 }
 
 .orange-400-hover-border:hover {
-  border-color: #fd9843 !important;
+  border-color: rgb(253.4, 151.8, 67) !important;
 }
 
 .orange-400-hover-bg:hover {
-  background: #fd9843 !important;
+  background: rgb(253.4, 151.8, 67) !important;
 }
 
 .orange-400-hover-pseudo-bg:hover::after, .orange-400-hover-pseudo-bg:hover::before {
-  background: #fd9843 !important;
+  background: rgb(253.4, 151.8, 67) !important;
 }
 
 .orange-500-text {
@@ -2001,259 +2001,259 @@
 }
 
 .orange-600-text {
-  color: #ca6510 !important;
+  color: rgb(202.4, 100.8, 16) !important;
 }
 
 .orange-600-border {
-  border-color: #ca6510 !important;
+  border-color: rgb(202.4, 100.8, 16) !important;
 }
 
 .orange-600-bg {
-  background: #ca6510 !important;
+  background: rgb(202.4, 100.8, 16) !important;
 }
 
 .orange-600-pseudo-bg::after, .orange-600-pseudo-bg::before {
-  background: #ca6510 !important;
+  background: rgb(202.4, 100.8, 16) !important;
 }
 
 .orange-600-hover-text:hover {
-  color: #ca6510 !important;
+  color: rgb(202.4, 100.8, 16) !important;
 }
 
 .orange-600-hover-border:hover {
-  border-color: #ca6510 !important;
+  border-color: rgb(202.4, 100.8, 16) !important;
 }
 
 .orange-600-hover-bg:hover {
-  background: #ca6510 !important;
+  background: rgb(202.4, 100.8, 16) !important;
 }
 
 .orange-600-hover-pseudo-bg:hover::after, .orange-600-hover-pseudo-bg:hover::before {
-  background: #ca6510 !important;
+  background: rgb(202.4, 100.8, 16) !important;
 }
 
 .orange-700-text {
-  color: #984c0c !important;
+  color: rgb(151.8, 75.6, 12) !important;
 }
 
 .orange-700-border {
-  border-color: #984c0c !important;
+  border-color: rgb(151.8, 75.6, 12) !important;
 }
 
 .orange-700-bg {
-  background: #984c0c !important;
+  background: rgb(151.8, 75.6, 12) !important;
 }
 
 .orange-700-pseudo-bg::after, .orange-700-pseudo-bg::before {
-  background: #984c0c !important;
+  background: rgb(151.8, 75.6, 12) !important;
 }
 
 .orange-700-hover-text:hover {
-  color: #984c0c !important;
+  color: rgb(151.8, 75.6, 12) !important;
 }
 
 .orange-700-hover-border:hover {
-  border-color: #984c0c !important;
+  border-color: rgb(151.8, 75.6, 12) !important;
 }
 
 .orange-700-hover-bg:hover {
-  background: #984c0c !important;
+  background: rgb(151.8, 75.6, 12) !important;
 }
 
 .orange-700-hover-pseudo-bg:hover::after, .orange-700-hover-pseudo-bg:hover::before {
-  background: #984c0c !important;
+  background: rgb(151.8, 75.6, 12) !important;
 }
 
 .orange-800-text {
-  color: #653208 !important;
+  color: rgb(101.2, 50.4, 8) !important;
 }
 
 .orange-800-border {
-  border-color: #653208 !important;
+  border-color: rgb(101.2, 50.4, 8) !important;
 }
 
 .orange-800-bg {
-  background: #653208 !important;
+  background: rgb(101.2, 50.4, 8) !important;
 }
 
 .orange-800-pseudo-bg::after, .orange-800-pseudo-bg::before {
-  background: #653208 !important;
+  background: rgb(101.2, 50.4, 8) !important;
 }
 
 .orange-800-hover-text:hover {
-  color: #653208 !important;
+  color: rgb(101.2, 50.4, 8) !important;
 }
 
 .orange-800-hover-border:hover {
-  border-color: #653208 !important;
+  border-color: rgb(101.2, 50.4, 8) !important;
 }
 
 .orange-800-hover-bg:hover {
-  background: #653208 !important;
+  background: rgb(101.2, 50.4, 8) !important;
 }
 
 .orange-800-hover-pseudo-bg:hover::after, .orange-800-hover-pseudo-bg:hover::before {
-  background: #653208 !important;
+  background: rgb(101.2, 50.4, 8) !important;
 }
 
 .orange-900-text {
-  color: #331904 !important;
+  color: rgb(50.6, 25.2, 4) !important;
 }
 
 .orange-900-border {
-  border-color: #331904 !important;
+  border-color: rgb(50.6, 25.2, 4) !important;
 }
 
 .orange-900-bg {
-  background: #331904 !important;
+  background: rgb(50.6, 25.2, 4) !important;
 }
 
 .orange-900-pseudo-bg::after, .orange-900-pseudo-bg::before {
-  background: #331904 !important;
+  background: rgb(50.6, 25.2, 4) !important;
 }
 
 .orange-900-hover-text:hover {
-  color: #331904 !important;
+  color: rgb(50.6, 25.2, 4) !important;
 }
 
 .orange-900-hover-border:hover {
-  border-color: #331904 !important;
+  border-color: rgb(50.6, 25.2, 4) !important;
 }
 
 .orange-900-hover-bg:hover {
-  background: #331904 !important;
+  background: rgb(50.6, 25.2, 4) !important;
 }
 
 .orange-900-hover-pseudo-bg:hover::after, .orange-900-hover-pseudo-bg:hover::before {
-  background: #331904 !important;
+  background: rgb(50.6, 25.2, 4) !important;
 }
 
 .yellow-100-text {
-  color: #fff3cd !important;
+  color: rgb(255, 242.6, 205.4) !important;
 }
 
 .yellow-100-border {
-  border-color: #fff3cd !important;
+  border-color: rgb(255, 242.6, 205.4) !important;
 }
 
 .yellow-100-bg {
-  background: #fff3cd !important;
+  background: rgb(255, 242.6, 205.4) !important;
 }
 
 .yellow-100-pseudo-bg::after, .yellow-100-pseudo-bg::before {
-  background: #fff3cd !important;
+  background: rgb(255, 242.6, 205.4) !important;
 }
 
 .yellow-100-hover-text:hover {
-  color: #fff3cd !important;
+  color: rgb(255, 242.6, 205.4) !important;
 }
 
 .yellow-100-hover-border:hover {
-  border-color: #fff3cd !important;
+  border-color: rgb(255, 242.6, 205.4) !important;
 }
 
 .yellow-100-hover-bg:hover {
-  background: #fff3cd !important;
+  background: rgb(255, 242.6, 205.4) !important;
 }
 
 .yellow-100-hover-pseudo-bg:hover::after, .yellow-100-hover-pseudo-bg:hover::before {
-  background: #fff3cd !important;
+  background: rgb(255, 242.6, 205.4) !important;
 }
 
 .yellow-200-text {
-  color: #ffe69c !important;
+  color: rgb(255, 230.2, 155.8) !important;
 }
 
 .yellow-200-border {
-  border-color: #ffe69c !important;
+  border-color: rgb(255, 230.2, 155.8) !important;
 }
 
 .yellow-200-bg {
-  background: #ffe69c !important;
+  background: rgb(255, 230.2, 155.8) !important;
 }
 
 .yellow-200-pseudo-bg::after, .yellow-200-pseudo-bg::before {
-  background: #ffe69c !important;
+  background: rgb(255, 230.2, 155.8) !important;
 }
 
 .yellow-200-hover-text:hover {
-  color: #ffe69c !important;
+  color: rgb(255, 230.2, 155.8) !important;
 }
 
 .yellow-200-hover-border:hover {
-  border-color: #ffe69c !important;
+  border-color: rgb(255, 230.2, 155.8) !important;
 }
 
 .yellow-200-hover-bg:hover {
-  background: #ffe69c !important;
+  background: rgb(255, 230.2, 155.8) !important;
 }
 
 .yellow-200-hover-pseudo-bg:hover::after, .yellow-200-hover-pseudo-bg:hover::before {
-  background: #ffe69c !important;
+  background: rgb(255, 230.2, 155.8) !important;
 }
 
 .yellow-300-text {
-  color: #ffda6a !important;
+  color: rgb(255, 217.8, 106.2) !important;
 }
 
 .yellow-300-border {
-  border-color: #ffda6a !important;
+  border-color: rgb(255, 217.8, 106.2) !important;
 }
 
 .yellow-300-bg {
-  background: #ffda6a !important;
+  background: rgb(255, 217.8, 106.2) !important;
 }
 
 .yellow-300-pseudo-bg::after, .yellow-300-pseudo-bg::before {
-  background: #ffda6a !important;
+  background: rgb(255, 217.8, 106.2) !important;
 }
 
 .yellow-300-hover-text:hover {
-  color: #ffda6a !important;
+  color: rgb(255, 217.8, 106.2) !important;
 }
 
 .yellow-300-hover-border:hover {
-  border-color: #ffda6a !important;
+  border-color: rgb(255, 217.8, 106.2) !important;
 }
 
 .yellow-300-hover-bg:hover {
-  background: #ffda6a !important;
+  background: rgb(255, 217.8, 106.2) !important;
 }
 
 .yellow-300-hover-pseudo-bg:hover::after, .yellow-300-hover-pseudo-bg:hover::before {
-  background: #ffda6a !important;
+  background: rgb(255, 217.8, 106.2) !important;
 }
 
 .yellow-400-text {
-  color: #ffcd39 !important;
+  color: rgb(255, 205.4, 56.6) !important;
 }
 
 .yellow-400-border {
-  border-color: #ffcd39 !important;
+  border-color: rgb(255, 205.4, 56.6) !important;
 }
 
 .yellow-400-bg {
-  background: #ffcd39 !important;
+  background: rgb(255, 205.4, 56.6) !important;
 }
 
 .yellow-400-pseudo-bg::after, .yellow-400-pseudo-bg::before {
-  background: #ffcd39 !important;
+  background: rgb(255, 205.4, 56.6) !important;
 }
 
 .yellow-400-hover-text:hover {
-  color: #ffcd39 !important;
+  color: rgb(255, 205.4, 56.6) !important;
 }
 
 .yellow-400-hover-border:hover {
-  border-color: #ffcd39 !important;
+  border-color: rgb(255, 205.4, 56.6) !important;
 }
 
 .yellow-400-hover-bg:hover {
-  background: #ffcd39 !important;
+  background: rgb(255, 205.4, 56.6) !important;
 }
 
 .yellow-400-hover-pseudo-bg:hover::after, .yellow-400-hover-pseudo-bg:hover::before {
-  background: #ffcd39 !important;
+  background: rgb(255, 205.4, 56.6) !important;
 }
 
 .yellow-500-text {
@@ -2289,259 +2289,259 @@
 }
 
 .yellow-600-text {
-  color: #cc9a06 !important;
+  color: rgb(204, 154.4, 5.6) !important;
 }
 
 .yellow-600-border {
-  border-color: #cc9a06 !important;
+  border-color: rgb(204, 154.4, 5.6) !important;
 }
 
 .yellow-600-bg {
-  background: #cc9a06 !important;
+  background: rgb(204, 154.4, 5.6) !important;
 }
 
 .yellow-600-pseudo-bg::after, .yellow-600-pseudo-bg::before {
-  background: #cc9a06 !important;
+  background: rgb(204, 154.4, 5.6) !important;
 }
 
 .yellow-600-hover-text:hover {
-  color: #cc9a06 !important;
+  color: rgb(204, 154.4, 5.6) !important;
 }
 
 .yellow-600-hover-border:hover {
-  border-color: #cc9a06 !important;
+  border-color: rgb(204, 154.4, 5.6) !important;
 }
 
 .yellow-600-hover-bg:hover {
-  background: #cc9a06 !important;
+  background: rgb(204, 154.4, 5.6) !important;
 }
 
 .yellow-600-hover-pseudo-bg:hover::after, .yellow-600-hover-pseudo-bg:hover::before {
-  background: #cc9a06 !important;
+  background: rgb(204, 154.4, 5.6) !important;
 }
 
 .yellow-700-text {
-  color: #997404 !important;
+  color: rgb(153, 115.8, 4.2) !important;
 }
 
 .yellow-700-border {
-  border-color: #997404 !important;
+  border-color: rgb(153, 115.8, 4.2) !important;
 }
 
 .yellow-700-bg {
-  background: #997404 !important;
+  background: rgb(153, 115.8, 4.2) !important;
 }
 
 .yellow-700-pseudo-bg::after, .yellow-700-pseudo-bg::before {
-  background: #997404 !important;
+  background: rgb(153, 115.8, 4.2) !important;
 }
 
 .yellow-700-hover-text:hover {
-  color: #997404 !important;
+  color: rgb(153, 115.8, 4.2) !important;
 }
 
 .yellow-700-hover-border:hover {
-  border-color: #997404 !important;
+  border-color: rgb(153, 115.8, 4.2) !important;
 }
 
 .yellow-700-hover-bg:hover {
-  background: #997404 !important;
+  background: rgb(153, 115.8, 4.2) !important;
 }
 
 .yellow-700-hover-pseudo-bg:hover::after, .yellow-700-hover-pseudo-bg:hover::before {
-  background: #997404 !important;
+  background: rgb(153, 115.8, 4.2) !important;
 }
 
 .yellow-800-text {
-  color: #664d03 !important;
+  color: rgb(102, 77.2, 2.8) !important;
 }
 
 .yellow-800-border {
-  border-color: #664d03 !important;
+  border-color: rgb(102, 77.2, 2.8) !important;
 }
 
 .yellow-800-bg {
-  background: #664d03 !important;
+  background: rgb(102, 77.2, 2.8) !important;
 }
 
 .yellow-800-pseudo-bg::after, .yellow-800-pseudo-bg::before {
-  background: #664d03 !important;
+  background: rgb(102, 77.2, 2.8) !important;
 }
 
 .yellow-800-hover-text:hover {
-  color: #664d03 !important;
+  color: rgb(102, 77.2, 2.8) !important;
 }
 
 .yellow-800-hover-border:hover {
-  border-color: #664d03 !important;
+  border-color: rgb(102, 77.2, 2.8) !important;
 }
 
 .yellow-800-hover-bg:hover {
-  background: #664d03 !important;
+  background: rgb(102, 77.2, 2.8) !important;
 }
 
 .yellow-800-hover-pseudo-bg:hover::after, .yellow-800-hover-pseudo-bg:hover::before {
-  background: #664d03 !important;
+  background: rgb(102, 77.2, 2.8) !important;
 }
 
 .yellow-900-text {
-  color: #332701 !important;
+  color: rgb(51, 38.6, 1.4) !important;
 }
 
 .yellow-900-border {
-  border-color: #332701 !important;
+  border-color: rgb(51, 38.6, 1.4) !important;
 }
 
 .yellow-900-bg {
-  background: #332701 !important;
+  background: rgb(51, 38.6, 1.4) !important;
 }
 
 .yellow-900-pseudo-bg::after, .yellow-900-pseudo-bg::before {
-  background: #332701 !important;
+  background: rgb(51, 38.6, 1.4) !important;
 }
 
 .yellow-900-hover-text:hover {
-  color: #332701 !important;
+  color: rgb(51, 38.6, 1.4) !important;
 }
 
 .yellow-900-hover-border:hover {
-  border-color: #332701 !important;
+  border-color: rgb(51, 38.6, 1.4) !important;
 }
 
 .yellow-900-hover-bg:hover {
-  background: #332701 !important;
+  background: rgb(51, 38.6, 1.4) !important;
 }
 
 .yellow-900-hover-pseudo-bg:hover::after, .yellow-900-hover-pseudo-bg:hover::before {
-  background: #332701 !important;
+  background: rgb(51, 38.6, 1.4) !important;
 }
 
 .green-100-text {
-  color: #d1e7dd !important;
+  color: rgb(209, 231, 220.8) !important;
 }
 
 .green-100-border {
-  border-color: #d1e7dd !important;
+  border-color: rgb(209, 231, 220.8) !important;
 }
 
 .green-100-bg {
-  background: #d1e7dd !important;
+  background: rgb(209, 231, 220.8) !important;
 }
 
 .green-100-pseudo-bg::after, .green-100-pseudo-bg::before {
-  background: #d1e7dd !important;
+  background: rgb(209, 231, 220.8) !important;
 }
 
 .green-100-hover-text:hover {
-  color: #d1e7dd !important;
+  color: rgb(209, 231, 220.8) !important;
 }
 
 .green-100-hover-border:hover {
-  border-color: #d1e7dd !important;
+  border-color: rgb(209, 231, 220.8) !important;
 }
 
 .green-100-hover-bg:hover {
-  background: #d1e7dd !important;
+  background: rgb(209, 231, 220.8) !important;
 }
 
 .green-100-hover-pseudo-bg:hover::after, .green-100-hover-pseudo-bg:hover::before {
-  background: #d1e7dd !important;
+  background: rgb(209, 231, 220.8) !important;
 }
 
 .green-200-text {
-  color: #a3cfbb !important;
+  color: rgb(163, 207, 186.6) !important;
 }
 
 .green-200-border {
-  border-color: #a3cfbb !important;
+  border-color: rgb(163, 207, 186.6) !important;
 }
 
 .green-200-bg {
-  background: #a3cfbb !important;
+  background: rgb(163, 207, 186.6) !important;
 }
 
 .green-200-pseudo-bg::after, .green-200-pseudo-bg::before {
-  background: #a3cfbb !important;
+  background: rgb(163, 207, 186.6) !important;
 }
 
 .green-200-hover-text:hover {
-  color: #a3cfbb !important;
+  color: rgb(163, 207, 186.6) !important;
 }
 
 .green-200-hover-border:hover {
-  border-color: #a3cfbb !important;
+  border-color: rgb(163, 207, 186.6) !important;
 }
 
 .green-200-hover-bg:hover {
-  background: #a3cfbb !important;
+  background: rgb(163, 207, 186.6) !important;
 }
 
 .green-200-hover-pseudo-bg:hover::after, .green-200-hover-pseudo-bg:hover::before {
-  background: #a3cfbb !important;
+  background: rgb(163, 207, 186.6) !important;
 }
 
 .green-300-text {
-  color: #75b798 !important;
+  color: rgb(117, 183, 152.4) !important;
 }
 
 .green-300-border {
-  border-color: #75b798 !important;
+  border-color: rgb(117, 183, 152.4) !important;
 }
 
 .green-300-bg {
-  background: #75b798 !important;
+  background: rgb(117, 183, 152.4) !important;
 }
 
 .green-300-pseudo-bg::after, .green-300-pseudo-bg::before {
-  background: #75b798 !important;
+  background: rgb(117, 183, 152.4) !important;
 }
 
 .green-300-hover-text:hover {
-  color: #75b798 !important;
+  color: rgb(117, 183, 152.4) !important;
 }
 
 .green-300-hover-border:hover {
-  border-color: #75b798 !important;
+  border-color: rgb(117, 183, 152.4) !important;
 }
 
 .green-300-hover-bg:hover {
-  background: #75b798 !important;
+  background: rgb(117, 183, 152.4) !important;
 }
 
 .green-300-hover-pseudo-bg:hover::after, .green-300-hover-pseudo-bg:hover::before {
-  background: #75b798 !important;
+  background: rgb(117, 183, 152.4) !important;
 }
 
 .green-400-text {
-  color: #479f76 !important;
+  color: rgb(71, 159, 118.2) !important;
 }
 
 .green-400-border {
-  border-color: #479f76 !important;
+  border-color: rgb(71, 159, 118.2) !important;
 }
 
 .green-400-bg {
-  background: #479f76 !important;
+  background: rgb(71, 159, 118.2) !important;
 }
 
 .green-400-pseudo-bg::after, .green-400-pseudo-bg::before {
-  background: #479f76 !important;
+  background: rgb(71, 159, 118.2) !important;
 }
 
 .green-400-hover-text:hover {
-  color: #479f76 !important;
+  color: rgb(71, 159, 118.2) !important;
 }
 
 .green-400-hover-border:hover {
-  border-color: #479f76 !important;
+  border-color: rgb(71, 159, 118.2) !important;
 }
 
 .green-400-hover-bg:hover {
-  background: #479f76 !important;
+  background: rgb(71, 159, 118.2) !important;
 }
 
 .green-400-hover-pseudo-bg:hover::after, .green-400-hover-pseudo-bg:hover::before {
-  background: #479f76 !important;
+  background: rgb(71, 159, 118.2) !important;
 }
 
 .green-500-text {
@@ -2609,227 +2609,227 @@
 }
 
 .green-700-text {
-  color: #146c43 !important;
+  color: rgb(20, 108, 67.2) !important;
 }
 
 .green-700-border {
-  border-color: #146c43 !important;
+  border-color: rgb(20, 108, 67.2) !important;
 }
 
 .green-700-bg {
-  background: #146c43 !important;
+  background: rgb(20, 108, 67.2) !important;
 }
 
 .green-700-pseudo-bg::after, .green-700-pseudo-bg::before {
-  background: #146c43 !important;
+  background: rgb(20, 108, 67.2) !important;
 }
 
 .green-700-hover-text:hover {
-  color: #146c43 !important;
+  color: rgb(20, 108, 67.2) !important;
 }
 
 .green-700-hover-border:hover {
-  border-color: #146c43 !important;
+  border-color: rgb(20, 108, 67.2) !important;
 }
 
 .green-700-hover-bg:hover {
-  background: #146c43 !important;
+  background: rgb(20, 108, 67.2) !important;
 }
 
 .green-700-hover-pseudo-bg:hover::after, .green-700-hover-pseudo-bg:hover::before {
-  background: #146c43 !important;
+  background: rgb(20, 108, 67.2) !important;
 }
 
 .green-800-text {
-  color: #0f5132 !important;
+  color: rgb(15, 81, 50.4) !important;
 }
 
 .green-800-border {
-  border-color: #0f5132 !important;
+  border-color: rgb(15, 81, 50.4) !important;
 }
 
 .green-800-bg {
-  background: #0f5132 !important;
+  background: rgb(15, 81, 50.4) !important;
 }
 
 .green-800-pseudo-bg::after, .green-800-pseudo-bg::before {
-  background: #0f5132 !important;
+  background: rgb(15, 81, 50.4) !important;
 }
 
 .green-800-hover-text:hover {
-  color: #0f5132 !important;
+  color: rgb(15, 81, 50.4) !important;
 }
 
 .green-800-hover-border:hover {
-  border-color: #0f5132 !important;
+  border-color: rgb(15, 81, 50.4) !important;
 }
 
 .green-800-hover-bg:hover {
-  background: #0f5132 !important;
+  background: rgb(15, 81, 50.4) !important;
 }
 
 .green-800-hover-pseudo-bg:hover::after, .green-800-hover-pseudo-bg:hover::before {
-  background: #0f5132 !important;
+  background: rgb(15, 81, 50.4) !important;
 }
 
 .green-900-text {
-  color: #0a3622 !important;
+  color: rgb(10, 54, 33.6) !important;
 }
 
 .green-900-border {
-  border-color: #0a3622 !important;
+  border-color: rgb(10, 54, 33.6) !important;
 }
 
 .green-900-bg {
-  background: #0a3622 !important;
+  background: rgb(10, 54, 33.6) !important;
 }
 
 .green-900-pseudo-bg::after, .green-900-pseudo-bg::before {
-  background: #0a3622 !important;
+  background: rgb(10, 54, 33.6) !important;
 }
 
 .green-900-hover-text:hover {
-  color: #0a3622 !important;
+  color: rgb(10, 54, 33.6) !important;
 }
 
 .green-900-hover-border:hover {
-  border-color: #0a3622 !important;
+  border-color: rgb(10, 54, 33.6) !important;
 }
 
 .green-900-hover-bg:hover {
-  background: #0a3622 !important;
+  background: rgb(10, 54, 33.6) !important;
 }
 
 .green-900-hover-pseudo-bg:hover::after, .green-900-hover-pseudo-bg:hover::before {
-  background: #0a3622 !important;
+  background: rgb(10, 54, 33.6) !important;
 }
 
 .teal-100-text {
-  color: #d2f4ea !important;
+  color: rgb(210.4, 244.2, 234.2) !important;
 }
 
 .teal-100-border {
-  border-color: #d2f4ea !important;
+  border-color: rgb(210.4, 244.2, 234.2) !important;
 }
 
 .teal-100-bg {
-  background: #d2f4ea !important;
+  background: rgb(210.4, 244.2, 234.2) !important;
 }
 
 .teal-100-pseudo-bg::after, .teal-100-pseudo-bg::before {
-  background: #d2f4ea !important;
+  background: rgb(210.4, 244.2, 234.2) !important;
 }
 
 .teal-100-hover-text:hover {
-  color: #d2f4ea !important;
+  color: rgb(210.4, 244.2, 234.2) !important;
 }
 
 .teal-100-hover-border:hover {
-  border-color: #d2f4ea !important;
+  border-color: rgb(210.4, 244.2, 234.2) !important;
 }
 
 .teal-100-hover-bg:hover {
-  background: #d2f4ea !important;
+  background: rgb(210.4, 244.2, 234.2) !important;
 }
 
 .teal-100-hover-pseudo-bg:hover::after, .teal-100-hover-pseudo-bg:hover::before {
-  background: #d2f4ea !important;
+  background: rgb(210.4, 244.2, 234.2) !important;
 }
 
 .teal-200-text {
-  color: #a6e9d5 !important;
+  color: rgb(165.8, 233.4, 213.4) !important;
 }
 
 .teal-200-border {
-  border-color: #a6e9d5 !important;
+  border-color: rgb(165.8, 233.4, 213.4) !important;
 }
 
 .teal-200-bg {
-  background: #a6e9d5 !important;
+  background: rgb(165.8, 233.4, 213.4) !important;
 }
 
 .teal-200-pseudo-bg::after, .teal-200-pseudo-bg::before {
-  background: #a6e9d5 !important;
+  background: rgb(165.8, 233.4, 213.4) !important;
 }
 
 .teal-200-hover-text:hover {
-  color: #a6e9d5 !important;
+  color: rgb(165.8, 233.4, 213.4) !important;
 }
 
 .teal-200-hover-border:hover {
-  border-color: #a6e9d5 !important;
+  border-color: rgb(165.8, 233.4, 213.4) !important;
 }
 
 .teal-200-hover-bg:hover {
-  background: #a6e9d5 !important;
+  background: rgb(165.8, 233.4, 213.4) !important;
 }
 
 .teal-200-hover-pseudo-bg:hover::after, .teal-200-hover-pseudo-bg:hover::before {
-  background: #a6e9d5 !important;
+  background: rgb(165.8, 233.4, 213.4) !important;
 }
 
 .teal-300-text {
-  color: #79dfc1 !important;
+  color: rgb(121.2, 222.6, 192.6) !important;
 }
 
 .teal-300-border {
-  border-color: #79dfc1 !important;
+  border-color: rgb(121.2, 222.6, 192.6) !important;
 }
 
 .teal-300-bg {
-  background: #79dfc1 !important;
+  background: rgb(121.2, 222.6, 192.6) !important;
 }
 
 .teal-300-pseudo-bg::after, .teal-300-pseudo-bg::before {
-  background: #79dfc1 !important;
+  background: rgb(121.2, 222.6, 192.6) !important;
 }
 
 .teal-300-hover-text:hover {
-  color: #79dfc1 !important;
+  color: rgb(121.2, 222.6, 192.6) !important;
 }
 
 .teal-300-hover-border:hover {
-  border-color: #79dfc1 !important;
+  border-color: rgb(121.2, 222.6, 192.6) !important;
 }
 
 .teal-300-hover-bg:hover {
-  background: #79dfc1 !important;
+  background: rgb(121.2, 222.6, 192.6) !important;
 }
 
 .teal-300-hover-pseudo-bg:hover::after, .teal-300-hover-pseudo-bg:hover::before {
-  background: #79dfc1 !important;
+  background: rgb(121.2, 222.6, 192.6) !important;
 }
 
 .teal-400-text {
-  color: #4dd4ac !important;
+  color: rgb(76.6, 211.8, 171.8) !important;
 }
 
 .teal-400-border {
-  border-color: #4dd4ac !important;
+  border-color: rgb(76.6, 211.8, 171.8) !important;
 }
 
 .teal-400-bg {
-  background: #4dd4ac !important;
+  background: rgb(76.6, 211.8, 171.8) !important;
 }
 
 .teal-400-pseudo-bg::after, .teal-400-pseudo-bg::before {
-  background: #4dd4ac !important;
+  background: rgb(76.6, 211.8, 171.8) !important;
 }
 
 .teal-400-hover-text:hover {
-  color: #4dd4ac !important;
+  color: rgb(76.6, 211.8, 171.8) !important;
 }
 
 .teal-400-hover-border:hover {
-  border-color: #4dd4ac !important;
+  border-color: rgb(76.6, 211.8, 171.8) !important;
 }
 
 .teal-400-hover-bg:hover {
-  background: #4dd4ac !important;
+  background: rgb(76.6, 211.8, 171.8) !important;
 }
 
 .teal-400-hover-pseudo-bg:hover::after, .teal-400-hover-pseudo-bg:hover::before {
-  background: #4dd4ac !important;
+  background: rgb(76.6, 211.8, 171.8) !important;
 }
 
 .teal-500-text {
@@ -2865,259 +2865,259 @@
 }
 
 .teal-600-text {
-  color: #1aa179 !important;
+  color: rgb(25.6, 160.8, 120.8) !important;
 }
 
 .teal-600-border {
-  border-color: #1aa179 !important;
+  border-color: rgb(25.6, 160.8, 120.8) !important;
 }
 
 .teal-600-bg {
-  background: #1aa179 !important;
+  background: rgb(25.6, 160.8, 120.8) !important;
 }
 
 .teal-600-pseudo-bg::after, .teal-600-pseudo-bg::before {
-  background: #1aa179 !important;
+  background: rgb(25.6, 160.8, 120.8) !important;
 }
 
 .teal-600-hover-text:hover {
-  color: #1aa179 !important;
+  color: rgb(25.6, 160.8, 120.8) !important;
 }
 
 .teal-600-hover-border:hover {
-  border-color: #1aa179 !important;
+  border-color: rgb(25.6, 160.8, 120.8) !important;
 }
 
 .teal-600-hover-bg:hover {
-  background: #1aa179 !important;
+  background: rgb(25.6, 160.8, 120.8) !important;
 }
 
 .teal-600-hover-pseudo-bg:hover::after, .teal-600-hover-pseudo-bg:hover::before {
-  background: #1aa179 !important;
+  background: rgb(25.6, 160.8, 120.8) !important;
 }
 
 .teal-700-text {
-  color: #13795b !important;
+  color: rgb(19.2, 120.6, 90.6) !important;
 }
 
 .teal-700-border {
-  border-color: #13795b !important;
+  border-color: rgb(19.2, 120.6, 90.6) !important;
 }
 
 .teal-700-bg {
-  background: #13795b !important;
+  background: rgb(19.2, 120.6, 90.6) !important;
 }
 
 .teal-700-pseudo-bg::after, .teal-700-pseudo-bg::before {
-  background: #13795b !important;
+  background: rgb(19.2, 120.6, 90.6) !important;
 }
 
 .teal-700-hover-text:hover {
-  color: #13795b !important;
+  color: rgb(19.2, 120.6, 90.6) !important;
 }
 
 .teal-700-hover-border:hover {
-  border-color: #13795b !important;
+  border-color: rgb(19.2, 120.6, 90.6) !important;
 }
 
 .teal-700-hover-bg:hover {
-  background: #13795b !important;
+  background: rgb(19.2, 120.6, 90.6) !important;
 }
 
 .teal-700-hover-pseudo-bg:hover::after, .teal-700-hover-pseudo-bg:hover::before {
-  background: #13795b !important;
+  background: rgb(19.2, 120.6, 90.6) !important;
 }
 
 .teal-800-text {
-  color: #0d503c !important;
+  color: rgb(12.8, 80.4, 60.4) !important;
 }
 
 .teal-800-border {
-  border-color: #0d503c !important;
+  border-color: rgb(12.8, 80.4, 60.4) !important;
 }
 
 .teal-800-bg {
-  background: #0d503c !important;
+  background: rgb(12.8, 80.4, 60.4) !important;
 }
 
 .teal-800-pseudo-bg::after, .teal-800-pseudo-bg::before {
-  background: #0d503c !important;
+  background: rgb(12.8, 80.4, 60.4) !important;
 }
 
 .teal-800-hover-text:hover {
-  color: #0d503c !important;
+  color: rgb(12.8, 80.4, 60.4) !important;
 }
 
 .teal-800-hover-border:hover {
-  border-color: #0d503c !important;
+  border-color: rgb(12.8, 80.4, 60.4) !important;
 }
 
 .teal-800-hover-bg:hover {
-  background: #0d503c !important;
+  background: rgb(12.8, 80.4, 60.4) !important;
 }
 
 .teal-800-hover-pseudo-bg:hover::after, .teal-800-hover-pseudo-bg:hover::before {
-  background: #0d503c !important;
+  background: rgb(12.8, 80.4, 60.4) !important;
 }
 
 .teal-900-text {
-  color: #06281e !important;
+  color: rgb(6.4, 40.2, 30.2) !important;
 }
 
 .teal-900-border {
-  border-color: #06281e !important;
+  border-color: rgb(6.4, 40.2, 30.2) !important;
 }
 
 .teal-900-bg {
-  background: #06281e !important;
+  background: rgb(6.4, 40.2, 30.2) !important;
 }
 
 .teal-900-pseudo-bg::after, .teal-900-pseudo-bg::before {
-  background: #06281e !important;
+  background: rgb(6.4, 40.2, 30.2) !important;
 }
 
 .teal-900-hover-text:hover {
-  color: #06281e !important;
+  color: rgb(6.4, 40.2, 30.2) !important;
 }
 
 .teal-900-hover-border:hover {
-  border-color: #06281e !important;
+  border-color: rgb(6.4, 40.2, 30.2) !important;
 }
 
 .teal-900-hover-bg:hover {
-  background: #06281e !important;
+  background: rgb(6.4, 40.2, 30.2) !important;
 }
 
 .teal-900-hover-pseudo-bg:hover::after, .teal-900-hover-pseudo-bg:hover::before {
-  background: #06281e !important;
+  background: rgb(6.4, 40.2, 30.2) !important;
 }
 
 .cyan-100-text {
-  color: #cff4fc !important;
+  color: rgb(206.6, 244.4, 252) !important;
 }
 
 .cyan-100-border {
-  border-color: #cff4fc !important;
+  border-color: rgb(206.6, 244.4, 252) !important;
 }
 
 .cyan-100-bg {
-  background: #cff4fc !important;
+  background: rgb(206.6, 244.4, 252) !important;
 }
 
 .cyan-100-pseudo-bg::after, .cyan-100-pseudo-bg::before {
-  background: #cff4fc !important;
+  background: rgb(206.6, 244.4, 252) !important;
 }
 
 .cyan-100-hover-text:hover {
-  color: #cff4fc !important;
+  color: rgb(206.6, 244.4, 252) !important;
 }
 
 .cyan-100-hover-border:hover {
-  border-color: #cff4fc !important;
+  border-color: rgb(206.6, 244.4, 252) !important;
 }
 
 .cyan-100-hover-bg:hover {
-  background: #cff4fc !important;
+  background: rgb(206.6, 244.4, 252) !important;
 }
 
 .cyan-100-hover-pseudo-bg:hover::after, .cyan-100-hover-pseudo-bg:hover::before {
-  background: #cff4fc !important;
+  background: rgb(206.6, 244.4, 252) !important;
 }
 
 .cyan-200-text {
-  color: #9eeaf9 !important;
+  color: rgb(158.2, 233.8, 249) !important;
 }
 
 .cyan-200-border {
-  border-color: #9eeaf9 !important;
+  border-color: rgb(158.2, 233.8, 249) !important;
 }
 
 .cyan-200-bg {
-  background: #9eeaf9 !important;
+  background: rgb(158.2, 233.8, 249) !important;
 }
 
 .cyan-200-pseudo-bg::after, .cyan-200-pseudo-bg::before {
-  background: #9eeaf9 !important;
+  background: rgb(158.2, 233.8, 249) !important;
 }
 
 .cyan-200-hover-text:hover {
-  color: #9eeaf9 !important;
+  color: rgb(158.2, 233.8, 249) !important;
 }
 
 .cyan-200-hover-border:hover {
-  border-color: #9eeaf9 !important;
+  border-color: rgb(158.2, 233.8, 249) !important;
 }
 
 .cyan-200-hover-bg:hover {
-  background: #9eeaf9 !important;
+  background: rgb(158.2, 233.8, 249) !important;
 }
 
 .cyan-200-hover-pseudo-bg:hover::after, .cyan-200-hover-pseudo-bg:hover::before {
-  background: #9eeaf9 !important;
+  background: rgb(158.2, 233.8, 249) !important;
 }
 
 .cyan-300-text {
-  color: #6edff6 !important;
+  color: rgb(109.8, 223.2, 246) !important;
 }
 
 .cyan-300-border {
-  border-color: #6edff6 !important;
+  border-color: rgb(109.8, 223.2, 246) !important;
 }
 
 .cyan-300-bg {
-  background: #6edff6 !important;
+  background: rgb(109.8, 223.2, 246) !important;
 }
 
 .cyan-300-pseudo-bg::after, .cyan-300-pseudo-bg::before {
-  background: #6edff6 !important;
+  background: rgb(109.8, 223.2, 246) !important;
 }
 
 .cyan-300-hover-text:hover {
-  color: #6edff6 !important;
+  color: rgb(109.8, 223.2, 246) !important;
 }
 
 .cyan-300-hover-border:hover {
-  border-color: #6edff6 !important;
+  border-color: rgb(109.8, 223.2, 246) !important;
 }
 
 .cyan-300-hover-bg:hover {
-  background: #6edff6 !important;
+  background: rgb(109.8, 223.2, 246) !important;
 }
 
 .cyan-300-hover-pseudo-bg:hover::after, .cyan-300-hover-pseudo-bg:hover::before {
-  background: #6edff6 !important;
+  background: rgb(109.8, 223.2, 246) !important;
 }
 
 .cyan-400-text {
-  color: #3dd5f3 !important;
+  color: rgb(61.4, 212.6, 243) !important;
 }
 
 .cyan-400-border {
-  border-color: #3dd5f3 !important;
+  border-color: rgb(61.4, 212.6, 243) !important;
 }
 
 .cyan-400-bg {
-  background: #3dd5f3 !important;
+  background: rgb(61.4, 212.6, 243) !important;
 }
 
 .cyan-400-pseudo-bg::after, .cyan-400-pseudo-bg::before {
-  background: #3dd5f3 !important;
+  background: rgb(61.4, 212.6, 243) !important;
 }
 
 .cyan-400-hover-text:hover {
-  color: #3dd5f3 !important;
+  color: rgb(61.4, 212.6, 243) !important;
 }
 
 .cyan-400-hover-border:hover {
-  border-color: #3dd5f3 !important;
+  border-color: rgb(61.4, 212.6, 243) !important;
 }
 
 .cyan-400-hover-bg:hover {
-  background: #3dd5f3 !important;
+  background: rgb(61.4, 212.6, 243) !important;
 }
 
 .cyan-400-hover-pseudo-bg:hover::after, .cyan-400-hover-pseudo-bg:hover::before {
-  background: #3dd5f3 !important;
+  background: rgb(61.4, 212.6, 243) !important;
 }
 
 .cyan-500-text {
@@ -3153,259 +3153,259 @@
 }
 
 .cyan-600-text {
-  color: #0aa2c0 !important;
+  color: rgb(10.4, 161.6, 192) !important;
 }
 
 .cyan-600-border {
-  border-color: #0aa2c0 !important;
+  border-color: rgb(10.4, 161.6, 192) !important;
 }
 
 .cyan-600-bg {
-  background: #0aa2c0 !important;
+  background: rgb(10.4, 161.6, 192) !important;
 }
 
 .cyan-600-pseudo-bg::after, .cyan-600-pseudo-bg::before {
-  background: #0aa2c0 !important;
+  background: rgb(10.4, 161.6, 192) !important;
 }
 
 .cyan-600-hover-text:hover {
-  color: #0aa2c0 !important;
+  color: rgb(10.4, 161.6, 192) !important;
 }
 
 .cyan-600-hover-border:hover {
-  border-color: #0aa2c0 !important;
+  border-color: rgb(10.4, 161.6, 192) !important;
 }
 
 .cyan-600-hover-bg:hover {
-  background: #0aa2c0 !important;
+  background: rgb(10.4, 161.6, 192) !important;
 }
 
 .cyan-600-hover-pseudo-bg:hover::after, .cyan-600-hover-pseudo-bg:hover::before {
-  background: #0aa2c0 !important;
+  background: rgb(10.4, 161.6, 192) !important;
 }
 
 .cyan-700-text {
-  color: #087990 !important;
+  color: rgb(7.8, 121.2, 144) !important;
 }
 
 .cyan-700-border {
-  border-color: #087990 !important;
+  border-color: rgb(7.8, 121.2, 144) !important;
 }
 
 .cyan-700-bg {
-  background: #087990 !important;
+  background: rgb(7.8, 121.2, 144) !important;
 }
 
 .cyan-700-pseudo-bg::after, .cyan-700-pseudo-bg::before {
-  background: #087990 !important;
+  background: rgb(7.8, 121.2, 144) !important;
 }
 
 .cyan-700-hover-text:hover {
-  color: #087990 !important;
+  color: rgb(7.8, 121.2, 144) !important;
 }
 
 .cyan-700-hover-border:hover {
-  border-color: #087990 !important;
+  border-color: rgb(7.8, 121.2, 144) !important;
 }
 
 .cyan-700-hover-bg:hover {
-  background: #087990 !important;
+  background: rgb(7.8, 121.2, 144) !important;
 }
 
 .cyan-700-hover-pseudo-bg:hover::after, .cyan-700-hover-pseudo-bg:hover::before {
-  background: #087990 !important;
+  background: rgb(7.8, 121.2, 144) !important;
 }
 
 .cyan-800-text {
-  color: #055160 !important;
+  color: rgb(5.2, 80.8, 96) !important;
 }
 
 .cyan-800-border {
-  border-color: #055160 !important;
+  border-color: rgb(5.2, 80.8, 96) !important;
 }
 
 .cyan-800-bg {
-  background: #055160 !important;
+  background: rgb(5.2, 80.8, 96) !important;
 }
 
 .cyan-800-pseudo-bg::after, .cyan-800-pseudo-bg::before {
-  background: #055160 !important;
+  background: rgb(5.2, 80.8, 96) !important;
 }
 
 .cyan-800-hover-text:hover {
-  color: #055160 !important;
+  color: rgb(5.2, 80.8, 96) !important;
 }
 
 .cyan-800-hover-border:hover {
-  border-color: #055160 !important;
+  border-color: rgb(5.2, 80.8, 96) !important;
 }
 
 .cyan-800-hover-bg:hover {
-  background: #055160 !important;
+  background: rgb(5.2, 80.8, 96) !important;
 }
 
 .cyan-800-hover-pseudo-bg:hover::after, .cyan-800-hover-pseudo-bg:hover::before {
-  background: #055160 !important;
+  background: rgb(5.2, 80.8, 96) !important;
 }
 
 .cyan-900-text {
-  color: #032830 !important;
+  color: rgb(2.6, 40.4, 48) !important;
 }
 
 .cyan-900-border {
-  border-color: #032830 !important;
+  border-color: rgb(2.6, 40.4, 48) !important;
 }
 
 .cyan-900-bg {
-  background: #032830 !important;
+  background: rgb(2.6, 40.4, 48) !important;
 }
 
 .cyan-900-pseudo-bg::after, .cyan-900-pseudo-bg::before {
-  background: #032830 !important;
+  background: rgb(2.6, 40.4, 48) !important;
 }
 
 .cyan-900-hover-text:hover {
-  color: #032830 !important;
+  color: rgb(2.6, 40.4, 48) !important;
 }
 
 .cyan-900-hover-border:hover {
-  border-color: #032830 !important;
+  border-color: rgb(2.6, 40.4, 48) !important;
 }
 
 .cyan-900-hover-bg:hover {
-  background: #032830 !important;
+  background: rgb(2.6, 40.4, 48) !important;
 }
 
 .cyan-900-hover-pseudo-bg:hover::after, .cyan-900-hover-pseudo-bg:hover::before {
-  background: #032830 !important;
+  background: rgb(2.6, 40.4, 48) !important;
 }
 
 .flatrica-green-100-text {
-  color: #cdede0 !important;
+  color: rgb(205.2, 237.4, 223.8) !important;
 }
 
 .flatrica-green-100-border {
-  border-color: #cdede0 !important;
+  border-color: rgb(205.2, 237.4, 223.8) !important;
 }
 
 .flatrica-green-100-bg {
-  background: #cdede0 !important;
+  background: rgb(205.2, 237.4, 223.8) !important;
 }
 
 .flatrica-green-100-pseudo-bg::after, .flatrica-green-100-pseudo-bg::before {
-  background: #cdede0 !important;
+  background: rgb(205.2, 237.4, 223.8) !important;
 }
 
 .flatrica-green-100-hover-text:hover {
-  color: #cdede0 !important;
+  color: rgb(205.2, 237.4, 223.8) !important;
 }
 
 .flatrica-green-100-hover-border:hover {
-  border-color: #cdede0 !important;
+  border-color: rgb(205.2, 237.4, 223.8) !important;
 }
 
 .flatrica-green-100-hover-bg:hover {
-  background: #cdede0 !important;
+  background: rgb(205.2, 237.4, 223.8) !important;
 }
 
 .flatrica-green-100-hover-pseudo-bg:hover::after, .flatrica-green-100-hover-pseudo-bg:hover::before {
-  background: #cdede0 !important;
+  background: rgb(205.2, 237.4, 223.8) !important;
 }
 
 .flatrica-green-200-text {
-  color: #9bdcc1 !important;
+  color: rgb(155.4, 219.8, 192.6) !important;
 }
 
 .flatrica-green-200-border {
-  border-color: #9bdcc1 !important;
+  border-color: rgb(155.4, 219.8, 192.6) !important;
 }
 
 .flatrica-green-200-bg {
-  background: #9bdcc1 !important;
+  background: rgb(155.4, 219.8, 192.6) !important;
 }
 
 .flatrica-green-200-pseudo-bg::after, .flatrica-green-200-pseudo-bg::before {
-  background: #9bdcc1 !important;
+  background: rgb(155.4, 219.8, 192.6) !important;
 }
 
 .flatrica-green-200-hover-text:hover {
-  color: #9bdcc1 !important;
+  color: rgb(155.4, 219.8, 192.6) !important;
 }
 
 .flatrica-green-200-hover-border:hover {
-  border-color: #9bdcc1 !important;
+  border-color: rgb(155.4, 219.8, 192.6) !important;
 }
 
 .flatrica-green-200-hover-bg:hover {
-  background: #9bdcc1 !important;
+  background: rgb(155.4, 219.8, 192.6) !important;
 }
 
 .flatrica-green-200-hover-pseudo-bg:hover::after, .flatrica-green-200-hover-pseudo-bg:hover::before {
-  background: #9bdcc1 !important;
+  background: rgb(155.4, 219.8, 192.6) !important;
 }
 
 .flatrica-green-300-text {
-  color: #6acaa1 !important;
+  color: rgb(105.6, 202.2, 161.4) !important;
 }
 
 .flatrica-green-300-border {
-  border-color: #6acaa1 !important;
+  border-color: rgb(105.6, 202.2, 161.4) !important;
 }
 
 .flatrica-green-300-bg {
-  background: #6acaa1 !important;
+  background: rgb(105.6, 202.2, 161.4) !important;
 }
 
 .flatrica-green-300-pseudo-bg::after, .flatrica-green-300-pseudo-bg::before {
-  background: #6acaa1 !important;
+  background: rgb(105.6, 202.2, 161.4) !important;
 }
 
 .flatrica-green-300-hover-text:hover {
-  color: #6acaa1 !important;
+  color: rgb(105.6, 202.2, 161.4) !important;
 }
 
 .flatrica-green-300-hover-border:hover {
-  border-color: #6acaa1 !important;
+  border-color: rgb(105.6, 202.2, 161.4) !important;
 }
 
 .flatrica-green-300-hover-bg:hover {
-  background: #6acaa1 !important;
+  background: rgb(105.6, 202.2, 161.4) !important;
 }
 
 .flatrica-green-300-hover-pseudo-bg:hover::after, .flatrica-green-300-hover-pseudo-bg:hover::before {
-  background: #6acaa1 !important;
+  background: rgb(105.6, 202.2, 161.4) !important;
 }
 
 .flatrica-green-400-text {
-  color: #38b982 !important;
+  color: rgb(55.8, 184.6, 130.2) !important;
 }
 
 .flatrica-green-400-border {
-  border-color: #38b982 !important;
+  border-color: rgb(55.8, 184.6, 130.2) !important;
 }
 
 .flatrica-green-400-bg {
-  background: #38b982 !important;
+  background: rgb(55.8, 184.6, 130.2) !important;
 }
 
 .flatrica-green-400-pseudo-bg::after, .flatrica-green-400-pseudo-bg::before {
-  background: #38b982 !important;
+  background: rgb(55.8, 184.6, 130.2) !important;
 }
 
 .flatrica-green-400-hover-text:hover {
-  color: #38b982 !important;
+  color: rgb(55.8, 184.6, 130.2) !important;
 }
 
 .flatrica-green-400-hover-border:hover {
-  border-color: #38b982 !important;
+  border-color: rgb(55.8, 184.6, 130.2) !important;
 }
 
 .flatrica-green-400-hover-bg:hover {
-  background: #38b982 !important;
+  background: rgb(55.8, 184.6, 130.2) !important;
 }
 
 .flatrica-green-400-hover-pseudo-bg:hover::after, .flatrica-green-400-hover-pseudo-bg:hover::before {
-  background: #38b982 !important;
+  background: rgb(55.8, 184.6, 130.2) !important;
 }
 
 .flatrica-green-500-text {
@@ -3441,259 +3441,259 @@
 }
 
 .flatrica-green-600-text {
-  color: #05864f !important;
+  color: rgb(4.8, 133.6, 79.2) !important;
 }
 
 .flatrica-green-600-border {
-  border-color: #05864f !important;
+  border-color: rgb(4.8, 133.6, 79.2) !important;
 }
 
 .flatrica-green-600-bg {
-  background: #05864f !important;
+  background: rgb(4.8, 133.6, 79.2) !important;
 }
 
 .flatrica-green-600-pseudo-bg::after, .flatrica-green-600-pseudo-bg::before {
-  background: #05864f !important;
+  background: rgb(4.8, 133.6, 79.2) !important;
 }
 
 .flatrica-green-600-hover-text:hover {
-  color: #05864f !important;
+  color: rgb(4.8, 133.6, 79.2) !important;
 }
 
 .flatrica-green-600-hover-border:hover {
-  border-color: #05864f !important;
+  border-color: rgb(4.8, 133.6, 79.2) !important;
 }
 
 .flatrica-green-600-hover-bg:hover {
-  background: #05864f !important;
+  background: rgb(4.8, 133.6, 79.2) !important;
 }
 
 .flatrica-green-600-hover-pseudo-bg:hover::after, .flatrica-green-600-hover-pseudo-bg:hover::before {
-  background: #05864f !important;
+  background: rgb(4.8, 133.6, 79.2) !important;
 }
 
 .flatrica-green-700-text {
-  color: #04643b !important;
+  color: rgb(3.6, 100.2, 59.4) !important;
 }
 
 .flatrica-green-700-border {
-  border-color: #04643b !important;
+  border-color: rgb(3.6, 100.2, 59.4) !important;
 }
 
 .flatrica-green-700-bg {
-  background: #04643b !important;
+  background: rgb(3.6, 100.2, 59.4) !important;
 }
 
 .flatrica-green-700-pseudo-bg::after, .flatrica-green-700-pseudo-bg::before {
-  background: #04643b !important;
+  background: rgb(3.6, 100.2, 59.4) !important;
 }
 
 .flatrica-green-700-hover-text:hover {
-  color: #04643b !important;
+  color: rgb(3.6, 100.2, 59.4) !important;
 }
 
 .flatrica-green-700-hover-border:hover {
-  border-color: #04643b !important;
+  border-color: rgb(3.6, 100.2, 59.4) !important;
 }
 
 .flatrica-green-700-hover-bg:hover {
-  background: #04643b !important;
+  background: rgb(3.6, 100.2, 59.4) !important;
 }
 
 .flatrica-green-700-hover-pseudo-bg:hover::after, .flatrica-green-700-hover-pseudo-bg:hover::before {
-  background: #04643b !important;
+  background: rgb(3.6, 100.2, 59.4) !important;
 }
 
 .flatrica-green-800-text {
-  color: #024328 !important;
+  color: rgb(2.4, 66.8, 39.6) !important;
 }
 
 .flatrica-green-800-border {
-  border-color: #024328 !important;
+  border-color: rgb(2.4, 66.8, 39.6) !important;
 }
 
 .flatrica-green-800-bg {
-  background: #024328 !important;
+  background: rgb(2.4, 66.8, 39.6) !important;
 }
 
 .flatrica-green-800-pseudo-bg::after, .flatrica-green-800-pseudo-bg::before {
-  background: #024328 !important;
+  background: rgb(2.4, 66.8, 39.6) !important;
 }
 
 .flatrica-green-800-hover-text:hover {
-  color: #024328 !important;
+  color: rgb(2.4, 66.8, 39.6) !important;
 }
 
 .flatrica-green-800-hover-border:hover {
-  border-color: #024328 !important;
+  border-color: rgb(2.4, 66.8, 39.6) !important;
 }
 
 .flatrica-green-800-hover-bg:hover {
-  background: #024328 !important;
+  background: rgb(2.4, 66.8, 39.6) !important;
 }
 
 .flatrica-green-800-hover-pseudo-bg:hover::after, .flatrica-green-800-hover-pseudo-bg:hover::before {
-  background: #024328 !important;
+  background: rgb(2.4, 66.8, 39.6) !important;
 }
 
 .flatrica-green-900-text {
-  color: #012114 !important;
+  color: rgb(1.2, 33.4, 19.8) !important;
 }
 
 .flatrica-green-900-border {
-  border-color: #012114 !important;
+  border-color: rgb(1.2, 33.4, 19.8) !important;
 }
 
 .flatrica-green-900-bg {
-  background: #012114 !important;
+  background: rgb(1.2, 33.4, 19.8) !important;
 }
 
 .flatrica-green-900-pseudo-bg::after, .flatrica-green-900-pseudo-bg::before {
-  background: #012114 !important;
+  background: rgb(1.2, 33.4, 19.8) !important;
 }
 
 .flatrica-green-900-hover-text:hover {
-  color: #012114 !important;
+  color: rgb(1.2, 33.4, 19.8) !important;
 }
 
 .flatrica-green-900-hover-border:hover {
-  border-color: #012114 !important;
+  border-color: rgb(1.2, 33.4, 19.8) !important;
 }
 
 .flatrica-green-900-hover-bg:hover {
-  background: #012114 !important;
+  background: rgb(1.2, 33.4, 19.8) !important;
 }
 
 .flatrica-green-900-hover-pseudo-bg:hover::after, .flatrica-green-900-hover-pseudo-bg:hover::before {
-  background: #012114 !important;
+  background: rgb(1.2, 33.4, 19.8) !important;
 }
 
 .manga-red-100-text {
-  color: #f6d1d0 !important;
+  color: rgb(246.4, 208.8, 208.4) !important;
 }
 
 .manga-red-100-border {
-  border-color: #f6d1d0 !important;
+  border-color: rgb(246.4, 208.8, 208.4) !important;
 }
 
 .manga-red-100-bg {
-  background: #f6d1d0 !important;
+  background: rgb(246.4, 208.8, 208.4) !important;
 }
 
 .manga-red-100-pseudo-bg::after, .manga-red-100-pseudo-bg::before {
-  background: #f6d1d0 !important;
+  background: rgb(246.4, 208.8, 208.4) !important;
 }
 
 .manga-red-100-hover-text:hover {
-  color: #f6d1d0 !important;
+  color: rgb(246.4, 208.8, 208.4) !important;
 }
 
 .manga-red-100-hover-border:hover {
-  border-color: #f6d1d0 !important;
+  border-color: rgb(246.4, 208.8, 208.4) !important;
 }
 
 .manga-red-100-hover-bg:hover {
-  background: #f6d1d0 !important;
+  background: rgb(246.4, 208.8, 208.4) !important;
 }
 
 .manga-red-100-hover-pseudo-bg:hover::after, .manga-red-100-hover-pseudo-bg:hover::before {
-  background: #f6d1d0 !important;
+  background: rgb(246.4, 208.8, 208.4) !important;
 }
 
 .manga-red-200-text {
-  color: #eea3a2 !important;
+  color: rgb(237.8, 162.6, 161.8) !important;
 }
 
 .manga-red-200-border {
-  border-color: #eea3a2 !important;
+  border-color: rgb(237.8, 162.6, 161.8) !important;
 }
 
 .manga-red-200-bg {
-  background: #eea3a2 !important;
+  background: rgb(237.8, 162.6, 161.8) !important;
 }
 
 .manga-red-200-pseudo-bg::after, .manga-red-200-pseudo-bg::before {
-  background: #eea3a2 !important;
+  background: rgb(237.8, 162.6, 161.8) !important;
 }
 
 .manga-red-200-hover-text:hover {
-  color: #eea3a2 !important;
+  color: rgb(237.8, 162.6, 161.8) !important;
 }
 
 .manga-red-200-hover-border:hover {
-  border-color: #eea3a2 !important;
+  border-color: rgb(237.8, 162.6, 161.8) !important;
 }
 
 .manga-red-200-hover-bg:hover {
-  background: #eea3a2 !important;
+  background: rgb(237.8, 162.6, 161.8) !important;
 }
 
 .manga-red-200-hover-pseudo-bg:hover::after, .manga-red-200-hover-pseudo-bg:hover::before {
-  background: #eea3a2 !important;
+  background: rgb(237.8, 162.6, 161.8) !important;
 }
 
 .manga-red-300-text {
-  color: #e57473 !important;
+  color: rgb(229.2, 116.4, 115.2) !important;
 }
 
 .manga-red-300-border {
-  border-color: #e57473 !important;
+  border-color: rgb(229.2, 116.4, 115.2) !important;
 }
 
 .manga-red-300-bg {
-  background: #e57473 !important;
+  background: rgb(229.2, 116.4, 115.2) !important;
 }
 
 .manga-red-300-pseudo-bg::after, .manga-red-300-pseudo-bg::before {
-  background: #e57473 !important;
+  background: rgb(229.2, 116.4, 115.2) !important;
 }
 
 .manga-red-300-hover-text:hover {
-  color: #e57473 !important;
+  color: rgb(229.2, 116.4, 115.2) !important;
 }
 
 .manga-red-300-hover-border:hover {
-  border-color: #e57473 !important;
+  border-color: rgb(229.2, 116.4, 115.2) !important;
 }
 
 .manga-red-300-hover-bg:hover {
-  background: #e57473 !important;
+  background: rgb(229.2, 116.4, 115.2) !important;
 }
 
 .manga-red-300-hover-pseudo-bg:hover::after, .manga-red-300-hover-pseudo-bg:hover::before {
-  background: #e57473 !important;
+  background: rgb(229.2, 116.4, 115.2) !important;
 }
 
 .manga-red-400-text {
-  color: #dd4645 !important;
+  color: rgb(220.6, 70.2, 68.6) !important;
 }
 
 .manga-red-400-border {
-  border-color: #dd4645 !important;
+  border-color: rgb(220.6, 70.2, 68.6) !important;
 }
 
 .manga-red-400-bg {
-  background: #dd4645 !important;
+  background: rgb(220.6, 70.2, 68.6) !important;
 }
 
 .manga-red-400-pseudo-bg::after, .manga-red-400-pseudo-bg::before {
-  background: #dd4645 !important;
+  background: rgb(220.6, 70.2, 68.6) !important;
 }
 
 .manga-red-400-hover-text:hover {
-  color: #dd4645 !important;
+  color: rgb(220.6, 70.2, 68.6) !important;
 }
 
 .manga-red-400-hover-border:hover {
-  border-color: #dd4645 !important;
+  border-color: rgb(220.6, 70.2, 68.6) !important;
 }
 
 .manga-red-400-hover-bg:hover {
-  background: #dd4645 !important;
+  background: rgb(220.6, 70.2, 68.6) !important;
 }
 
 .manga-red-400-hover-pseudo-bg:hover::after, .manga-red-400-hover-pseudo-bg:hover::before {
-  background: #dd4645 !important;
+  background: rgb(220.6, 70.2, 68.6) !important;
 }
 
 .manga-red-500-text {
@@ -3729,131 +3729,131 @@
 }
 
 .manga-red-600-text {
-  color: #aa1312 !important;
+  color: rgb(169.6, 19.2, 17.6) !important;
 }
 
 .manga-red-600-border {
-  border-color: #aa1312 !important;
+  border-color: rgb(169.6, 19.2, 17.6) !important;
 }
 
 .manga-red-600-bg {
-  background: #aa1312 !important;
+  background: rgb(169.6, 19.2, 17.6) !important;
 }
 
 .manga-red-600-pseudo-bg::after, .manga-red-600-pseudo-bg::before {
-  background: #aa1312 !important;
+  background: rgb(169.6, 19.2, 17.6) !important;
 }
 
 .manga-red-600-hover-text:hover {
-  color: #aa1312 !important;
+  color: rgb(169.6, 19.2, 17.6) !important;
 }
 
 .manga-red-600-hover-border:hover {
-  border-color: #aa1312 !important;
+  border-color: rgb(169.6, 19.2, 17.6) !important;
 }
 
 .manga-red-600-hover-bg:hover {
-  background: #aa1312 !important;
+  background: rgb(169.6, 19.2, 17.6) !important;
 }
 
 .manga-red-600-hover-pseudo-bg:hover::after, .manga-red-600-hover-pseudo-bg:hover::before {
-  background: #aa1312 !important;
+  background: rgb(169.6, 19.2, 17.6) !important;
 }
 
 .manga-red-700-text {
-  color: #7f0e0d !important;
+  color: rgb(127.2, 14.4, 13.2) !important;
 }
 
 .manga-red-700-border {
-  border-color: #7f0e0d !important;
+  border-color: rgb(127.2, 14.4, 13.2) !important;
 }
 
 .manga-red-700-bg {
-  background: #7f0e0d !important;
+  background: rgb(127.2, 14.4, 13.2) !important;
 }
 
 .manga-red-700-pseudo-bg::after, .manga-red-700-pseudo-bg::before {
-  background: #7f0e0d !important;
+  background: rgb(127.2, 14.4, 13.2) !important;
 }
 
 .manga-red-700-hover-text:hover {
-  color: #7f0e0d !important;
+  color: rgb(127.2, 14.4, 13.2) !important;
 }
 
 .manga-red-700-hover-border:hover {
-  border-color: #7f0e0d !important;
+  border-color: rgb(127.2, 14.4, 13.2) !important;
 }
 
 .manga-red-700-hover-bg:hover {
-  background: #7f0e0d !important;
+  background: rgb(127.2, 14.4, 13.2) !important;
 }
 
 .manga-red-700-hover-pseudo-bg:hover::after, .manga-red-700-hover-pseudo-bg:hover::before {
-  background: #7f0e0d !important;
+  background: rgb(127.2, 14.4, 13.2) !important;
 }
 
 .manga-red-800-text {
-  color: #550a09 !important;
+  color: rgb(84.8, 9.6, 8.8) !important;
 }
 
 .manga-red-800-border {
-  border-color: #550a09 !important;
+  border-color: rgb(84.8, 9.6, 8.8) !important;
 }
 
 .manga-red-800-bg {
-  background: #550a09 !important;
+  background: rgb(84.8, 9.6, 8.8) !important;
 }
 
 .manga-red-800-pseudo-bg::after, .manga-red-800-pseudo-bg::before {
-  background: #550a09 !important;
+  background: rgb(84.8, 9.6, 8.8) !important;
 }
 
 .manga-red-800-hover-text:hover {
-  color: #550a09 !important;
+  color: rgb(84.8, 9.6, 8.8) !important;
 }
 
 .manga-red-800-hover-border:hover {
-  border-color: #550a09 !important;
+  border-color: rgb(84.8, 9.6, 8.8) !important;
 }
 
 .manga-red-800-hover-bg:hover {
-  background: #550a09 !important;
+  background: rgb(84.8, 9.6, 8.8) !important;
 }
 
 .manga-red-800-hover-pseudo-bg:hover::after, .manga-red-800-hover-pseudo-bg:hover::before {
-  background: #550a09 !important;
+  background: rgb(84.8, 9.6, 8.8) !important;
 }
 
 .manga-red-900-text {
-  color: #2a0504 !important;
+  color: rgb(42.4, 4.8, 4.4) !important;
 }
 
 .manga-red-900-border {
-  border-color: #2a0504 !important;
+  border-color: rgb(42.4, 4.8, 4.4) !important;
 }
 
 .manga-red-900-bg {
-  background: #2a0504 !important;
+  background: rgb(42.4, 4.8, 4.4) !important;
 }
 
 .manga-red-900-pseudo-bg::after, .manga-red-900-pseudo-bg::before {
-  background: #2a0504 !important;
+  background: rgb(42.4, 4.8, 4.4) !important;
 }
 
 .manga-red-900-hover-text:hover {
-  color: #2a0504 !important;
+  color: rgb(42.4, 4.8, 4.4) !important;
 }
 
 .manga-red-900-hover-border:hover {
-  border-color: #2a0504 !important;
+  border-color: rgb(42.4, 4.8, 4.4) !important;
 }
 
 .manga-red-900-hover-bg:hover {
-  background: #2a0504 !important;
+  background: rgb(42.4, 4.8, 4.4) !important;
 }
 
 .manga-red-900-hover-pseudo-bg:hover::after, .manga-red-900-hover-pseudo-bg:hover::before {
-  background: #2a0504 !important;
+  background: rgb(42.4, 4.8, 4.4) !important;
 }
 
 .brand-facebook-text {
@@ -5783,14 +5783,17 @@
 }
 
 :root {
-  --color-opaque-1: #111111;
-  --color-opaque-2: #6f6f6f;
-  --color-tint-1: #595959;
-  --color-tint-2: #e6e6e6;
-  --color-shade-1: #1a1a1a;
-  --color-shade-2: #a6a6a6;
-  --color-shift-1: #1a1a1a;
-  --color-shift-2: #a6a6a6;
+  --color-opaque-1: rgba(33.0810810811, 33.0810810811, 33.0810810811, 0.84);
+  --color-opaque-2: rgb(110.5, 110.5, 110.5);
+  --color-opaque-3: #dddddd;
+  --color-tint-1: rgb(89.25, 89.25, 89.25);
+  --color-tint-2: rgb(229.5, 229.5, 229.5);
+  --color-shade-1: rgb(25.5, 25.5, 25.5);
+  --color-shade-2: rgb(165.75, 165.75, 165.75);
+  --color-shift-1: rgb(25.5, 25.5, 25.5);
+  --color-shift-2: rgb(165.75, 165.75, 165.75);
+  --color-shift-3: rgb(89.25, 89.25, 89.25);
+  --color-shift-4: rgb(229.5, 229.5, 229.5);
   --color-contrast-1: #fff;
   --color-contrast-2: #000;
   --color-brightness-1: #fff;
