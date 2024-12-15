@@ -1,3 +1,5 @@
+@use "sass:map" as map;
+
 /**
  * Giving a list of variables and values,
  * from start to end, try all the values until a non-null is found
@@ -36,7 +38,7 @@
 //   $var: map-deep-get($map, 'size', 'sml'); // => 10px
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
   @return $map;
 }

@@ -37,7 +37,7 @@ describe("COMPILE", function() {
         expect(cssCompiled).to.contain('.blue-400-bg {');
         expect(cssCompiled).to.contain('background: rgb(61.4, 139, 253.4) !important;');
         // --
-        expect(cssCompiled).to.contain('--blue-400: 61 139 253;');
+        expect(cssCompiled).to.contain('--blue-400: 61.4 139 253.4;');
         expect(cssCompiled).to.contain('--manga-red-500: 212 24 22;');
         expect(cssCompiled).to.contain('--advanced-brand-instagram: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);');
         expect(cssCompiled).to.contain('.mt-auto {');

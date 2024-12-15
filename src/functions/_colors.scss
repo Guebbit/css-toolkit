@@ -1,7 +1,6 @@
-@use "sass:color";
-@use "sass:math";
-@use "sass:string";
-@use "sass:meta";
+@use "sass:color" as color;
+@use "sass:math" as math;
+@use "sass:meta" as meta;
 
 /**
  * Return opaque color
@@ -9,25 +8,26 @@
  * function credited to https://getbootstrap.com/
  */
 @function color-opaque($background, $foreground) {
-  @return mix(rgba($foreground, 1), $background, opacity($foreground) * 100%);
+  @return color.mix(rgba($foreground, 1), $background, color.opacity($foreground) * 100%);
 }
 
-
 /**
- * Tint a color: mix a color with white
- * function credited to https://getbootstrap.com/
+ * Tint a color
  */
 @function color-tint($color, $weight) {
-  @return mix(#fff, $color, $weight);
+  // Creates a physical mixture with white color
+  @return color.mix(#fff, $color, $weight);
+  // Adjusts properties (like lightness) relative to the color's current values.
+  // @return color.scale($color, $lightness: $weight);
 }
 
 
 /**
- * Shade a color: mix a color with black
- * function credited to https://getbootstrap.com/
+ * Shade a color
  */
 @function color-shade($color, $weight) {
-  @return mix(#000, $color, $weight);
+  @return color.mix(#000, $color, $weight);
+  // @return color.scale($color, $lightness: -$weight);
 }
 
 
@@ -50,13 +50,12 @@
   @if meta.type-of($color) != color or $color == transparent {
     @return inherit;
   }
-  $color-brightness: color-brightness($color);
-  $light-text-brightness: color-brightness($light);
-  $dark-text-brightness: color-brightness($dark);
+  $color-brightness: color.channel($color, "lightness", $space: hsl);
+  $light-text-brightness: color.channel($light, "lightness", $space: hsl);
+  $dark-text-brightness:color.channel($dark, "lightness", $space: hsl);
 
-  @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+  @return if(math.abs($color-brightness - $light-text-brightness) > math.abs($color-brightness - $dark-text-brightness), $light, $dark);
 }
-
 
 
 // Return WCAG2.1 relative luminance
@@ -68,7 +67,11 @@
   @if $color == transparent or meta.type-of($color) != color {
     @return 100;
   }
-  @return math.div(((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)), 255 * 100%);
+  @return math.div((
+          (color.channel($color, "red", $space: rgb) * .299) +
+          (color.channel($color, "green", $space: rgb) * .587) +
+          (color.channel($color, "blue", $space: rgb) * .114)
+  ), 255 * 100%);
 }
 
 /**
@@ -94,18 +97,23 @@
     $delimiter: ", ";
     $delimiter-alpha: ", ";
   }
-  $alpha: alpha($color);
+  $alpha: color.alpha($color);
   @if $mode == 1 or ($mode == 2 and $alpha == 1) {
-    @return red($color) + $delimiter + green($color) + $delimiter + blue($color);
+    @return color.channel($color, "red", $space: rgb) +
+        $delimiter + color.channel($color, "green", $space: rgb) +
+        $delimiter + color.channel($color, "blue", $space: rgb);
   }
   // Regular RGBA compliant result ("number" notation)
-  @return red($color) + $delimiter + green($color) + $delimiter + blue($color) + $delimiter-alpha + alpha($color); // * 100%
+  @return color.channel($color, "red", $space: rgb) +
+        $delimiter + color.channel($color, "green", $space: rgb) +
+        $delimiter + color.channel($color, "blue", $space: rgb) +
+        $delimiter-alpha + color.channel($color, "alpha"); // * 100%
 }
 
 /**
  * Create default collection
  */
-@function create-collection($color){
+@function create-collection($color) {
   $list: (
           "100": color-tint($color, 80%),
           "200": color-tint($color, 60%),
