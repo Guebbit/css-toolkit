@@ -15,6 +15,13 @@
  * function credited to https://getbootstrap.com/
  */
 /**
+ * Return WCAG2.1 relative luminance
+ * See https://www.w3.org/TR/WCAG/#dfn-relative-luminance
+ * See https://en.wikipedia.org/wiki/Relative_luminance
+ * Gives %, less than 50 darker is better, less than 50, lighter.
+ * Function like color.channel($color, "lightness", $space: hsl) gives a different %
+ */
+/**
  * Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
  */
 /**
@@ -5144,7 +5151,7 @@
   --on-blue-200: 0 0 0;
   --on-blue-300: 0 0 0;
   --on-blue-400: 0 0 0;
-  --on-blue-500: 0 0 0;
+  --on-blue-500: 255 255 255;
   --on-blue-600: 255 255 255;
   --on-blue-700: 255 255 255;
   --on-blue-800: 255 255 255;
@@ -5152,8 +5159,8 @@
   --on-indigo-100: 0 0 0;
   --on-indigo-200: 0 0 0;
   --on-indigo-300: 0 0 0;
-  --on-indigo-400: 0 0 0;
-  --on-indigo-500: 0 0 0;
+  --on-indigo-400: 255 255 255;
+  --on-indigo-500: 255 255 255;
   --on-indigo-600: 255 255 255;
   --on-indigo-700: 255 255 255;
   --on-indigo-800: 255 255 255;
@@ -5161,8 +5168,8 @@
   --on-purple-100: 0 0 0;
   --on-purple-200: 0 0 0;
   --on-purple-300: 0 0 0;
-  --on-purple-400: 0 0 0;
-  --on-purple-500: 0 0 0;
+  --on-purple-400: 255 255 255;
+  --on-purple-500: 255 255 255;
   --on-purple-600: 255 255 255;
   --on-purple-700: 255 255 255;
   --on-purple-800: 255 255 255;
@@ -5171,7 +5178,7 @@
   --on-pink-200: 0 0 0;
   --on-pink-300: 0 0 0;
   --on-pink-400: 0 0 0;
-  --on-pink-500: 0 0 0;
+  --on-pink-500: 255 255 255;
   --on-pink-600: 255 255 255;
   --on-pink-700: 255 255 255;
   --on-pink-800: 255 255 255;
@@ -5180,7 +5187,7 @@
   --on-red-200: 0 0 0;
   --on-red-300: 0 0 0;
   --on-red-400: 0 0 0;
-  --on-red-500: 0 0 0;
+  --on-red-500: 255 255 255;
   --on-red-600: 255 255 255;
   --on-red-700: 255 255 255;
   --on-red-800: 255 255 255;
@@ -5199,14 +5206,14 @@
   --on-yellow-300: 0 0 0;
   --on-yellow-400: 0 0 0;
   --on-yellow-500: 0 0 0;
-  --on-yellow-600: 255 255 255;
+  --on-yellow-600: 0 0 0;
   --on-yellow-700: 255 255 255;
   --on-yellow-800: 255 255 255;
   --on-yellow-900: 255 255 255;
   --on-green-100: 0 0 0;
   --on-green-200: 0 0 0;
   --on-green-300: 0 0 0;
-  --on-green-400: 255 255 255;
+  --on-green-400: 0 0 0;
   --on-green-500: 255 255 255;
   --on-green-600: 255 255 255;
   --on-green-700: 255 255 255;
@@ -5216,7 +5223,7 @@
   --on-teal-200: 0 0 0;
   --on-teal-300: 0 0 0;
   --on-teal-400: 0 0 0;
-  --on-teal-500: 255 255 255;
+  --on-teal-500: 0 0 0;
   --on-teal-600: 255 255 255;
   --on-teal-700: 255 255 255;
   --on-teal-800: 255 255 255;
@@ -5225,7 +5232,7 @@
   --on-cyan-200: 0 0 0;
   --on-cyan-300: 0 0 0;
   --on-cyan-400: 0 0 0;
-  --on-cyan-500: 255 255 255;
+  --on-cyan-500: 0 0 0;
   --on-cyan-600: 255 255 255;
   --on-cyan-700: 255 255 255;
   --on-cyan-800: 255 255 255;
@@ -5233,7 +5240,7 @@
   --on-flatrica-green-100: 0 0 0;
   --on-flatrica-green-200: 0 0 0;
   --on-flatrica-green-300: 0 0 0;
-  --on-flatrica-green-400: 255 255 255;
+  --on-flatrica-green-400: 0 0 0;
   --on-flatrica-green-500: 255 255 255;
   --on-flatrica-green-600: 255 255 255;
   --on-flatrica-green-700: 255 255 255;
@@ -5242,7 +5249,7 @@
   --on-manga-red-100: 0 0 0;
   --on-manga-red-200: 0 0 0;
   --on-manga-red-300: 0 0 0;
-  --on-manga-red-400: 0 0 0;
+  --on-manga-red-400: 255 255 255;
   --on-manga-red-500: 255 255 255;
   --on-manga-red-600: 255 255 255;
   --on-manga-red-700: 255 255 255;
@@ -5251,31 +5258,31 @@
   --on-brand-facebook: 255 255 255;
   --on-brand-youtube: 255 255 255;
   --on-brand-twitter: 0 0 0;
-  --on-brand-skype: 255 255 255;
+  --on-brand-skype: 0 0 0;
   --on-brand-linkedin: 255 255 255;
   --on-brand-whatsapp: 0 0 0;
   --on-brand-telegram: 255 255 255;
   --on-brand-twitch: 255 255 255;
   --on-brand-pinterest: 255 255 255;
-  --on-brand-reddit: 0 0 0;
+  --on-brand-reddit: 255 255 255;
   --on-brand-tumblr: 255 255 255;
   --on-brand-patreon: 0 0 0;
-  --on-brand-kickstarter: 255 255 255;
+  --on-brand-kickstarter: 0 0 0;
   --on-brand-instagram: 0 0 0;
   --on-brand-tiktok: 0 0 0;
-  --on-brand-google: 0 0 0;
+  --on-brand-google: 255 255 255;
   --on-brand-paypal: 255 255 255;
   --on-brand-paypal2: 0 0 0;
-  --on-core-blue: 0 0 0;
-  --on-core-indigo: 0 0 0;
-  --on-core-purple: 0 0 0;
-  --on-core-pink: 0 0 0;
-  --on-core-red: 0 0 0;
+  --on-core-blue: 255 255 255;
+  --on-core-indigo: 255 255 255;
+  --on-core-purple: 255 255 255;
+  --on-core-pink: 255 255 255;
+  --on-core-red: 255 255 255;
   --on-core-orange: 0 0 0;
   --on-core-yellow: 0 0 0;
   --on-core-green: 255 255 255;
-  --on-core-teal: 255 255 255;
-  --on-core-cyan: 255 255 255;
+  --on-core-teal: 0 0 0;
+  --on-core-cyan: 0 0 0;
   --on-core-black: 255 255 255;
   --on-core-white: 0 0 0;
   --on-core-gray: 0 0 0;
