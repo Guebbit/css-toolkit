@@ -44,25 +44,13 @@
 
 
 /**
- * Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+ * Return WCAG2.1 relative luminance
+ * See https://www.w3.org/TR/WCAG/#dfn-relative-luminance
+ * See https://en.wikipedia.org/wiki/Relative_luminance
+ * Gives %, less than 50 darker is better, less than 50, lighter.
+ * Function like color.channel($color, "lightness", $space: hsl) gives a different %
  */
-@function color-contrast($color: #fff, $dark: #000, $light: #fff) {
-  @if meta.type-of($color) != color or $color == transparent {
-    @return inherit;
-  }
-  $color-brightness: color.channel($color, "lightness", $space: hsl);
-  $light-text-brightness: color.channel($light, "lightness", $space: hsl);
-  $dark-text-brightness:color.channel($dark, "lightness", $space: hsl);
-
-  @return if(math.abs($color-brightness - $light-text-brightness) > math.abs($color-brightness - $dark-text-brightness), $light, $dark);
-}
-
-
-// Return WCAG2.1 relative luminance
-// See https://www.w3.org/TR/WCAG/#dfn-relative-luminance
-// See https://en.wikipedia.org/wiki/Relative_luminance
-// Gives %, less than 50 darker is better, less than 50, lighter.
-@function color-brightness($color) {
+@function color-luminance($color) {
   // fallback
   @if $color == transparent or meta.type-of($color) != color {
     @return 100;
@@ -71,8 +59,24 @@
           (color.channel($color, "red", $space: rgb) * .299) +
           (color.channel($color, "green", $space: rgb) * .587) +
           (color.channel($color, "blue", $space: rgb) * .114)
-  ), 255 * 100%);
+  ), 255) * 100%;
 }
+
+
+/**
+ * Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+ */
+@function color-contrast($color: #fff, $dark: #000, $light: #fff) {
+  @if meta.type-of($color) != color or $color == transparent {
+    @return inherit;
+  }
+  $color-brightness: color-luminance($color);
+  $light-text-brightness: color-luminance($light);
+  $dark-text-brightness: color-luminance($dark);
+
+  @return if(math.abs($color-brightness - $light-text-brightness) > math.abs($color-brightness - $dark-text-brightness), $light, $dark);
+}
+
 
 /**
  * NEW numeric annotation
