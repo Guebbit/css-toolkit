@@ -23,6 +23,17 @@
     }
   }
 
-  // OPERA TODO
-  // SAFARI TODO
+  // OPERA
+  @if $browser == "opera" {
+    @supports (-o-object-fit: fill) {
+      @content;
+    }
+  }
+
+  // SAFARI
+  @if $browser == "safari" {
+    @supports (background: -webkit-named-image(i)) and (not (-webkit-touch-callout: none)) {
+      @content;
+    }
+  }
 }

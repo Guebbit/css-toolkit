@@ -1,0 +1,19 @@
+@use "sass:list";
+
+/**
+ * CSS single instructions class generator
+ * @param measure-list - {Array<name,value>[]} postfix name and value OR just values[] (name and value will be the same)
+ */
+@mixin create-class($instruction, $measure-list: (), $important: false, $prefix: "", $delimiter: "-") {
+  @each $values in $measure-list {
+    $name: $values;
+    $val: $values;
+    @if list.length($values) > 1 {
+      $name: list.nth($values, 1);
+      $val: list.nth($values, 2);
+    }
+    .#{$prefix}#{$instruction}#{$delimiter}#{$name} {
+      #{$instruction}: #{$val} #{if($important == true, "!important", "")}
+    }
+  }
+}

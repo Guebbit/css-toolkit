@@ -72,7 +72,7 @@ export default defineConfig({
                     },
                     {
                         text: 'Create Size instruction',
-                        link: '/mixins/create-instructions.md',
+                        link: '/mixins/create-class.md',
                     },
                     {
                         text: 'Create Margin helper',

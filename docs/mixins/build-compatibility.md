@@ -3,7 +3,7 @@
 ## Example
 
 Compatibility mode for browsers
-Firefox, Internet Explorer, Microsoft Edge, Opera (TODO), Safari (TODO)
+Firefox, Internet Explorer, Microsoft Edge, Opera, Safari
 
 ```scss
 @include guebbit-compatibility("ie") {

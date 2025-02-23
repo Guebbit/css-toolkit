@@ -1,6 +1,6 @@
-@use "sass:color" as color;
-@use "sass:math" as math;
-@use "sass:meta" as meta;
+@use "sass:color";
+@use "sass:math";
+@use "sass:meta";
 
 /**
  * Return opaque color
@@ -116,8 +116,9 @@
 
 /**
  * Create default collection
+ * @param $color
  */
-@function create-collection($color) {
+@function create-collection($color: #fff) {
   $list: (
           "100": color-tint($color, 80%),
           "200": color-tint($color, 60%),

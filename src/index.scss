@@ -8,6 +8,7 @@
 @forward "./mixins/build-compatibility";
 @forward "./mixins/build-scrollbar";
 @forward "./mixins/create-colors";
-@forward "./mixins/create-instructions";
+@forward "./mixins/create-colors-vars";
+@forward "./mixins/create-class";
 @forward "./mixins/create-helper-margin";
 @forward "./mixins/create-helper-padding";

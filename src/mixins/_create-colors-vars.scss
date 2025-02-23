@@ -1,0 +1,35 @@
+@use "sass:list";
+@use "../functions/colors" as color-functions;
+
+/**
+ *  Create the CSS VARS (like on root)
+ *  WARNING: They will be translated in "RGB" instead of "HEX"
+ *
+ *  @param $color-list - list of colors (like $colors-collection: ("branch": ( "leaf: $color" )))
+ *  @param $prefix
+ *  @param $branch-list:   - when filled: becomes a whitelist (aka: include only listed brands)
+ */
+@mixin create-colors-vars($color-list: (), $prefix: "", $branch-list: ()) {
+  // for every branch
+  @each $branch-name, $branch in $color-list {
+    // check that there is no $branch-list or, if present, it's correctly whitelisted
+    @if list.length($branch-list) < 1 or list.index($branch-list, $branch-name) {
+      // for every color
+      @each $branch-name, $branch in $color-list {
+
+        @each $sname, $scolor in $branch {
+          // @if meta.type-of($scolor) == color {
+          --#{$prefix}#{$branch-name}-#{$sname}: #{color-functions.extract-colors($scolor)};
+          // _}
+        }
+
+        @each $sname, $scolor in $branch {
+          // @if meta.type-of($scolor) == color {
+          --#{$prefix}on-#{$branch-name}-#{$sname}: #{color-functions.extract-colors(color-functions.color-contrast($scolor))};
+          // _}
+        }
+
+      }
+    }
+  }
+}

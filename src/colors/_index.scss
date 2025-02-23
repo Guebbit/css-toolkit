@@ -192,9 +192,9 @@ $colors-collection: (
                 "flatrica-green": customs.$flatrica-green,
                 "manga-red": customs.$manga-red,
         ),
-  // ADVANCED
-        "advanced": (
-                "brand-instagram": brands.$advanced-brand-instagram,
-                "brand-tiktok": brands.$advanced-brand-tiktok,
+  // Gradients are special colors that should not be used in texts and borders (for example)
+        "gradient": (
+                "brand-instagram": brands.$gradient-brand-instagram,
+                "brand-tiktok": brands.$gradient-brand-tiktok,
         ),
 );

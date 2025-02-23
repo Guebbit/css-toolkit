@@ -1,7 +1,7 @@
 {
   "name": "@guebbit/css-toolkit",
   "type": "module",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "A repository containing helpful SCSS functions, mixins, and utilities for streamlining and standardizing CSS development",
   "main": "vite.config.js",
   "files": [
@@ -24,25 +24,25 @@
     "publish:public": "npm publish --access public"
   },
   "devDependencies": {
-    "@types/node": "^22.5.4",
-    "@vitejs/plugin-vue": "^5.0.3",
-    "autoprefixer": "^10.4.16",
+    "@types/node": "^22.13.5",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
     "breakpoint-sass": "^3.0.0",
-    "chai": "^5.1.1",
+    "chai": "^5.2.0",
     "css-loader": "^7.1.2",
     "cssnano": "^7.0.6",
-    "mocha": "^11.0.1",
-    "postcss": "^8.4.33",
+    "mocha": "^11.1.0",
+    "postcss": "^8.5.3",
     "postcss-loader": "^8.1.1",
     "postcss-prefix-selector": "^2.1.0",
-    "sass": "^1.83.0",
+    "sass": "^1.85.0",
     "style-loader": "^4.0.0",
-    "stylelint": "^16.1.0",
+    "stylelint": "^16.14.1",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
-    "stylelint-scss": "^6.0.0",
-    "vite": "^6.0.3",
-    "vitepress": "^1.0.0-rc.36"
+    "stylelint-scss": "^6.11.1",
+    "vite": "^6.1.1",
+    "vitepress": "^1.6.3"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,28 @@
 @use "../src/index" as guebbit;
 
+:root{
+  @include guebbit.create-colors-vars(guebbit.$colors-collection);
+  @include guebbit.create-colors-vars((
+          "primary": guebbit.create-collection(#ff00ff)
+  ), "g-theme-");
+}
+
 @include guebbit.create-colors(guebbit.$colors-collection);
+@include guebbit.create-colors((
+        // colors are ignored if vars is true
+        "primary": guebbit.create-collection()
+), true, "", "g-theme-");
+
+
+
+
+@include guebbit.create-class("text-align", (
+    "right",
+    "left",
+    "center",
+), true);
+
+
 
 @include guebbit.create-helper-margin((
   (auto, auto),
@@ -19,7 +41,7 @@
   (48, 48px),
 ));
 
-@include guebbit.create-instructions("font-size", (
+@include guebbit.create-class("font-size", (
   (n2, 0.6em),
   (n1, 0.8em),
   (1, 1.2em),
@@ -27,7 +49,7 @@
   (3, 2em),
 ));
 
-@include guebbit.create-instructions("opacity", (
+@include guebbit.create-class("opacity", (
   (0, 0),
   (25, 0.25),
   (50, 0.50),
@@ -35,7 +57,7 @@
   (100, 1),
 ));
 
-@include guebbit.create-instructions("width", (
+@include guebbit.create-class("width", (
   (25, 25%),
   (50, 50%),
   (75, 75%),
@@ -46,7 +68,7 @@
   (p100, 100px)
 ), true);
 
-@include guebbit.create-instructions("min-width", (
+@include guebbit.create-class("min-width", (
   (25, 25%),
   (50, 50%),
   (75, 75%),
@@ -57,11 +79,13 @@
   (p100, 100px)
 ), true);
 
-@include guebbit.create-instructions("gap", (
+@include guebbit.create-class("gap", (
   (6, 6px),
   (12, 12px),
   (24, 24px),
 ), true, "flex-");
+
+
 
 .aspect-ratio-1-1{
   @include guebbit.build-aspect-ratio(100%);
@@ -74,6 +98,8 @@
     @include guebbit.build-aspect-ratio-anchor;
   }
 }
+
+
 
 
 .test-compatibility{
@@ -92,6 +118,18 @@
   @include guebbit.build-compatibility("firefox"){
     &::after{
       content: "this is firefox";
+    }
+  }
+
+  @include guebbit.build-compatibility("opera"){
+    &::after{
+      content: "this is opera";
+    }
+  }
+
+  @include guebbit.build-compatibility("safari"){
+    &::after{
+      content: "this is safari";
     }
   }
 }

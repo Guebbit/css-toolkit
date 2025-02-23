@@ -35,11 +35,37 @@ describe("COMPILE", function() {
         expect(cssCompiled).to.contain('.blue-400-text {');
         expect(cssCompiled).to.contain('color: rgb(61.4, 139, 253.4) !important;');
         expect(cssCompiled).to.contain('.blue-400-bg {');
-        expect(cssCompiled).to.contain('background: rgb(61.4, 139, 253.4) !important;');
+        expect(cssCompiled).to.contain('background-color: rgb(61.4, 139, 253.4) !important;');
+        expect(cssCompiled).to.contain('.blue-400-border {');
+        expect(cssCompiled).to.contain('border-color: rgb(61.4, 139, 253.4) !important;');
+        expect(cssCompiled).to.contain('.blue-400-pseudo-bg::after, .blue-400-pseudo-bg::before {');
+        expect(cssCompiled).to.contain('background-color: rgb(61.4, 139, 253.4) !important;');
+        expect(cssCompiled).to.contain('.blue-400-hover-text:hover {');
+        expect(cssCompiled).to.contain('.blue-400-hover-bg:hover {');
+        expect(cssCompiled).to.contain('.blue-400-hover-border:hover {');
+        expect(cssCompiled).to.contain('.blue-400-hover-pseudo-bg:hover::after, .blue-400-hover-pseudo-bg:hover::before {');
         // --
+        expect(cssCompiled).to.contain('.primary-500-text {');
+        expect(cssCompiled).to.contain('color: var(--g-theme-primary-500) !important;');
+        expect(cssCompiled).to.contain('.primary-500-bg {');
+        expect(cssCompiled).to.contain('background-color: var(--g-theme-primary-500) !important;');
+        expect(cssCompiled).to.contain('.primary-500-border {');
+        expect(cssCompiled).to.contain('border-color: var(--g-theme-primary-500) !important;');
+        expect(cssCompiled).to.contain('.primary-500-pseudo-bg::after, .primary-500-pseudo-bg::before {');
+        expect(cssCompiled).to.contain('.primary-500-hover-text:hover {');
+        expect(cssCompiled).to.contain('.primary-500-hover-bg:hover {');
+        expect(cssCompiled).to.contain('.primary-500-hover-border:hover {');
+        expect(cssCompiled).to.contain('.primary-500-hover-pseudo-bg:hover::after, .primary-500-hover-pseudo-bg:hover::before {');
+        // --
+        expect(cssCompiled).to.contain('--g-theme-primary-500: 255 0 255;');
+        expect(cssCompiled).to.contain('--g-theme-on-primary-500: 255 255 255;');
         expect(cssCompiled).to.contain('--blue-400: 61.4 139 253.4;');
+        expect(cssCompiled).to.contain('--on-blue-400: 0 0 0;');
         expect(cssCompiled).to.contain('--manga-red-500: 212 24 22;');
-        expect(cssCompiled).to.contain('--advanced-brand-instagram: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);');
+        expect(cssCompiled).to.contain('--gradient-brand-instagram: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);');
+        expect(cssCompiled).to.contain('.text-align-right {');
+        expect(cssCompiled).to.contain('text-align: right !important;');
+
         expect(cssCompiled).to.contain('.mt-auto {');
         expect(cssCompiled).to.contain('margin-top: auto;');
         expect(cssCompiled).to.contain('.my-48 {');
