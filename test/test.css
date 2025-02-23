@@ -10720,6 +10720,16 @@
     content: "this is firefox";
   }
 }
+@supports (-o-object-fit: fill) {
+  .test-compatibility::after {
+    content: "this is opera";
+  }
+}
+@supports (background: -webkit-named-image(i)) and (not (-webkit-touch-callout: none)) {
+  .test-compatibility::after {
+    content: "this is safari";
+  }
+}
 
 :root {
   --color-opaque-1: rgba(33.0810810811, 33.0810810811, 33.0810810811, 0.84);
