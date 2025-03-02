@@ -84,7 +84,6 @@
  *  @param $vars: if true, use css vars instead of rgb
  *  @param $prefix: prefix that applies to classes
  *  @param $prefixV: prefix that applies to vars (if true)
- *  @param $branch-list:   - when filled: becomes a whitelist (aka: include only listed brands)
  *  @param $feature-list:  - when filled: becomes a whitelist. May become cumbersome and many are not needed. Use with care.
  *    - text
  *    - background
@@ -98,7 +97,6 @@
  *
  *  @param $color-list - list of colors (like $colors-collection: ("branch": ( "leaf: $color" )))
  *  @param $prefix
- *  @param $branch-list:   - when filled: becomes a whitelist (aka: include only listed brands)
  */
 /**
  * CSS single instructions class generator

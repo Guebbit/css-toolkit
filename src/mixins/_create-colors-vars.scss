@@ -7,29 +7,21 @@
  *
  *  @param $color-list - list of colors (like $colors-collection: ("branch": ( "leaf: $color" )))
  *  @param $prefix
- *  @param $branch-list:   - when filled: becomes a whitelist (aka: include only listed brands)
  */
-@mixin create-colors-vars($color-list: (), $prefix: "", $branch-list: ()) {
+@mixin create-colors-vars($color-list: (), $prefix: "") {
   // for every branch
   @each $branch-name, $branch in $color-list {
-    // check that there is no $branch-list or, if present, it's correctly whitelisted
-    @if list.length($branch-list) < 1 or list.index($branch-list, $branch-name) {
-      // for every color
-      @each $branch-name, $branch in $color-list {
+    // for every color
+    @each $color-name, $color-value in $branch {
+      // @if meta.type-of($scolor) == color {
+      --#{$prefix}#{$branch-name}-#{$color-name}: #{color-functions.extract-colors($color-value)};
+      // _}
+    }
 
-        @each $sname, $scolor in $branch {
-          // @if meta.type-of($scolor) == color {
-          --#{$prefix}#{$branch-name}-#{$sname}: #{color-functions.extract-colors($scolor)};
-          // _}
-        }
-
-        @each $sname, $scolor in $branch {
-          // @if meta.type-of($scolor) == color {
-          --#{$prefix}on-#{$branch-name}-#{$sname}: #{color-functions.extract-colors(color-functions.color-contrast($scolor))};
-          // _}
-        }
-
-      }
+    @each $color-name, $color-value in $branch {
+      // @if meta.type-of($scolor) == color {
+      --#{$prefix}on-#{$branch-name}-#{$color-name}: #{color-functions.extract-colors(color-functions.color-contrast($color-value))};
+      // _}
     }
   }
 }

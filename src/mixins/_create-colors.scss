@@ -10,7 +10,6 @@
  *  @param $vars: if true, use css vars instead of rgb
  *  @param $prefix: prefix that applies to classes
  *  @param $prefixV: prefix that applies to vars (if true)
- *  @param $branch-list:   - when filled: becomes a whitelist (aka: include only listed brands)
  *  @param $feature-list:  - when filled: becomes a whitelist. May become cumbersome and many are not needed. Use with care.
  *    - text
  *    - background
@@ -18,136 +17,132 @@
  *    - pseudo (bg only, text very rarely used)
  *    - hover
  */
-@mixin create-colors($color-list: (), $vars: false, $prefix: "", $prefixV: "", $branch-list: (), $feature-list: ()) {
+@mixin create-colors($color-list: (), $vars: false, $prefix: "", $prefixV: "", $feature-list: ()) {
   // for every branch
   @each $branch-name, $branch in $color-list {
-    // check that there is no $branch-list or, if present, it's correctly whitelisted
-    @if list.length($branch-list) < 1 or list.index($branch-list, $branch-name) {
+    // for every leaf
+    @each $color-name, $color-value in $branch {
 
-      // for every leaf
-      @each $sname, $scolor in $branch {
+      @if not list.index($branch-name, "gradient") and (list.length($feature-list) < 1 or list.index($feature-list, "text")) {
+        .#{$prefix}#{$branch-name}-#{$color-name}-text {
+          @if $vars {
+            color: var(--#{$prefixV}#{$branch-name}-#{$color-name}) !important;
+          } @else {
+            color: $color-value !important;
+          }
+        }
+      }
+
+      @if not list.index($branch-name, "gradient") and (list.length($feature-list) < 1 or list.index($feature-list, "border")) {
+        @if $vars {
+          .#{$prefix}#{$branch-name}-#{$color-name}-border {
+            border-color: var(--#{$prefixV}#{$branch-name}-#{$color-name}) !important;
+          }
+        } @else {
+          .#{$prefix}#{$branch-name}-#{$color-name}-border {
+            border-color: $color-value !important;
+          }
+        }
+      }
+
+      @if list.length($feature-list) < 1 or list.index($feature-list, "background") {
+        @if $vars {
+          .#{$prefix}#{$branch-name}-#{$color-name}-bg {
+            background-color: var(--#{$prefixV}#{$branch-name}-#{$color-name}) !important;
+            color: var(--#{$prefixV}on-#{$branch-name}-#{$color-name}) !important;
+          }
+        } @else {
+          .#{$prefix}#{$branch-name}-#{$color-name}-bg {
+            background-color: $color-value !important;
+          }
+        }
+      }
+
+      @if list.length($feature-list) < 1 or list.index($feature-list, "pseudo") {
+        @if $vars {
+          .#{$prefix}#{$branch-name}-#{$color-name}-pseudo-bg {
+            &::after,
+            &::before {
+              background-color: var(--#{$prefixV}#{$branch-name}-#{$color-name}) !important;
+            }
+          }
+        } @else {
+          .#{$prefix}#{$branch-name}-#{$color-name}-pseudo-bg {
+            &::after,
+            &::before {
+              background-color: $color-value !important;
+            }
+          }
+        }
+      }
+
+      @if list.length($feature-list) < 1 or list.index($feature-list, "hover") {
 
         @if not list.index($branch-name, "gradient") and (list.length($feature-list) < 1 or list.index($feature-list, "text")) {
-          .#{$prefix}#{$branch-name}-#{$sname}-text {
-            @if $vars {
-              color: var(--#{$prefixV}#{$branch-name}-#{$sname}) !important;
-            } @else {
-              color: $scolor !important;
+          @if $vars {
+            .#{$prefix}#{$branch-name}-#{$color-name}-hover-text {
+              &:hover {
+                color: var(--#{$prefixV}#{$branch-name}-#{$color-name}) !important;
+              }
+            }
+          } @else {
+            .#{$prefix}#{$branch-name}-#{$color-name}-hover-text {
+              &:hover {
+                color: $color-value !important;
+              }
             }
           }
         }
 
         @if not list.index($branch-name, "gradient") and (list.length($feature-list) < 1 or list.index($feature-list, "border")) {
           @if $vars {
-            .#{$prefix}#{$branch-name}-#{$sname}-border {
-              border-color: var(--#{$prefixV}#{$branch-name}-#{$sname}) !important;
+            .#{$prefix}#{$branch-name}-#{$color-name}-hover-border {
+              &:hover {
+                border-color: var(--#{$prefixV}#{$branch-name}-#{$color-name}) !important;
+              }
             }
           } @else {
-            .#{$prefix}#{$branch-name}-#{$sname}-border {
-              border-color: $scolor !important;
+            .#{$prefix}#{$branch-name}-#{$color-name}-hover-border {
+              &:hover {
+                border-color: $color-value !important;
+              }
             }
           }
         }
 
         @if list.length($feature-list) < 1 or list.index($feature-list, "background") {
           @if $vars {
-            .#{$prefix}#{$branch-name}-#{$sname}-bg {
-              background-color: var(--#{$prefixV}#{$branch-name}-#{$sname}) !important;
-              color: var(--#{$prefixV}on-#{$branch-name}-#{$sname}) !important;
+            .#{$prefix}#{$branch-name}-#{$color-name}-hover-bg {
+              &:hover {
+                background-color: var(--#{$prefixV}#{$branch-name}-#{$color-name}) !important;
+                color: var(--#{$prefixV}on-#{$branch-name}-#{$color-name}) !important;
+              }
             }
           } @else {
-            .#{$prefix}#{$branch-name}-#{$sname}-bg {
-              background-color: $scolor !important;
+            .#{$prefix}#{$branch-name}-#{$color-name}-hover-bg {
+              &:hover {
+                background-color: $color-value !important;
+              }
             }
           }
         }
 
         @if list.length($feature-list) < 1 or list.index($feature-list, "pseudo") {
           @if $vars {
-            .#{$prefix}#{$branch-name}-#{$sname}-pseudo-bg {
-              &::after,
-              &::before {
-                background-color: var(--#{$prefixV}#{$branch-name}-#{$sname}) !important;
+            .#{$prefix}#{$branch-name}-#{$color-name}-hover-pseudo-bg {
+              &:hover {
+                &::after,
+                &::before {
+                  background-color: var(--#{$prefixV}#{$branch-name}-#{$color-name}) !important;
+                }
               }
             }
           } @else {
-            .#{$prefix}#{$branch-name}-#{$sname}-pseudo-bg {
-              &::after,
-              &::before {
-                background-color: $scolor !important;
-              }
-            }
-          }
-        }
-
-        @if list.length($feature-list) < 1 or list.index($feature-list, "hover") {
-
-          @if not list.index($branch-name, "gradient") and (list.length($feature-list) < 1 or list.index($feature-list, "text")) {
-            @if $vars {
-              .#{$prefix}#{$branch-name}-#{$sname}-hover-text {
-                &:hover {
-                  color: var(--#{$prefixV}#{$branch-name}-#{$sname}) !important;
-                }
-              }
-            } @else {
-              .#{$prefix}#{$branch-name}-#{$sname}-hover-text {
-                &:hover {
-                  color: $scolor !important;
-                }
-              }
-            }
-          }
-
-          @if not list.index($branch-name, "gradient") and (list.length($feature-list) < 1 or list.index($feature-list, "border")) {
-            @if $vars {
-              .#{$prefix}#{$branch-name}-#{$sname}-hover-border {
-                &:hover {
-                  border-color: var(--#{$prefixV}#{$branch-name}-#{$sname}) !important;
-                }
-              }
-            } @else {
-              .#{$prefix}#{$branch-name}-#{$sname}-hover-border {
-                &:hover {
-                  border-color: $scolor !important;
-                }
-              }
-            }
-          }
-
-          @if list.length($feature-list) < 1 or list.index($feature-list, "background") {
-            @if $vars {
-              .#{$prefix}#{$branch-name}-#{$sname}-hover-bg {
-                &:hover {
-                  background-color: var(--#{$prefixV}#{$branch-name}-#{$sname}) !important;
-                  color: var(--#{$prefixV}on-#{$branch-name}-#{$sname}) !important;
-                }
-              }
-            } @else {
-              .#{$prefix}#{$branch-name}-#{$sname}-hover-bg {
-                &:hover {
-                  background-color: $scolor !important;
-                }
-              }
-            }
-          }
-
-          @if list.length($feature-list) < 1 or list.index($feature-list, "pseudo") {
-            @if $vars {
-              .#{$prefix}#{$branch-name}-#{$sname}-hover-pseudo-bg {
-                &:hover {
-                  &::after,
-                  &::before {
-                    background-color: var(--#{$prefixV}#{$branch-name}-#{$sname}) !important;
-                  }
-                }
-              }
-            } @else {
-              .#{$prefix}#{$branch-name}-#{$sname}-hover-pseudo-bg {
-                &:hover {
-                  &::after,
-                  &::before {
-                    background-color: $scolor !important;
-                  }
+            .#{$prefix}#{$branch-name}-#{$color-name}-hover-pseudo-bg {
+              &:hover {
+                &::after,
+                &::before {
+                  background-color: $color-value !important;
                 }
               }
             }
