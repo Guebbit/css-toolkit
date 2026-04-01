@@ -1,23 +1,21 @@
-# Build Compatibility
+# @mixin build-compatibility
 
-## Example
+Wraps nested CSS in browser-targeted `@media`/`@supports` blocks.
 
-Compatibility mode for browsers
-Firefox, Internet Explorer, Microsoft Edge, Opera, Safari
+## Usage
 
-```scss
-@include guebbit-compatibility("ie") {
-    ...
+```css
+@mixin build-compatibility ie {
+  .legacy-only {
+    display: block;
+  }
 }
 ```
 
-# Code
+## Supported targets
 
-<<< ../../src/mixins/build-compatibility.js
-
-## SCSS variables
-
-| Variable     | Description        | Accepted Values | Default |
-|:-------------|:-------------------|:----------------|:--------|
-| `@content`   | CSS Style to apply | `content`       | ``      |
-| `$browser`   | browser name       | `string`        | `none`  |
+- `ie`
+- `edge`
+- `firefox`
+- `opera`
+- `safari`

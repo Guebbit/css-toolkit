@@ -1,24 +1,17 @@
-# Create Padding
+# @mixin create-helper-padding
 
-## Example
+Generates padding helper classes from key/value pairs.
 
-```scss
-@include create-helper-padding((
-    (6, 6px),
-    (12, 12px),
-    (24, 24px),
-    (36, 36px),
-    (48, 48px),
-), true);
+## Usage
+
+```css
+@mixin create-helper-padding 6:6px, 12:12px, 24:24px;
 ```
 
-## Code
+## Output per key
 
-<<< ../../src/mixins/create-helper-padding.js
+For key `24`, value `24px`:
 
-
-| Variable          | Description                                              | Accepted Values       | Default |
-|:------------------|:---------------------------------------------------------|:----------------------|:--------|
-| `$measure-list`   | List of pairs <name, value>                              | `Array<name,value>[]` | `[]`    |
-| `$important`      | If instruction is !important                             | `boolean`             | `false` |
-| `$prefix`         | Eventual prefix (like `guebbit-`), to prevent collisions | `string`              | ``      |
+- `.pt-24`, `.pb-24`, `.pl-24`, `.pr-24`
+- `.px-24`, `.py-24`
+- `.pa-24`

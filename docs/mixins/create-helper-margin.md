@@ -1,25 +1,17 @@
-# Create Margin
+# @mixin create-helper-margin
 
-## Example
+Generates margin helper classes from key/value pairs.
 
-```scss
-@include create-helper-margin((
-    (auto, auto),
-    (6, 6px),
-    (12, 12px),
-    (24, 24px),
-    (36, 36px),
-    (48, 48px),
-), true);
+## Usage
+
+```css
+@mixin create-helper-margin auto:auto, 6:6px, 12:12px, 24:24px;
 ```
 
-## Code
+## Output per key
 
-<<< ../../src/mixins/create-helper-margin.js
+For key `24`, value `24px`:
 
-
-| Variable          | Description                                              | Accepted Values       | Default |
-|:------------------|:---------------------------------------------------------|:----------------------|:--------|
-| `$measure-list`   | List of pairs <name, value>                              | `Array<name,value>[]` | `[]`    |
-| `$important`      | If instruction is !important                             | `boolean`             | `false` |
-| `$prefix`         | Eventual prefix (like `guebbit-`), to prevent collisions | `string`              | ``      |
+- `.mt-24`, `.mb-24`, `.ml-24`, `.mr-24`
+- `.mx-24`, `.my-24`
+- `.ma-24`

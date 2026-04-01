@@ -1,66 +1,82 @@
-# Colors
+# Color functions
 
-https://blog.logrocket.com/using-hsl-colors-css/#what-hsl
-https://blog.logrocket.com/building-color-palette-css/#60-30-10-design-rule
+These functions are processed by the toolkit plugin inside declaration values.
 
-## color-brightness
+## color-opaque(background, foreground)
 
-Gives %, less than 50 darker is better, less than 50, lighter.
+Returns the visible opaque color when `foreground` is rendered over `background`.
 
-```scss
-@if(color-brightness($color) > 50)
-```
-
-```scss
-@function color-brightness($color) {
-  @return math.div(((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)), 255 * 100%);
+```css
+.demo {
+  color: color-opaque(#ddd, rgba(33, 33, 33, 0.84));
 }
 ```
 
-| Variable  | Description    | Accepted Values | Default |
-|:----------|:---------------|:----------------|:--------|
-| `$color`  | Color to check | `color`         | `none`  |
+## color-tint(color, weight)
 
+Mixes a color with white.
 
-
-## color-contrast
-
-Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
-
-```scss
-background-color: $background;
-color: color-contrast($background);
-```
-
-```scss
-@function color-contrast($color: #fff, $dark: #000, $light: #fff) {
-  $color-brightness: color-brightness($color);
-  $light-text-brightness: color-brightness($light);
-  $dark-text-brightness: color-brightness($dark);
-
-  @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+```css
+.demo {
+  background: color-tint(#333, 25%);
 }
 ```
 
-## color-hex2rgba
+## color-shade(color, weight)
 
-Convert HEX color to RGBA color
+Mixes a color with black.
 
-```scss
-color: color-hex2rgba(#00ff00, 0.5);
+```css
+.demo {
+  background: color-shade(#ddd, 25%);
+}
 ```
 
-## color-hex2rgbcore
+## color-shift(color, weight)
 
-Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+If weight is positive it shades, if negative it tints.
 
-```scss
---custom-var: color-hex2rgbcore(#00ff00);
+```css
+.darken { color: color-shift(#333, 25%); }
+.lighten { color: color-shift(#333, -25%); }
 ```
 
+## color-luminance(color)
 
-| Variable | Description          | Accepted Values | Default |
-|:---------|:---------------------|:----------------|:--------|
-| `$color` | Color to check       | `color`         | `4px`   |
-| `$dark`  | Dark color to apply  | `color`         | `#000`  |
-| `$light` | White color to apply | `color`         | `#fff`  |
+Returns relative luminance as a percentage.
+
+```css
+.demo {
+  --lum: color-luminance(#333);
+}
+```
+
+## color-contrast(color, dark, light)
+
+Returns the most contrasting between `dark` and `light`.
+
+```css
+.demo {
+  background: #222;
+  color: color-contrast(#222, #000, #fff);
+}
+```
+
+## extract-colors(color, mode, classic)
+
+Extracts color channels:
+
+- `mode=1`: always `r g b`
+- `mode=2` (default): `r g b` for opaque, `r g b / a` when alpha exists
+- `classic=true`: comma syntax (`r, g, b`)
+
+```css
+:root {
+  --brand-rgb: extract-colors(#3d8bfd, 1);
+}
+```
+
+## create-collection(color)
+
+JavaScript utility that returns shades `100..900` from a base color.  
+Used internally by custom color mixins.
