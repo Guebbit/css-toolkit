@@ -17,14 +17,14 @@ const __dirname = path.dirname(__filename);
 let cssCompiled;
 
 function assertContains(expected) {
-    const compact = (value) => value.replace(/\s+/g, '').replace(/;/g, '').replace(/::/g, ':');
+    const compact = (value) => value.replace(/\s+/g, '').replace(/;$/g, '');
     expect(compact(cssCompiled)).to.contain(compact(expected));
 }
 
 function roundCssNumbers(css, decimals = 5) {
-    return css.replace(/-?\d+\.\d{6,}/g, (raw) => {
+    return css.replace(/-?\d+\.\d{5,}/g, (raw) => {
         const rounded = Number.parseFloat(raw).toFixed(decimals);
-        return rounded.replace(/\.?0+$/, '');
+        return rounded.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
     });
 }
 
@@ -65,8 +65,8 @@ describe('COMPILE', function () {
             '.blue-400-hover-bg:hover,.blue-400-hover-pseudo-bg:hover:after,.blue-400-hover-pseudo-bg:hover:before{'
         );
         assertContains('.blue-400-hover-border:hover {');
-        assertContains('.blue-400-hover-pseudo-bg:hover::after,');
-        assertContains('.blue-400-hover-pseudo-bg:hover::before {');
+        assertContains('.blue-400-hover-pseudo-bg:hover:after,');
+        assertContains('.blue-400-hover-pseudo-bg:hover:before {');
 
         assertContains('.primary-500-text {');
         assertContains('color: var(--g-theme-primary-500) !important;');
@@ -83,8 +83,8 @@ describe('COMPILE', function () {
             '.primary-500-hover-bg:hover,.primary-500-hover-pseudo-bg:hover:after,.primary-500-hover-pseudo-bg:hover:before{'
         );
         assertContains('.primary-500-hover-border:hover {');
-        assertContains('.primary-500-hover-pseudo-bg:hover::after,');
-        assertContains('.primary-500-hover-pseudo-bg:hover::before {');
+        assertContains('.primary-500-hover-pseudo-bg:hover:after,');
+        assertContains('.primary-500-hover-pseudo-bg:hover:before {');
 
         assertContains('--g-theme-primary-500: 255 0 255;');
         assertContains('--g-theme-on-primary-500: 255 255 255;');
@@ -107,9 +107,9 @@ describe('COMPILE', function () {
         assertContains('.flex-gap-24 {');
         assertContains('gap: 24px !important;');
 
-        assertContains('.aspect-ratio-1-1::before {');
+        assertContains('.aspect-ratio-1-1:before {');
         assertContains('padding-top: 100%;');
-        assertContains('.aspect-ratio-16-9::before {');
+        assertContains('.aspect-ratio-16-9:before {');
         assertContains('padding-top: 56%;');
 
         assertContains(

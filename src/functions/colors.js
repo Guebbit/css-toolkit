@@ -8,6 +8,8 @@ const COLOR_DECIMALS = 5;
 function roundColorNumber(value, decimals = COLOR_DECIMALS) {
     if (!Number.isFinite(value)) return value;
     const rounded = Number(value.toFixed(decimals));
+    // Floating-point math can produce -0 for values very close to 0.
+    // Normalize to 0 so generated CSS never emits "-0" channels/alpha.
     return Object.is(rounded, -0) ? 0 : rounded;
 }
 
@@ -18,7 +20,7 @@ function normalizeColorChannels(color) {
         r: roundColorNumber(color.r),
         g: roundColorNumber(color.g),
         b: roundColorNumber(color.b),
-        a: color.a === undefined ? color.a : roundColorNumber(color.a)
+        a: color.a !== undefined ? roundColorNumber(color.a) : undefined
     };
 }
 
