@@ -2,7 +2,7 @@
 
 A repository containing helpful SCSS functions, mixins, and utilities for streamlining and standardizing CSS development
 
-# Notes
+# Architecture & Development Notes
 
 ## Why is `src/mixins/index.js` written as a single file?
 
@@ -23,7 +23,7 @@ The root `index.css` imports it so consumers have a stable CSS entrypoint, even 
 ## How do I build `test/compiled.css`?
 
 `test/compiled.css` is currently used as the **test input fixture** (not generated output).  
-So you normally:
+Typical workflow:
 
 1. edit/create `test/compiled.css` with mixin/function usage
 2. run `npm test`
