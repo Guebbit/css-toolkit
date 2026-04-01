@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 let cssCompiled;
 
 async function postcssCompiler() {
-    const inputPath = path.join(__dirname, './test.css');
+    const inputPath = path.join(__dirname, './compiled.css');
     const source = fs.readFileSync(inputPath, 'utf8');
 
     const result = await postcss([
