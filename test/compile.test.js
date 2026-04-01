@@ -21,15 +21,8 @@ function assertContains(expected) {
     expect(compact(cssCompiled)).to.contain(compact(expected));
 }
 
-function roundCssNumbers(css, decimals = 5) {
-    return css.replace(/-?\d+\.\d{5,}/g, (raw) => {
-        const rounded = Number.parseFloat(raw).toFixed(decimals);
-        return rounded.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
-    });
-}
-
 async function postcssCompiler() {
-    const inputPath = path.join(__dirname, './compiled.css');
+    const inputPath = path.join(__dirname, './source.css');
     const source = fs.readFileSync(inputPath, 'utf8');
 
     const result = await postcss([
@@ -40,7 +33,7 @@ async function postcssCompiler() {
         cssnano()
     ]).process(source, { from: inputPath });
 
-    return roundCssNumbers(result.css);
+    return result.css;
 }
 
 describe('COMPILE', function () {
@@ -48,7 +41,6 @@ describe('COMPILE', function () {
 
     it('Should compile', async function () {
         cssCompiled = await postcssCompiler();
-        fs.writeFileSync(path.join(__dirname, 'compiled.css'), cssCompiled);
     });
 
     it('Check some rules', function () {
