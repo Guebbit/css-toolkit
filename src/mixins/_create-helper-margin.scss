@@ -10,30 +10,30 @@
  *
  * @param {Array<name,value>[]} measure-list - postfix name and value
  */
-@mixin create-helper-margin($measure-list: (), $important: false, $prefix: "") {
-  @each $name, $val in $measure-list {
-    .#{$prefix}mt-#{$name} {
-      margin-top: #{$val} #{if($important == true, "!important", "")};
+@mixin create-helper-margin($measure-list: (), $important: false, $prefix: '') {
+    @each $name, $val in $measure-list {
+        .#{$prefix}mt-#{$name} {
+            margin-top: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}mb-#{$name} {
+            margin-bottom: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}ml-#{$name} {
+            margin-left: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}mr-#{$name} {
+            margin-right: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}mx-#{$name} {
+            margin-right: #{$val} #{if($important == true, '!important', '')};
+            margin-left: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}my-#{$name} {
+            margin-top: #{$val} #{if($important == true, '!important', '')};
+            margin-bottom: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}ma-#{$name} {
+            margin: #{$val} #{if($important == true, '!important', '')};
+        }
     }
-    .#{$prefix}mb-#{$name} {
-      margin-bottom: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}ml-#{$name} {
-      margin-left: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}mr-#{$name} {
-      margin-right: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}mx-#{$name} {
-      margin-right: #{$val} #{if($important == true, "!important", "")};
-      margin-left: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}my-#{$name} {
-      margin-top: #{$val} #{if($important == true, "!important", "")};
-      margin-bottom: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}ma-#{$name} {
-      margin: #{$val} #{if($important == true, "!important", "")};
-    }
-  }
 }

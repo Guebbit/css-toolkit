@@ -22,6 +22,6 @@ export default {
         postcssMixins({ mixins }),
         toolkitPlugin,
         postcssNesting(),
-        autoprefixer(),
-    ],
+        autoprefixer()
+    ]
 };

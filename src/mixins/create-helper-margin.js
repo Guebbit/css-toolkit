@@ -16,8 +16,12 @@ export function createHelperMargin(measureList = [], important = false, prefix =
         lines.push(`.${prefix}mb-${name} {\n  margin-bottom: ${val}${imp};\n}`);
         lines.push(`.${prefix}ml-${name} {\n  margin-left: ${val}${imp};\n}`);
         lines.push(`.${prefix}mr-${name} {\n  margin-right: ${val}${imp};\n}`);
-        lines.push(`.${prefix}mx-${name} {\n  margin-right: ${val}${imp};\n  margin-left: ${val}${imp};\n}`);
-        lines.push(`.${prefix}my-${name} {\n  margin-top: ${val}${imp};\n  margin-bottom: ${val}${imp};\n}`);
+        lines.push(
+            `.${prefix}mx-${name} {\n  margin-right: ${val}${imp};\n  margin-left: ${val}${imp};\n}`
+        );
+        lines.push(
+            `.${prefix}my-${name} {\n  margin-top: ${val}${imp};\n  margin-bottom: ${val}${imp};\n}`
+        );
         lines.push(`.${prefix}ma-${name} {\n  margin: ${val}${imp};\n}`);
     }
 

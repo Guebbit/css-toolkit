@@ -16,7 +16,13 @@ function resolveColor(colorValue) {
     return formatColor(colorValue);
 }
 
-export function createColors(colorList = {}, vars = false, prefix = '', prefixV = '', featureList = []) {
+export function createColors(
+    colorList = {},
+    vars = false,
+    prefix = '',
+    prefixV = '',
+    featureList = []
+) {
     const all = featureList.length < 1;
     const has = (f) => all || featureList.includes(f);
     const lines = [];
@@ -51,7 +57,9 @@ export function createColors(colorList = {}, vars = false, prefix = '', prefixV 
                         `.${cls}-bg {\n  background-color: ${varRef(`${branchName}-${colorName}`)} !important;\n  color: ${varRef(`on-${branchName}-${colorName}`)} !important;\n}`
                     );
                 } else {
-                    lines.push(`.${cls}-bg {\n  background-color: ${resolveColor(colorValue)} !important;\n}`);
+                    lines.push(
+                        `.${cls}-bg {\n  background-color: ${resolveColor(colorValue)} !important;\n}`
+                    );
                 }
             }
 
@@ -80,7 +88,9 @@ export function createColors(colorList = {}, vars = false, prefix = '', prefixV 
                     const val = vars
                         ? `${varRef(`${branchName}-${colorName}`)}`
                         : resolveColor(colorValue);
-                    lines.push(`.${cls}-hover-border:hover {\n  border-color: ${val} !important;\n}`);
+                    lines.push(
+                        `.${cls}-hover-border:hover {\n  border-color: ${val} !important;\n}`
+                    );
                 }
 
                 // Hover background
@@ -90,7 +100,9 @@ export function createColors(colorList = {}, vars = false, prefix = '', prefixV 
                             `.${cls}-hover-bg:hover {\n  background-color: ${varRef(`${branchName}-${colorName}`)} !important;\n  color: ${varRef(`on-${branchName}-${colorName}`)} !important;\n}`
                         );
                     } else {
-                        lines.push(`.${cls}-hover-bg:hover {\n  background-color: ${resolveColor(colorValue)} !important;\n}`);
+                        lines.push(
+                            `.${cls}-hover-bg:hover {\n  background-color: ${resolveColor(colorValue)} !important;\n}`
+                        );
                     }
                 }
 

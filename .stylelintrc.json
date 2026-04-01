@@ -1,14 +1,12 @@
 {
-  "extends": [
-    "stylelint-config-standard"
-  ],
-  "reporters": [
-    {
-      "formatter": "stylelint-mocha-formatter"
+    "extends": ["stylelint-config-standard"],
+    "reporters": [
+        {
+            "formatter": "stylelint-mocha-formatter"
+        }
+    ],
+    "rules": {
+        "alpha-value-notation": "number",
+        "no-descending-specificity": null
     }
-  ],
-  "rules": {
-    "alpha-value-notation": "number",
-    "no-descending-specificity": null
-  }
 }

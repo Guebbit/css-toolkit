@@ -26,6 +26,6 @@ export function buildScrollbar(size = '4px', color = '#fff', bg = 'auto', radius
         `  &::-webkit-scrollbar-corner {`,
         `    background-color: transparent;`,
         `    background-color: ${resolvedBg};`,
-        `  }`,
+        `  }`
     ].join('\n');
 }

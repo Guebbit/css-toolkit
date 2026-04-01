@@ -19,33 +19,43 @@ export const gray800 = '#343a40';
 export const gray900 = '#212529';
 
 export const grays = {
-    '100': gray100,
-    '200': gray200,
-    '300': gray300,
-    '400': gray400,
-    '500': gray500,
-    '600': gray600,
-    '700': gray700,
-    '800': gray800,
-    '900': gray900,
+    100: gray100,
+    200: gray200,
+    300: gray300,
+    400: gray400,
+    500: gray500,
+    600: gray600,
+    700: gray700,
+    800: gray800,
+    900: gray900
 };
 
-export const blue   = '#0d6efd';
+export const blue = '#0d6efd';
 export const indigo = '#6610f2';
 export const purple = '#6f42c1';
-export const pink   = '#d63384';
-export const red    = '#dc3545';
+export const pink = '#d63384';
+export const red = '#dc3545';
 export const orange = '#fd7e14';
 export const yellow = '#ffc107';
-export const green  = '#198754';
-export const teal   = '#20c997';
-export const cyan   = '#0dcaf0';
+export const green = '#198754';
+export const teal = '#20c997';
+export const cyan = '#0dcaf0';
 
 export const colors = {
-    blue, indigo, purple, pink, red, orange, yellow, green, teal, cyan,
-    black, white,
+    blue,
+    indigo,
+    purple,
+    pink,
+    red,
+    orange,
+    yellow,
+    green,
+    teal,
+    cyan,
+    black,
+    white,
     gray: gray600,
-    'gray-dark': gray800,
+    'gray-dark': gray800
 };
 
 // Blue shades

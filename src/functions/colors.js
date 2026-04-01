@@ -23,7 +23,7 @@ export function parseColor(colorStr) {
             r: parseInt(shortHex[1] + shortHex[1], 16),
             g: parseInt(shortHex[2] + shortHex[2], 16),
             b: parseInt(shortHex[3] + shortHex[3], 16),
-            a: 1,
+            a: 1
         };
     }
 
@@ -34,7 +34,7 @@ export function parseColor(colorStr) {
             r: parseInt(hexMatch[1], 16),
             g: parseInt(hexMatch[2], 16),
             b: parseInt(hexMatch[3], 16),
-            a: hexMatch[4] ? parseInt(hexMatch[4], 16) / 255 : 1,
+            a: hexMatch[4] ? parseInt(hexMatch[4], 16) / 255 : 1
         };
     }
 
@@ -47,7 +47,7 @@ export function parseColor(colorStr) {
             r: parseFloat(rgbMatch[1]),
             g: parseFloat(rgbMatch[2]),
             b: parseFloat(rgbMatch[3]),
-            a: rgbMatch[4] !== undefined ? parseFloat(rgbMatch[4]) : 1,
+            a: rgbMatch[4] !== undefined ? parseFloat(rgbMatch[4]) : 1
         };
     }
 
@@ -106,7 +106,7 @@ export function colorMix(color1, color2, weight) {
         r: c1.r * w1 + c2.r * w2,
         g: c1.g * w1 + c2.g * w2,
         b: c1.b * w1 + c2.b * w2,
-        a: a1 * p + a2 * (1 - p),
+        a: a1 * p + a2 * (1 - p)
     };
 }
 
@@ -159,7 +159,7 @@ export function colorLuminance(color) {
     if (!color || color === 'transparent') return 100;
     const c = typeof color === 'string' ? parseColor(color) : color;
     if (c.transparent || c.unparseable) return 100;
-    return (c.r * 0.299 + c.g * 0.587 + c.b * 0.114) / 255 * 100;
+    return ((c.r * 0.299 + c.g * 0.587 + c.b * 0.114) / 255) * 100;
 }
 
 /**
@@ -210,14 +210,14 @@ export function extractColors(color = '#fff', mode = 2, classic = false) {
 export function createCollection(color = '#fff') {
     const c = typeof color === 'string' ? parseColor(color) : color;
     return {
-        '100': colorTint(c, 80),
-        '200': colorTint(c, 60),
-        '300': colorTint(c, 40),
-        '400': colorTint(c, 20),
-        '500': { ...c },
-        '600': colorShade(c, 20),
-        '700': colorShade(c, 40),
-        '800': colorShade(c, 60),
-        '900': colorShade(c, 80),
+        100: colorTint(c, 80),
+        200: colorTint(c, 60),
+        300: colorTint(c, 40),
+        400: colorTint(c, 20),
+        500: { ...c },
+        600: colorShade(c, 20),
+        700: colorShade(c, 40),
+        800: colorShade(c, 60),
+        900: colorShade(c, 80)
     };
 }

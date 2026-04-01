@@ -1,6 +1,6 @@
-@use "sass:color";
-@use "sass:math";
-@use "sass:meta";
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:meta';
 
 /**
  * Return opaque color
@@ -8,40 +8,34 @@
  * function credited to https://getbootstrap.com/
  */
 @function color-opaque($background, $foreground) {
-  @return color.mix(rgba($foreground, 1), $background, color.opacity($foreground) * 100%);
+    @return color.mix(rgba($foreground, 1), $background, color.opacity($foreground) * 100%);
 }
 
 /**
  * Tint a color
  */
 @function color-tint($color, $weight) {
-  // Creates a physical mixture with white color
-  @return color.mix(#fff, $color, $weight);
-  // Adjusts properties (like lightness) relative to the color's current values.
-  // @return color.scale($color, $lightness: $weight);
+    // Creates a physical mixture with white color
+    @return color.mix(#fff, $color, $weight);
+    // Adjusts properties (like lightness) relative to the color's current values.
+    // @return color.scale($color, $lightness: $weight);
 }
-
 
 /**
  * Shade a color
  */
 @function color-shade($color, $weight) {
-  @return color.mix(#000, $color, $weight);
-  // @return color.scale($color, $lightness: -$weight);
+    @return color.mix(#000, $color, $weight);
+    // @return color.scale($color, $lightness: -$weight);
 }
-
 
 /**
  * Shade the color if the weight is positive, else tint it
  * function credited to https://getbootstrap.com/
  */
 @function color-shift($color, $weight) {
-  @return if($weight > 0,
-          color-shade($color, $weight),
-          color-tint($color, -$weight)
-  );
+    @return if($weight > 0, color-shade($color, $weight), color-tint($color, -$weight));
 }
-
 
 /**
  * Return WCAG2.1 relative luminance
@@ -51,32 +45,39 @@
  * Function like color.channel($color, "lightness", $space: hsl) gives a different %
  */
 @function color-luminance($color) {
-  // fallback
-  @if $color == transparent or meta.type-of($color) != color {
-    @return 100;
-  }
-  @return math.div((
-          (color.channel($color, "red", $space: rgb) * .299) +
-          (color.channel($color, "green", $space: rgb) * .587) +
-          (color.channel($color, "blue", $space: rgb) * .114)
-  ), 255) * 100%;
+    // fallback
+    @if $color == transparent or meta.type-of($color) != color {
+        @return 100;
+    }
+    @return math.div(
+            (
+                (color.channel($color, 'red', $space: rgb) * 0.299) +
+                    (color.channel($color, 'green', $space: rgb) * 0.587) +
+                    (color.channel($color, 'blue', $space: rgb) * 0.114)
+            ),
+            255
+        ) *
+        100%;
 }
-
 
 /**
  * Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
  */
 @function color-contrast($color: #fff, $dark: #000, $light: #fff) {
-  @if meta.type-of($color) != color or $color == transparent {
-    @return inherit;
-  }
-  $color-brightness: color-luminance($color);
-  $light-text-brightness: color-luminance($light);
-  $dark-text-brightness: color-luminance($dark);
+    @if meta.type-of($color) != color or $color == transparent {
+        @return inherit;
+    }
+    $color-brightness: color-luminance($color);
+    $light-text-brightness: color-luminance($light);
+    $dark-text-brightness: color-luminance($dark);
 
-  @return if(math.abs($color-brightness - $light-text-brightness) > math.abs($color-brightness - $dark-text-brightness), $light, $dark);
+    @return if(
+        math.abs($color-brightness - $light-text-brightness) >
+            math.abs($color-brightness - $dark-text-brightness),
+        $light,
+        $dark
+    );
 }
-
 
 /**
  * NEW numeric annotation
@@ -88,30 +89,30 @@
  *    - 2: 4° digit only when needed
  * $classic: false = new number annotation
  */
-@function extract-colors($color: #fff, $mode: 2, $classic: false){
-  // colors only
-  @if $color == transparent or meta.type-of($color) != color {
-    @return $color;
-  }
-  // new annotation
-  $delimiter: " ";
-  $delimiter-alpha: " / ";
-  // old annotation
-  @if $classic{
-    $delimiter: ", ";
-    $delimiter-alpha: ", ";
-  }
-  $alpha: color.alpha($color);
-  @if $mode == 1 or ($mode == 2 and $alpha == 1) {
-    @return color.channel($color, "red", $space: rgb) +
-        $delimiter + color.channel($color, "green", $space: rgb) +
-        $delimiter + color.channel($color, "blue", $space: rgb);
-  }
-  // Regular RGBA compliant result ("number" notation)
-  @return color.channel($color, "red", $space: rgb) +
-        $delimiter + color.channel($color, "green", $space: rgb) +
-        $delimiter + color.channel($color, "blue", $space: rgb) +
-        $delimiter-alpha + color.channel($color, "alpha"); // * 100%
+@function extract-colors($color: #fff, $mode: 2, $classic: false) {
+    // colors only
+    @if $color == transparent or meta.type-of($color) != color {
+        @return $color;
+    }
+    // new annotation
+    $delimiter: ' ';
+    $delimiter-alpha: ' / ';
+    // old annotation
+    @if $classic {
+        $delimiter: ', ';
+        $delimiter-alpha: ', ';
+    }
+    $alpha: color.alpha($color);
+    @if $mode == 1 or ($mode == 2 and $alpha == 1) {
+        @return color.channel($color, 'red', $space: rgb) + $delimiter +
+            color.channel($color, 'green', $space: rgb) + $delimiter +
+            color.channel($color, 'blue', $space: rgb);
+    }
+    // Regular RGBA compliant result ("number" notation)
+    @return color.channel($color, 'red', $space: rgb) + $delimiter +
+        color.channel($color, 'green', $space: rgb) + $delimiter +
+        color.channel($color, 'blue', $space: rgb) + $delimiter-alpha +
+        color.channel($color, 'alpha'); // * 100%
 }
 
 /**
@@ -119,17 +120,17 @@
  * @param $color
  */
 @function create-collection($color: #fff) {
-  $list: (
-          "100": color-tint($color, 80%),
-          "200": color-tint($color, 60%),
-          "300": color-tint($color, 40%),
-          "400": color-tint($color, 20%),
-          "500": $color,
-          "600": color-shade($color, 20%),
-          "700": color-shade($color, 40%),
-          "800": color-shade($color, 60%),
-          "900": color-shade($color, 80%)
-  );
+    $list: (
+        '100': color-tint($color, 80%),
+        '200': color-tint($color, 60%),
+        '300': color-tint($color, 40%),
+        '400': color-tint($color, 20%),
+        '500': $color,
+        '600': color-shade($color, 20%),
+        '700': color-shade($color, 40%),
+        '800': color-shade($color, 60%),
+        '900': color-shade($color, 80%)
+    );
 
-  @return $list
+    @return $list;
 }

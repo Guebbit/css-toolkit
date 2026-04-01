@@ -9,7 +9,13 @@
  * @param {string} delimiter    - Separator between instruction and name (default '-')
  * @returns {string} CSS string
  */
-export function createClass(instruction, measureList = [], important = false, prefix = '', delimiter = '-') {
+export function createClass(
+    instruction,
+    measureList = [],
+    important = false,
+    prefix = '',
+    delimiter = '-'
+) {
     const imp = important ? ' !important' : '';
     const lines = [];
 
@@ -20,7 +26,9 @@ export function createClass(instruction, measureList = [], important = false, pr
         } else {
             name = val = Array.isArray(entry) ? entry[0] : entry;
         }
-        lines.push(`.${prefix}${instruction}${delimiter}${name} {\n  ${instruction}: ${val}${imp};\n}`);
+        lines.push(
+            `.${prefix}${instruction}${delimiter}${name} {\n  ${instruction}: ${val}${imp};\n}`
+        );
     }
 
     return lines.join('\n');

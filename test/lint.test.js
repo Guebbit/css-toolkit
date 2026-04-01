@@ -1,24 +1,24 @@
-import { describe, it } from "mocha";
-import { expect } from "chai";
-import stylelint from "stylelint";
-import path from "path";
-import { fileURLToPath } from "url";
+import { describe, it } from 'mocha';
+import { expect } from 'chai';
+import stylelint from 'stylelint';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-describe("LINT", function () {
+describe('LINT', function () {
     this.timeout(10000);
 
-    it("Generic linting", async () => {
+    it('Generic linting', async () => {
         return stylelint
             .lint({
-                configFile: path.join(__dirname, "../.stylelintrc.json"),
-                ignorePath: path.join(__dirname, "../.stylelintignore"),
+                configFile: path.join(__dirname, '../.stylelintrc.json'),
+                ignorePath: path.join(__dirname, '../.stylelintignore'),
                 files: [
-                    path.join(__dirname, "../index.css"),
-                    path.join(__dirname, "../src/index.css"),
-                ],
+                    path.join(__dirname, '../index.css'),
+                    path.join(__dirname, '../src/index.css')
+                ]
             })
             .then(function ({ errored, report }) {
                 if (!errored) return false;
@@ -29,10 +29,10 @@ describe("LINT", function () {
                         const reportsValues = reportsArray[i][reportKeys[k]];
                         if (reportsValues.length <= 0) continue;
                         if (Array.isArray(reportsValues)) {
-                            console.log("-----------" + reportKeys[k] + "-----------");
+                            console.log('-----------' + reportKeys[k] + '-----------');
                             for (let x = reportsValues.length; x--; ) console.log(reportsValues[x]);
                         } else {
-                            console.log(reportKeys[k] + ": " + reportsValues);
+                            console.log(reportKeys[k] + ': ' + reportsValues);
                         }
                     }
                 }

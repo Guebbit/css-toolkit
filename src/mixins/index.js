@@ -10,7 +10,11 @@ import { createColorsVars } from './create-colors-vars.js';
 import { createClass } from './create-class.js';
 import { createHelperMargin } from './create-helper-margin.js';
 import { createHelperPadding } from './create-helper-padding.js';
-import { buildAspectRatio, buildAspectRatioContainer, buildAspectRatioAnchor } from './build-aspect-ratio.js';
+import {
+    buildAspectRatio,
+    buildAspectRatioContainer,
+    buildAspectRatioAnchor
+} from './build-aspect-ratio.js';
 import { buildCompatibility } from './build-compatibility.js';
 import { buildScrollbar } from './build-scrollbar.js';
 
@@ -177,7 +181,7 @@ export const mixins = {
     'build-scrollbar': function (mixin, size, color, bg, radius) {
         const css = buildScrollbar(size, color, bg, radius);
         mixin.replaceWith(postcss.parse(css));
-    },
+    }
 };
 
 export default mixins;

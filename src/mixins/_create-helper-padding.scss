@@ -10,31 +10,30 @@
 
  * @param {Array<name,value>[]} measure-list - postfix name and value
  */
-@mixin create-helper-padding($measure-list: (), $important: false, $prefix: "") {
-
-  @each $name, $val in $measure-list {
-    .#{$prefix}pt-#{$name} {
-      padding-top: #{$val} #{if($important == true, "!important", "")};
+@mixin create-helper-padding($measure-list: (), $important: false, $prefix: '') {
+    @each $name, $val in $measure-list {
+        .#{$prefix}pt-#{$name} {
+            padding-top: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}pb-#{$name} {
+            padding-bottom: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}pl-#{$name} {
+            padding-left: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}pr-#{$name} {
+            padding-right: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}px-#{$name} {
+            padding-right: #{$val} #{if($important == true, '!important', '')};
+            padding-left: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}py-#{$name} {
+            padding-top: #{$val} #{if($important == true, '!important', '')};
+            padding-bottom: #{$val} #{if($important == true, '!important', '')};
+        }
+        .#{$prefix}pa-#{$name} {
+            padding: #{$val} #{if($important == true, '!important', '')};
+        }
     }
-    .#{$prefix}pb-#{$name} {
-      padding-bottom: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}pl-#{$name} {
-      padding-left: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}pr-#{$name} {
-      padding-right: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}px-#{$name} {
-      padding-right: #{$val} #{if($important == true, "!important", "")};
-      padding-left: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}py-#{$name} {
-      padding-top: #{$val} #{if($important == true, "!important", "")};
-      padding-bottom: #{$val} #{if($important == true, "!important", "")};
-    }
-    .#{$prefix}pa-#{$name} {
-      padding: #{$val} #{if($important == true, "!important", "")};
-    }
-  }
 }

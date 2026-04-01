@@ -23,7 +23,7 @@ import {
     colorLuminance,
     colorContrast,
     extractColors,
-    createCollection,
+    createCollection
 } from './src/functions/colors.js';
 import { noNullVar, noTargetVar, mapDeepGet } from './src/functions/helpers.js';
 import { stringSplit, stringEndsWith } from './src/functions/strings.js';
@@ -38,7 +38,7 @@ function tokeniseArgs(str) {
     let current = '';
 
     for (const ch of str) {
-        if (ch === '(' ) depth++;
+        if (ch === '(') depth++;
         if (ch === ')') depth--;
         if (ch === ',' && depth === 0) {
             args.push(current.trim());
@@ -123,7 +123,10 @@ function processValue(value) {
 
     v = replaceFunction(v, 'color-shift', ([color, weightStr]) => {
         const w = parseWeight(weightStr);
-        const result = colorShift(color.trim(), weightStr.trim().startsWith('-') ? -Math.abs(w) : w);
+        const result = colorShift(
+            color.trim(),
+            weightStr.trim().startsWith('-') ? -Math.abs(w) : w
+        );
         return formatColor(result);
     });
 
@@ -132,7 +135,11 @@ function processValue(value) {
     });
 
     v = replaceFunction(v, 'color-contrast', ([color, dark, light]) => {
-        return colorContrast(color.trim(), dark ? dark.trim() : '#000', light ? light.trim() : '#fff');
+        return colorContrast(
+            color.trim(),
+            dark ? dark.trim() : '#000',
+            light ? light.trim() : '#fff'
+        );
     });
 
     v = replaceFunction(v, 'extract-colors', ([color, modeStr, classicStr]) => {
@@ -159,7 +166,7 @@ const pluginObject = {
         ) {
             decl.value = processValue(decl.value);
         }
-    },
+    }
 };
 
 // Wrap in a creator function so PostCSS can initialise it correctly

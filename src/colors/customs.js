@@ -5,7 +5,7 @@
 import { colorTint, colorShade } from '../functions/colors.js';
 
 export const flatricaGreen = '#06a763';
-export const mangaRed      = '#d41816';
+export const mangaRed = '#d41816';
 
 // Flatrica-green shades
 export const flatricaGreen100 = colorTint(flatricaGreen, 80);

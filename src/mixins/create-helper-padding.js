@@ -16,8 +16,12 @@ export function createHelperPadding(measureList = [], important = false, prefix 
         lines.push(`.${prefix}pb-${name} {\n  padding-bottom: ${val}${imp};\n}`);
         lines.push(`.${prefix}pl-${name} {\n  padding-left: ${val}${imp};\n}`);
         lines.push(`.${prefix}pr-${name} {\n  padding-right: ${val}${imp};\n}`);
-        lines.push(`.${prefix}px-${name} {\n  padding-right: ${val}${imp};\n  padding-left: ${val}${imp};\n}`);
-        lines.push(`.${prefix}py-${name} {\n  padding-top: ${val}${imp};\n  padding-bottom: ${val}${imp};\n}`);
+        lines.push(
+            `.${prefix}px-${name} {\n  padding-right: ${val}${imp};\n  padding-left: ${val}${imp};\n}`
+        );
+        lines.push(
+            `.${prefix}py-${name} {\n  padding-top: ${val}${imp};\n  padding-bottom: ${val}${imp};\n}`
+        );
         lines.push(`.${prefix}pa-${name} {\n  padding: ${val}${imp};\n}`);
     }
 
