@@ -10,19 +10,25 @@ import postcssMixins from 'postcss-mixins';
 import cssnano from 'cssnano';
 import { mixins } from '../src/mixins/index.js';
 import toolkitPlugin from '../index.js';
+import { createFullCssSource } from '../src/full-css.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 let cssCompiled;
+const inputPath = path.join(__dirname, './source.css');
 
 function assertContains(expected) {
     const compact = (value) => value.replace(/\s+/g, '').replace(/;$/g, '');
     expect(compact(cssCompiled)).to.contain(compact(expected));
 }
 
+function ensureSourceCss() {
+    const source = createFullCssSource();
+    fs.writeFileSync(inputPath, source, 'utf8');
+}
+
 async function postcssCompiler() {
-    const inputPath = path.join(__dirname, './source.css');
     const source = fs.readFileSync(inputPath, 'utf8');
 
     const result = await postcss([
@@ -40,6 +46,7 @@ describe('COMPILE', function () {
     this.timeout(10000);
 
     it('Should compile', async function () {
+        ensureSourceCss();
         cssCompiled = await postcssCompiler();
     });
 
