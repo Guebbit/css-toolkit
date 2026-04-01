@@ -3,6 +3,27 @@
  * Replaces SCSS functions from src/functions/_colors.scss
  */
 
+const COLOR_DECIMALS = 5;
+
+function roundColorNumber(value, decimals = COLOR_DECIMALS) {
+    if (!Number.isFinite(value)) return value;
+    const rounded = Number(value.toFixed(decimals));
+    // Floating-point math can produce -0 for values very close to 0.
+    // Normalize to 0 so generated CSS never emits "-0" channels/alpha.
+    return Object.is(rounded, -0) ? 0 : rounded;
+}
+
+function normalizeColorChannels(color) {
+    if (!color || color.transparent || color.unparseable) return color;
+    return {
+        ...color,
+        r: roundColorNumber(color.r),
+        g: roundColorNumber(color.g),
+        b: roundColorNumber(color.b),
+        a: color.a !== undefined ? roundColorNumber(color.a) : undefined
+    };
+}
+
 /**
  * Parse a CSS color string to { r, g, b, a } object
  * Supports: #hex, #hexa, rgb(), rgba()
@@ -61,7 +82,8 @@ export function parseColor(colorStr) {
 export function formatColor(color) {
     if (!color || color.transparent) return 'transparent';
     if (color.unparseable) return color.raw;
-    const { r, g, b, a } = color;
+    const normalized = normalizeColorChannels(color);
+    const { r, g, b, a } = normalized;
 
     if (a === 1) {
         // Use hex notation when all channels are exact integers
@@ -195,7 +217,7 @@ export function extractColors(color = '#fff', mode = 2, classic = false) {
     const delimiter = classic ? ', ' : ' ';
     const delimiterAlpha = classic ? ', ' : ' / ';
 
-    const { r, g, b, a } = c;
+    const { r, g, b, a } = normalizeColorChannels(c);
 
     if (mode === 1 || (mode === 2 && a === 1)) {
         return `${r}${delimiter}${g}${delimiter}${b}`;

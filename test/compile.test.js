@@ -7,6 +7,7 @@ import postcss from 'postcss';
 import postcssImport from 'postcss-import';
 import postcssNesting from 'postcss-nesting';
 import postcssMixins from 'postcss-mixins';
+import cssnano from 'cssnano';
 import { mixins } from '../src/mixins/index.js';
 import toolkitPlugin from '../index.js';
 
@@ -15,15 +16,21 @@ const __dirname = path.dirname(__filename);
 
 let cssCompiled;
 
+function assertContains(expected) {
+    const compact = (value) => value.replace(/\s+/g, '').replace(/;$/g, '');
+    expect(compact(cssCompiled)).to.contain(compact(expected));
+}
+
 async function postcssCompiler() {
-    const inputPath = path.join(__dirname, './compiled.css');
+    const inputPath = path.join(__dirname, './source.css');
     const source = fs.readFileSync(inputPath, 'utf8');
 
     const result = await postcss([
         postcssImport(),
         postcssMixins({ mixins }),
         toolkitPlugin(),
-        postcssNesting()
+        postcssNesting(),
+        cssnano()
     ]).process(source, { from: inputPath });
 
     return result.css;
@@ -34,84 +41,87 @@ describe('COMPILE', function () {
 
     it('Should compile', async function () {
         cssCompiled = await postcssCompiler();
-        fs.writeFileSync(path.join(__dirname, 'compiled.css'), cssCompiled);
     });
 
     it('Check some rules', function () {
-        expect(cssCompiled).to.contain('.blue-400-text {');
-        expect(cssCompiled).to.contain('color: rgb(61.4, 139, 253.4) !important;');
-        expect(cssCompiled).to.contain('.blue-400-bg {');
-        expect(cssCompiled).to.contain('background-color: rgb(61.4, 139, 253.4) !important;');
-        expect(cssCompiled).to.contain('.blue-400-border {');
-        expect(cssCompiled).to.contain('border-color: rgb(61.4, 139, 253.4) !important;');
-        expect(cssCompiled).to.contain('.blue-400-pseudo-bg::after,');
-        expect(cssCompiled).to.contain('.blue-400-pseudo-bg::before {');
-        expect(cssCompiled).to.contain('.blue-400-hover-text:hover {');
-        expect(cssCompiled).to.contain('.blue-400-hover-bg:hover {');
-        expect(cssCompiled).to.contain('.blue-400-hover-border:hover {');
-        expect(cssCompiled).to.contain('.blue-400-hover-pseudo-bg:hover::after,');
-        expect(cssCompiled).to.contain('.blue-400-hover-pseudo-bg:hover::before {');
-
-        expect(cssCompiled).to.contain('.primary-500-text {');
-        expect(cssCompiled).to.contain('color: var(--g-theme-primary-500) !important;');
-        expect(cssCompiled).to.contain('.primary-500-bg {');
-        expect(cssCompiled).to.contain('background-color: var(--g-theme-primary-500) !important;');
-        expect(cssCompiled).to.contain('.primary-500-border {');
-        expect(cssCompiled).to.contain('border-color: var(--g-theme-primary-500) !important;');
-        expect(cssCompiled).to.contain('.primary-500-pseudo-bg::after,');
-        expect(cssCompiled).to.contain('.primary-500-pseudo-bg::before {');
-        expect(cssCompiled).to.contain('.primary-500-hover-text:hover {');
-        expect(cssCompiled).to.contain('.primary-500-hover-bg:hover {');
-        expect(cssCompiled).to.contain('.primary-500-hover-border:hover {');
-        expect(cssCompiled).to.contain('.primary-500-hover-pseudo-bg:hover::after,');
-        expect(cssCompiled).to.contain('.primary-500-hover-pseudo-bg:hover::before {');
-
-        expect(cssCompiled).to.contain('--g-theme-primary-500: 255 0 255;');
-        expect(cssCompiled).to.contain('--g-theme-on-primary-500: 255 255 255;');
-        expect(cssCompiled).to.contain('--blue-400: 61.4 139 253.4;');
-        expect(cssCompiled).to.contain('--on-blue-400: 0 0 0;');
-        expect(cssCompiled).to.contain('--manga-red-500: 212 24 22;');
-        expect(cssCompiled).to.contain(
-            '--gradient-brand-instagram: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);'
+        assertContains('.blue-400-text {');
+        assertContains('color:#3d8bfd!important;');
+        assertContains('.blue-400-bg,.blue-400-pseudo-bg:after,.blue-400-pseudo-bg:before{');
+        assertContains('background-color:#3d8bfd!important;');
+        assertContains('.blue-400-border {');
+        assertContains('border-color:#3d8bfd!important;');
+        assertContains('.blue-400-pseudo-bg:after');
+        assertContains('.blue-400-pseudo-bg:before');
+        assertContains('.blue-400-hover-text:hover {');
+        assertContains(
+            '.blue-400-hover-bg:hover,.blue-400-hover-pseudo-bg:hover:after,.blue-400-hover-pseudo-bg:hover:before{'
         );
-        expect(cssCompiled).to.contain('.text-align-right {');
-        expect(cssCompiled).to.contain('text-align: right !important;');
+        assertContains('.blue-400-hover-border:hover {');
+        assertContains('.blue-400-hover-pseudo-bg:hover:after,');
+        assertContains('.blue-400-hover-pseudo-bg:hover:before {');
 
-        expect(cssCompiled).to.contain('.mt-auto {');
-        expect(cssCompiled).to.contain('margin-top: auto;');
-        expect(cssCompiled).to.contain('.my-48 {');
-        expect(cssCompiled).to.contain('margin-top: 48px;');
-        expect(cssCompiled).to.contain('margin-bottom: 48px;');
-        expect(cssCompiled).to.contain('.width-100 {');
-        expect(cssCompiled).to.contain('width: 100% !important;');
-        expect(cssCompiled).to.contain('.flex-gap-24 {');
-        expect(cssCompiled).to.contain('gap: 24px !important;');
-
-        expect(cssCompiled).to.contain('.aspect-ratio-1-1::before {');
-        expect(cssCompiled).to.contain('padding-top: 100%;');
-        expect(cssCompiled).to.contain('.aspect-ratio-16-9::before {');
-        expect(cssCompiled).to.contain('padding-top: 56%;');
-
-        expect(cssCompiled).to.contain(
-            '@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {'
+        assertContains('.primary-500-text {');
+        assertContains('color: var(--g-theme-primary-500) !important;');
+        assertContains(
+            '.primary-500-bg,.primary-500-pseudo-bg:after,.primary-500-pseudo-bg:before{'
         );
-        expect(cssCompiled).to.contain('@supports (-ms-ime-align: auto) {');
-        expect(cssCompiled).to.contain('@supports (-moz-appearance: none) {');
-
-        expect(cssCompiled).to.contain(
-            '--color-opaque-1: rgba(33.08108108108108, 33.08108108108108, 33.08108108108108, 0.8400000000000001);'
+        assertContains('background-color: var(--g-theme-primary-500) !important;');
+        assertContains('.primary-500-border {');
+        assertContains('border-color: var(--g-theme-primary-500) !important;');
+        assertContains('.primary-500-pseudo-bg:after');
+        assertContains('.primary-500-pseudo-bg:before');
+        assertContains('.primary-500-hover-text:hover {');
+        assertContains(
+            '.primary-500-hover-bg:hover,.primary-500-hover-pseudo-bg:hover:after,.primary-500-hover-pseudo-bg:hover:before{'
         );
-        expect(cssCompiled).to.contain('--color-opaque-2: rgb(110.5, 110.5, 110.5);');
-        expect(cssCompiled).to.contain('--color-opaque-3: #ddd;');
-        expect(cssCompiled).to.contain('--color-tint-1: rgb(89.25, 89.25, 89.25);');
-        expect(cssCompiled).to.contain('--color-tint-2: rgb(229.5, 229.5, 229.5);');
-        expect(cssCompiled).to.contain('--color-shade-1: rgb(25.5, 25.5, 25.5);');
-        expect(cssCompiled).to.contain('--color-shade-2: rgb(165.75, 165.75, 165.75);');
-        expect(cssCompiled).to.contain('--color-shift-1: rgb(25.5, 25.5, 25.5);');
-        expect(cssCompiled).to.contain('--color-shift-2: rgb(165.75, 165.75, 165.75);');
-        expect(cssCompiled).to.contain('--color-shift-3: rgb(89.25, 89.25, 89.25);');
-        expect(cssCompiled).to.contain('--color-shift-4: rgb(229.5, 229.5, 229.5);');
-        expect(cssCompiled).to.contain('--color-contrast-1: #fff;');
-        expect(cssCompiled).to.contain('--color-contrast-2: #000;');
+        assertContains('.primary-500-hover-border:hover {');
+        assertContains('.primary-500-hover-pseudo-bg:hover:after,');
+        assertContains('.primary-500-hover-pseudo-bg:hover:before {');
+
+        assertContains('--g-theme-primary-500: 255 0 255;');
+        assertContains('--g-theme-on-primary-500: 255 255 255;');
+        assertContains('--blue-400: 61.4 139 253.4;');
+        assertContains('--on-blue-400: 0 0 0;');
+        assertContains('--manga-red-500: 212 24 22;');
+        assertContains(
+            '--gradient-brand-instagram:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);'
+        );
+        assertContains('.text-align-right {');
+        assertContains('text-align: right !important;');
+
+        assertContains('.mt-auto {');
+        assertContains('margin-top: auto;');
+        assertContains('.my-48 {');
+        assertContains('margin-top: 48px;');
+        assertContains('margin-bottom: 48px;');
+        assertContains('.width-100 {');
+        assertContains('width: 100% !important;');
+        assertContains('.flex-gap-24 {');
+        assertContains('gap: 24px !important;');
+
+        assertContains('.aspect-ratio-1-1:before {');
+        assertContains('padding-top: 100%;');
+        assertContains('.aspect-ratio-16-9:before {');
+        assertContains('padding-top: 56%;');
+
+        assertContains(
+            '@media(-ms-high-contrast:active),(-ms-high-contrast:none){'
+        );
+        assertContains('@supports (-ms-ime-align: auto) {');
+        assertContains('@supports (-moz-appearance: none) {');
+
+        assertContains('--color-opaque-1:rgba(33,33,33,.84);');
+        assertContains('--color-opaque-2:#6f6f6f;');
+        assertContains('--color-opaque-3: #ddd;');
+        assertContains('--color-tint-1:#595959;');
+        assertContains('--color-tint-2:#e6e6e6;');
+        assertContains('--color-shade-1:#1a1a1a;');
+        assertContains('--color-shade-2:#a6a6a6;');
+        assertContains('--color-shift-1:#1a1a1a;');
+        assertContains('--color-shift-2:#a6a6a6;');
+        assertContains('--color-shift-3:#595959;');
+        assertContains('--color-shift-4:#e6e6e6;');
+        assertContains('--color-contrast-1: #fff;');
+        assertContains('--color-contrast-2: #000;');
     });
 });
