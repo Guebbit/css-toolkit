@@ -9,7 +9,7 @@ Scrollbars of element
 
 ## Code
 
-<<< ../../src/mixins/_build-scrollbar.scss
+<<< ../../src/mixins/build-scrollbar.js
 
 | Variable  | Description             | Accepted Values | Default |
 |:----------|:------------------------|:----------------|:--------|
