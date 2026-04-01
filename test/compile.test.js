@@ -22,7 +22,7 @@ function assertContains(expected) {
 }
 
 async function postcssCompiler() {
-    const inputPath = path.join(__dirname, './compiled.css');
+    const inputPath = path.join(__dirname, './source.css');
     const source = fs.readFileSync(inputPath, 'utf8');
 
     const result = await postcss([
