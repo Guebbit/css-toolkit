@@ -1,7 +1,7 @@
 {
     "name": "@guebbit/css-toolkit",
     "type": "module",
-    "version": "1.3.2",
+    "version": "2.0",
     "description": "A repository containing helpful CSS functions, mixins, and utilities for streamlining and standardizing CSS development",
     "main": "index.js",
     "files": [

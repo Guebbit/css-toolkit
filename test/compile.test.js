@@ -22,7 +22,7 @@ function assertContains(expected) {
 }
 
 async function postcssCompiler() {
-    const inputPath = path.join(__dirname, './source.css');
+    const inputPath = path.join(__dirname, './compiled.css');
     const source = fs.readFileSync(inputPath, 'utf8');
 
     const result = await postcss([
@@ -104,9 +104,7 @@ describe('COMPILE', function () {
         assertContains('.aspect-ratio-16-9:before {');
         assertContains('padding-top: 56%;');
 
-        assertContains(
-            '@media(-ms-high-contrast:active),(-ms-high-contrast:none){'
-        );
+        assertContains('@media(-ms-high-contrast:active),(-ms-high-contrast:none){');
         assertContains('@supports (-ms-ime-align: auto) {');
         assertContains('@supports (-moz-appearance: none) {');
 
