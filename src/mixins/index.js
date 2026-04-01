@@ -1,4 +1,8 @@
-import { buildAspectRatioAnchorMixin, buildAspectRatioContainerMixin, buildAspectRatioMixin } from './handlers/build-aspect-ratio.js';
+import {
+    buildAspectRatioAnchorMixin,
+    buildAspectRatioContainerMixin,
+    buildAspectRatioMixin
+} from './handlers/build-aspect-ratio.js';
 import { buildCompatibilityMixin } from './handlers/build-compatibility.js';
 import { buildScrollbarMixin } from './handlers/build-scrollbar.js';
 import { createClassMixin } from './handlers/create-class.js';
