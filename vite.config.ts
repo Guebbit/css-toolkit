@@ -6,7 +6,7 @@ export default defineConfig({
     build: {
         outDir: path.join(__dirname, "dist"),
         lib: {
-            entry: path.resolve(__dirname, "index.scss"),
+            entry: path.resolve(__dirname, "index.css"),
             name: "@guebbit/css-toolkit",
             fileName: "css-toolkit",
         },
