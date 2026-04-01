@@ -1,21 +1,21 @@
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
-    lang: "en-US",
-    title: "Guebbit SCSS Library",
-    titleTemplate: ":title - base SCSS plus components",
-    description: "Guebbit's personal SCSS Library (MIT license, free to use).",
+    lang: 'en-US',
+    title: '@guebbit/css-toolkit',
+    titleTemplate: ':title · @guebbit/css-toolkit',
+    description: 'PostCSS toolkit with CSS functions, mixins, and color collections.',
     themeConfig: {
-        logo: "/logotype.svg",
-        siteTitle: "SCSS Library",
+        logo: '/logotype.svg',
+        siteTitle: 'css-toolkit',
         search: {
             provider: 'local'
         },
         nav: [
             {
                 text: 'Github',
-                link: 'https://github.com/Guebbit/css-toolkit',
-            },
+                link: 'https://github.com/Guebbit/css-toolkit'
+            }
         ],
         sidebar: [
             {
@@ -32,7 +32,7 @@ export default defineConfig({
                     },
                     {
                         text: 'Gradients',
-                        link: '/colors/customs.md',
+                        link: '/colors/customs.md'
                     }
                 ]
             },
@@ -46,7 +46,11 @@ export default defineConfig({
                     },
                     {
                         text: 'Helpers',
-                        link: '/functions/helpers.md',
+                        link: '/functions/helpers.md'
+                    },
+                    {
+                        text: 'Strings',
+                        link: '/functions/strings.md'
                     }
                 ]
             },
@@ -56,34 +60,54 @@ export default defineConfig({
                 items: [
                     {
                         text: 'Build Aspect Ratio',
-                        link: '/mixins/build-aspect-ratio.md',
+                        link: '/mixins/build-aspect-ratio.md'
+                    },
+                    {
+                        text: 'Build Aspect Ratio Container',
+                        link: '/mixins/build-aspect-ratio-container.md'
+                    },
+                    {
+                        text: 'Build Aspect Ratio Anchor',
+                        link: '/mixins/build-aspect-ratio-anchor.md'
                     },
                     {
                         text: 'Build Compatibility',
-                        link: '/mixins/build-compatibility.md',
+                        link: '/mixins/build-compatibility.md'
                     },
                     {
                         text: 'Build Scrollbar',
-                        link: '/mixins/build-scrollbar.md',
+                        link: '/mixins/build-scrollbar.md'
                     },
                     {
                         text: 'Create Colors',
-                        link: '/mixins/create-colors.md',
+                        link: '/mixins/create-colors.md'
                     },
                     {
-                        text: 'Create Size instruction',
-                        link: '/mixins/create-class.md',
+                        text: 'Create Colors Vars',
+                        link: '/mixins/create-colors-vars.md'
+                    },
+                    {
+                        text: 'Create Colors Custom',
+                        link: '/mixins/create-colors-custom.md'
+                    },
+                    {
+                        text: 'Create Colors Vars Custom',
+                        link: '/mixins/create-colors-vars-custom.md'
+                    },
+                    {
+                        text: 'Create Class',
+                        link: '/mixins/create-class.md'
                     },
                     {
                         text: 'Create Margin helper',
-                        link: '/mixins/create-helper-margin.md',
+                        link: '/mixins/create-helper-margin.md'
                     },
                     {
                         text: 'Create Padding helper',
-                        link: '/mixins/create-helper-padding.md',
+                        link: '/mixins/create-helper-padding.md'
                     }
                 ]
-            },
+            }
         ]
     }
-})
+});
