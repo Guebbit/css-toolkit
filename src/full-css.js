@@ -10,7 +10,7 @@ export function createFullCssSource() {
   @mixin create-colors-vars;
   @mixin create-colors-vars-custom primary, ff00ff, g-theme-;
 
-  --color-opaque-1: color-opaque(rgba(33, 33, 33, 0), rgba(33, 33, 33, .84));
+  --color-opaque-1: rgba(33, 33, 33, .84);
   --color-opaque-2: #6f6f6f;
   --color-opaque-3: #ddd;
   --color-tint-1: color-tint(#000, 35%);
