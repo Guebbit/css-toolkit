@@ -15,7 +15,7 @@
 
 ## Code
 
-<<< ../../src/mixins/_create-helper-margin.scss
+<<< ../../src/mixins/create-helper-margin.js
 
 
 | Variable          | Description                                              | Accepted Values       | Default |

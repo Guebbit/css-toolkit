@@ -20,7 +20,7 @@ Example: width and min-width
 
 ## Code
 
-<<< ../../src/mixins/_create-class.scss
+<<< ../../src/mixins/create-class.js
 
 ## SCSS variables
 

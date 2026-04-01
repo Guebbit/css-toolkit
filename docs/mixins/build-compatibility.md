@@ -13,7 +13,7 @@ Firefox, Internet Explorer, Microsoft Edge, Opera, Safari
 
 # Code
 
-<<< ../../src/mixins/_build-compatibility.scss 
+<<< ../../src/mixins/build-compatibility.js
 
 ## SCSS variables
 

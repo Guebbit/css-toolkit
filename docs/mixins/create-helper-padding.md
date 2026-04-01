@@ -14,7 +14,7 @@
 
 ## Code
 
-<<< ../../src/mixins/_create-helper-margin.scss
+<<< ../../src/mixins/create-helper-padding.js
 
 
 | Variable          | Description                                              | Accepted Values       | Default |
