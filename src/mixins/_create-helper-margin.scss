@@ -11,29 +11,33 @@
  * @param {Array<name,value>[]} measure-list - postfix name and value
  */
 @mixin create-helper-margin($measure-list: (), $important: false, $prefix: "") {
+  $important-suffix: "";
+  @if $important == true {
+    $important-suffix: " !important";
+  }
   @each $name, $val in $measure-list {
     .#{$prefix}mt-#{$name} {
-      margin-top: #{$val} #{if($important == true, "!important", "")};
+      margin-top: #{$val}#{$important-suffix};
     }
     .#{$prefix}mb-#{$name} {
-      margin-bottom: #{$val} #{if($important == true, "!important", "")};
+      margin-bottom: #{$val}#{$important-suffix};
     }
     .#{$prefix}ml-#{$name} {
-      margin-left: #{$val} #{if($important == true, "!important", "")};
+      margin-left: #{$val}#{$important-suffix};
     }
     .#{$prefix}mr-#{$name} {
-      margin-right: #{$val} #{if($important == true, "!important", "")};
+      margin-right: #{$val}#{$important-suffix};
     }
     .#{$prefix}mx-#{$name} {
-      margin-right: #{$val} #{if($important == true, "!important", "")};
-      margin-left: #{$val} #{if($important == true, "!important", "")};
+      margin-right: #{$val}#{$important-suffix};
+      margin-left: #{$val}#{$important-suffix};
     }
     .#{$prefix}my-#{$name} {
-      margin-top: #{$val} #{if($important == true, "!important", "")};
-      margin-bottom: #{$val} #{if($important == true, "!important", "")};
+      margin-top: #{$val}#{$important-suffix};
+      margin-bottom: #{$val}#{$important-suffix};
     }
     .#{$prefix}ma-#{$name} {
-      margin: #{$val} #{if($important == true, "!important", "")};
+      margin: #{$val}#{$important-suffix};
     }
   }
 }

@@ -41,3 +41,11 @@
   }
   @return $map;
 }
+
+/**
+ * Read a color value from a 2-level color map collection
+ * Example: color-get($colors-collection, "blue", "500")
+ */
+@function color-get($collection, $group, $shade) {
+  @return map.get(map.get($collection, $group), $shade);
+}

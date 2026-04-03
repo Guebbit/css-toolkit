@@ -24,7 +24,8 @@ Example: width and min-width
 
 ## Code
 
-<<< ../../src/mixins/\_create-class.scss
+<!-- prettier-ignore -->
+<<< ../../src/mixins/_create-class.scss
 
 ## SCSS variables
 

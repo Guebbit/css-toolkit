@@ -11,6 +11,10 @@
   $prefix: "",
   $delimiter: "-"
 ) {
+  $important-suffix: "";
+  @if $important == true {
+    $important-suffix: " !important";
+  }
   @each $values in $measure-list {
     $name: $values;
     $val: $values;
@@ -19,7 +23,7 @@
       $val: list.nth($values, 2);
     }
     .#{$prefix}#{$instruction}#{$delimiter}#{$name} {
-      #{$instruction}: #{$val} #{if($important == true, "!important", "")};
+      #{$instruction}: #{$val}#{$important-suffix};
     }
   }
 }

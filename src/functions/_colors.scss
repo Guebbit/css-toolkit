@@ -38,11 +38,10 @@
  * function credited to https://getbootstrap.com/
  */
 @function color-shift($color, $weight) {
-  @return if(
-    $weight > 0,
-    color-shade($color, $weight),
-    color-tint($color, -$weight)
-  );
+  @if $weight > 0 {
+    @return color-shade($color, $weight);
+  }
+  @return color-tint($color, -$weight);
 }
 
 /**
@@ -79,12 +78,12 @@
   $light-text-brightness: color-luminance($light);
   $dark-text-brightness: color-luminance($dark);
 
-  @return if(
-    math.abs($color-brightness - $light-text-brightness) >
-      math.abs($color-brightness - $dark-text-brightness),
-    $light,
-    $dark
-  );
+  @if math.abs($color-brightness - $light-text-brightness) >
+    math.abs($color-brightness - $dark-text-brightness)
+  {
+    @return $light;
+  }
+  @return $dark;
 }
 
 /**
