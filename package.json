@@ -17,32 +17,34 @@
   "scripts": {
     "test": "mocha",
     "lint": "stylelint \"**/*.scss\" --fix",
+    "prettier": "npx prettier . --write",
     "docs:dev": "vitepress dev docs --port 8080",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs --port 8080",
-    "prepublish": "npm run lint && npm run test && npm run docs:build",
+    "update:all": "npx npm-check-updates -u",
+    "complete": "npm run lint && npm run prettier && npm run test",
     "publish:public": "npm publish --access public"
   },
   "devDependencies": {
-    "@types/node": "^22.13.8",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "autoprefixer": "^10.4.20",
+    "@types/node": "^25.5.2",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "autoprefixer": "^10.4.27",
     "breakpoint-sass": "^3.0.0",
-    "chai": "^5.2.0",
-    "css-loader": "^7.1.2",
-    "cssnano": "^7.0.6",
-    "mocha": "^11.1.0",
-    "postcss": "^8.5.3",
-    "postcss-loader": "^8.1.1",
-    "postcss-prefix-selector": "^2.1.0",
-    "sass": "^1.85.1",
+    "chai": "^6.2.2",
+    "css-loader": "^7.1.4",
+    "cssnano": "^7.1.4",
+    "mocha": "^11.7.5",
+    "postcss": "^8.5.8",
+    "postcss-loader": "^8.2.1",
+    "postcss-prefix-selector": "^2.1.1",
+    "sass": "^1.99.0",
     "style-loader": "^4.0.0",
-    "stylelint": "^16.15.0",
+    "stylelint": "^17.6.0",
     "stylelint-config-prettier-scss": "^1.0.0",
-    "stylelint-config-standard-scss": "^14.0.0",
-    "stylelint-scss": "^6.11.1",
-    "vite": "^6.2.0",
-    "vitepress": "^1.6.3"
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-scss": "^7.0.0",
+    "vite": "^8.0.3",
+    "vitepress": "^1.6.4"
   },
   "repository": {
     "type": "git",
@@ -57,5 +59,8 @@
   "bugs": {
     "url": "https://github.com/Guebbit/css-toolkit/issues"
   },
-  "homepage": "https://github.com/Guebbit/css-toolkit#readme"
+  "homepage": "https://github.com/Guebbit/css-toolkit#readme",
+  "dependencies": {
+    "prettier": "^3.8.1"
+  }
 }

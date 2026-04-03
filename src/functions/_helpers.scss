@@ -4,7 +4,7 @@
  * Giving a list of variables and values,
  * from start to end, try all the values until a non-null is found
  */
-@function no-null-var($list: ()){
+@function no-null-var($list: ()) {
   @each $value in $list {
     // stylelint-disable-next-line scss/at-if-no-null
     @if $value != null and $value != undefined {
@@ -17,13 +17,12 @@
 /**
  * If the color is the checked one, return inherit
  */
-@function no-target-var($check: transparent, $color: transparent){
+@function no-target-var($check: transparent, $color: transparent) {
   @if $color == $check {
     @return inherit;
   }
   @return $color;
 }
-
 
 /**
  * This function is to be used to return nested key values within a nested map

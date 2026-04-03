@@ -12,13 +12,13 @@
   }
   // MICROSOFT EDGE
   @if $browser == "edge" {
-    @supports (-ms-ime-align:auto) {
+    @supports (-ms-ime-align: auto) {
       @content;
     }
   }
   // FIREFOX
   @if $browser == "firefox" {
-    @supports (-moz-appearance:none) {
+    @supports (-moz-appearance: none) {
       @content;
     }
   }
@@ -32,7 +32,8 @@
 
   // SAFARI
   @if $browser == "safari" {
-    @supports (background: -webkit-named-image(i)) and (not (-webkit-touch-callout: none)) {
+    @supports (background: -webkit-named-image(i)) and
+      (not (-webkit-touch-callout: none)) {
       @content;
     }
   }

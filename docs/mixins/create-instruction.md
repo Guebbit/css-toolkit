@@ -6,7 +6,9 @@ Example: width and min-width
 ## Example
 
 ```scss
-@include create-class("width", (
+@include create-class(
+  "width",
+  (
     (25, 25%),
     (50, 50%),
     (75, 75%),
@@ -15,19 +17,21 @@ Example: width and min-width
     (p50, 50px),
     (p75, 75px),
     (p100, 100px)
-), true);
+  ),
+  true
+);
 ```
 
 ## Code
 
-<<< ../../src/mixins/_create-class.scss
+<<< ../../src/mixins/\_create-class.scss
 
 ## SCSS variables
 
-| Variable          | Description                                              | Accepted Values       | Default |
-|:------------------|:---------------------------------------------------------|:----------------------|:--------|
-| `$instruction`    | CSS instruction to insert                                | `string`              | `none`  |
-| `$measure-list`   | List of pairs <name, value>                              | `Array<name,value>[]` | `[]`    |
-| `$important`      | Flag: if instruction is !important                       | `boolean`             | `false` |
-| `$prefix`         | Eventual prefix (like `guebbit-`), to prevent collisions | `string`              | ``      |
-| `$delimiter`      | Custom delimeter of the final classnames                 | `string`              | `-`     |
+| Variable        | Description                                              | Accepted Values       | Default |
+| :-------------- | :------------------------------------------------------- | :-------------------- | :------ |
+| `$instruction`  | CSS instruction to insert                                | `string`              | `none`  |
+| `$measure-list` | List of pairs <name, value>                              | `Array<name,value>[]` | `[]`    |
+| `$important`    | Flag: if instruction is !important                       | `boolean`             | `false` |
+| `$prefix`       | Eventual prefix (like `guebbit-`), to prevent collisions | `string`              | ``      |
+| `$delimiter`    | Custom delimeter of the final classnames                 | `string`              | `-`     |

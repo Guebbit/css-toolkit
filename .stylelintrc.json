@@ -1,8 +1,6 @@
 {
   "customSyntax": "postcss-scss",
-  "plugins": [
-    "stylelint-scss"
-  ],
+  "plugins": ["stylelint-scss"],
   "reporters": [
     {
       "formatter": "stylelint-mocha-formatter"
@@ -22,7 +20,5 @@
     "alpha-value-notation": "number",
     "scss/dollar-variable-pattern": "^([a-z][a-z0-9]*)(-{1,2}[a-z0-9]+)*$"
   },
-  "ignoreFiles": [
-    "test/*.scss"
-  ]
+  "ignoreFiles": ["test/*.scss"]
 }

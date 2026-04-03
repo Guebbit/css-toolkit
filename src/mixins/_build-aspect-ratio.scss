@@ -3,11 +3,11 @@
 /**
  * Use in the parent\container, to be coupled with {build-aspect-ratio-anchor}
  */
-@mixin build-aspect-ratio-container($ratio: 100%){
+@mixin build-aspect-ratio-container($ratio: 100%) {
   position: relative;
   // aspect-ratio: #{$height} / #{$width};
 
-  &::before{
+  &::before {
     content: "";
     display: block;
     padding-top: #{$ratio};
@@ -17,7 +17,7 @@
 /**
  * Use in the child that "gives" form to the parent that has the respective {build-aspect-ratio-container}
  */
-@mixin build-aspect-ratio-anchor{
+@mixin build-aspect-ratio-anchor {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +28,7 @@
 /**
  *  aspect ratio shortcut
  */
-@mixin build-aspect-ratio($ratio: 100%){
+@mixin build-aspect-ratio($ratio: 100%) {
   @include build-aspect-ratio-container($ratio);
 
   & > * {

@@ -14,13 +14,17 @@
     // for every color
     @each $color-name, $color-value in $branch {
       // @if meta.type-of($scolor) == color {
-      --#{$prefix}#{$branch-name}-#{$color-name}: #{color-functions.extract-colors($color-value)};
+      --#{$prefix}#{$branch-name}-#{$color-name}: #{color-functions.extract-colors(
+          $color-value
+        )};
       // _}
     }
 
     @each $color-name, $color-value in $branch {
       // @if meta.type-of($scolor) == color {
-      --#{$prefix}on-#{$branch-name}-#{$color-name}: #{color-functions.extract-colors(color-functions.color-contrast($color-value))};
+      --#{$prefix}on-#{$branch-name}-#{$color-name}: #{color-functions.extract-colors(
+          color-functions.color-contrast($color-value)
+        )};
       // _}
     }
   }

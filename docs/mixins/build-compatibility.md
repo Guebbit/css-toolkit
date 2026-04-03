@@ -13,11 +13,11 @@ Firefox, Internet Explorer, Microsoft Edge, Opera, Safari
 
 # Code
 
-<<< ../../src/mixins/_build-compatibility.scss 
+<<< ../../src/mixins/\_build-compatibility.scss
 
 ## SCSS variables
 
-| Variable     | Description        | Accepted Values | Default |
-|:-------------|:-------------------|:----------------|:--------|
-| `@content`   | CSS Style to apply | `content`       | ``      |
-| `$browser`   | browser name       | `string`        | `none`  |
+| Variable   | Description        | Accepted Values | Default |
+| :--------- | :----------------- | :-------------- | :------ |
+| `@content` | CSS Style to apply | `content`       | ``      |
+| `$browser` | browser name       | `string`        | `none`  |

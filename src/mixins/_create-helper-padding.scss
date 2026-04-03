@@ -10,8 +10,11 @@
 
  * @param {Array<name,value>[]} measure-list - postfix name and value
  */
-@mixin create-helper-padding($measure-list: (), $important: false, $prefix: "") {
-
+@mixin create-helper-padding(
+  $measure-list: (),
+  $important: false,
+  $prefix: ""
+) {
   @each $name, $val in $measure-list {
     .#{$prefix}pt-#{$name} {
       padding-top: #{$val} #{if($important == true, "!important", "")};

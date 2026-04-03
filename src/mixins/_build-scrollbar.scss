@@ -4,7 +4,12 @@
  *	@param pixels $size
  *	@param $background: if false, has default lighten 40%
  */
-@mixin build-scrollbar($size: "4px", $color: "#fff", $bg: "auto", $radius: "10px") {
+@mixin build-scrollbar(
+  $size: "4px",
+  $color: "#fff",
+  $bg: "auto",
+  $radius: "10px"
+) {
   $fallback-color: #fff;
   $fallback-bg: transparent;
 
