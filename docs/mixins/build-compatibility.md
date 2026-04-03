@@ -13,7 +13,8 @@ Firefox, Internet Explorer, Microsoft Edge, Opera, Safari
 
 # Code
 
-<<< ../../src/mixins/\_build-compatibility.scss
+<!-- prettier-ignore -->
+<<< ../../src/mixins/_build-compatibility.scss
 
 ## SCSS variables
 

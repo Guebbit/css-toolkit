@@ -9,4 +9,5 @@ String utility functions for SCSS processing.
 
 ## Source
 
-<<< ../../src/functions/\_strings.scss
+<!-- prettier-ignore -->
+<<< ../../src/functions/_strings.scss

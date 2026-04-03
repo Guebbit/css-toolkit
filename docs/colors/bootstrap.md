@@ -14,4 +14,5 @@ Predefined Bootstrap-inspired color palettes exported by the toolkit.
 
 ## Source
 
-<<< ../../src/colors/\_bootstrap.scss
+<!-- prettier-ignore -->
+<<< ../../src/colors/_bootstrap.scss

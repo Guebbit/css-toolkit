@@ -10,7 +10,8 @@ Scrollbars of element
 
 ## Code
 
-<<< ../../src/mixins/\_build-scrollbar.scss
+<!-- prettier-ignore -->
+<<< ../../src/mixins/_build-scrollbar.scss
 
 | Variable  | Description             | Accepted Values | Default |
 | :-------- | :---------------------- | :-------------- | :------ |

@@ -10,4 +10,5 @@ General helper functions used across the toolkit.
 
 ## Source
 
-<<< ../../src/functions/\_helpers.scss
+<!-- prettier-ignore -->
+<<< ../../src/functions/_helpers.scss

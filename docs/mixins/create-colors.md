@@ -12,4 +12,5 @@ Generates color utility classes from a nested color map.
 
 ## Source
 
-<<< ../../src/mixins/\_create-colors.scss
+<!-- prettier-ignore -->
+<<< ../../src/mixins/_create-colors.scss

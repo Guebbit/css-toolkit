@@ -11,7 +11,8 @@
 
 ## Code
 
-<<< ../../src/mixins/\_create-helper-padding.scss
+<!-- prettier-ignore -->
+<<< ../../src/mixins/_create-helper-padding.scss
 
 | Variable        | Description                                              | Accepted Values       | Default |
 | :-------------- | :------------------------------------------------------- | :-------------------- | :------ |

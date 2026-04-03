@@ -12,4 +12,5 @@ Helpers to build responsive aspect-ratio containers and anchors.
 
 ## Source
 
-<<< ../../src/mixins/\_build-aspect-ratio.scss
+<!-- prettier-ignore -->
+<<< ../../src/mixins/_build-aspect-ratio.scss

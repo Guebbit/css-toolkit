@@ -13,6 +13,7 @@ let cssCompiled;
 function sassCompiler() {
   return Promise.resolve(
     sass.compile(path.join(__dirname, "./test.scss"), {
+      loadPaths: ["./scss"],
       style: "expanded",
     }).css,
   );
