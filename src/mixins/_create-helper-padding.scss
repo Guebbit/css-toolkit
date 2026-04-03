@@ -15,29 +15,33 @@
   $important: false,
   $prefix: ""
 ) {
+  $important-suffix: "";
+  @if $important == true {
+    $important-suffix: " !important";
+  }
   @each $name, $val in $measure-list {
     .#{$prefix}pt-#{$name} {
-      padding-top: #{$val} #{if($important == true, "!important", "")};
+      padding-top: #{$val}#{$important-suffix};
     }
     .#{$prefix}pb-#{$name} {
-      padding-bottom: #{$val} #{if($important == true, "!important", "")};
+      padding-bottom: #{$val}#{$important-suffix};
     }
     .#{$prefix}pl-#{$name} {
-      padding-left: #{$val} #{if($important == true, "!important", "")};
+      padding-left: #{$val}#{$important-suffix};
     }
     .#{$prefix}pr-#{$name} {
-      padding-right: #{$val} #{if($important == true, "!important", "")};
+      padding-right: #{$val}#{$important-suffix};
     }
     .#{$prefix}px-#{$name} {
-      padding-right: #{$val} #{if($important == true, "!important", "")};
-      padding-left: #{$val} #{if($important == true, "!important", "")};
+      padding-right: #{$val}#{$important-suffix};
+      padding-left: #{$val}#{$important-suffix};
     }
     .#{$prefix}py-#{$name} {
-      padding-top: #{$val} #{if($important == true, "!important", "")};
-      padding-bottom: #{$val} #{if($important == true, "!important", "")};
+      padding-top: #{$val}#{$important-suffix};
+      padding-bottom: #{$val}#{$important-suffix};
     }
     .#{$prefix}pa-#{$name} {
-      padding: #{$val} #{if($important == true, "!important", "")};
+      padding: #{$val}#{$important-suffix};
     }
   }
 }

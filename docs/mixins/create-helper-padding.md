@@ -11,7 +11,7 @@
 
 ## Code
 
-<<< ../../src/mixins/\_create-helper-margin.scss
+<<< ../../src/mixins/\_create-helper-padding.scss
 
 | Variable        | Description                                              | Accepted Values       | Default |
 | :-------------- | :------------------------------------------------------- | :-------------------- | :------ |

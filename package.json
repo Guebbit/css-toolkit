@@ -22,7 +22,7 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs --port 8080",
     "update:all": "npx npm-check-updates -u",
-    "complete": "npm run lint && npm run prettier && npm run test",
+    "complete": "npm run lint && npm run prettier && npm run test && npm run docs:build",
     "publish:public": "npm publish --access public"
   },
   "devDependencies": {

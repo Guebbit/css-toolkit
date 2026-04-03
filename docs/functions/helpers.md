@@ -1,1 +1,13 @@
-# TODO
+# Helper Functions
+
+General helper functions used across the toolkit.
+
+## Available helpers
+
+- `no-null-var($list)` returns the first non-null value in a list.
+- `no-target-var($check, $color)` returns `inherit` when `$color` matches `$check`.
+- `map-deep-get($map, $keys...)` reads nested map values.
+
+## Source
+
+<<< ../../src/functions/\_helpers.scss

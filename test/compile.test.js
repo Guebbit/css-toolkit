@@ -1,7 +1,6 @@
 import { describe, it } from "mocha";
 import { expect } from "chai";
 import fs from "fs";
-import util from "util";
 import * as sass from "sass";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -12,13 +11,11 @@ const __dirname = path.dirname(__filename);
 let cssCompiled;
 
 function sassCompiler() {
-  return util
-    .promisify(sass.render)({
-      includePaths: ["./scss"],
-      file: path.join(__dirname, "./test.scss"),
-      // outputStyle: 'compressed'
-    })
-    .then((result) => result?.css?.toString());
+  return Promise.resolve(
+    sass.compile(path.join(__dirname, "./test.scss"), {
+      style: "expanded",
+    }).css,
+  );
 }
 
 describe("COMPILE", function () {
