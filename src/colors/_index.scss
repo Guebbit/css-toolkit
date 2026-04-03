@@ -8,6 +8,30 @@
 
 $colors-collection: (
   // BOOTSTRAP
+  "neutral": (
+      "0": bootstrap.$black,
+      "100": bootstrap.$gray-900,
+      "200": bootstrap.$gray-800,
+      "300": bootstrap.$gray-700,
+      "400": bootstrap.$gray-600,
+      "500": bootstrap.$gray-500,
+      "600": bootstrap.$gray-400,
+      "700": bootstrap.$gray-300,
+      "800": bootstrap.$gray-200,
+      "900": bootstrap.$white,
+    ),
+  "gray": (
+      "100": bootstrap.$gray-100,
+      "200": bootstrap.$gray-200,
+      "300": bootstrap.$gray-300,
+      "400": bootstrap.$gray-400,
+      "500": bootstrap.$gray-500,
+      "600": bootstrap.$gray-600,
+      "700": bootstrap.$gray-700,
+      "800": bootstrap.$gray-800,
+      "900": bootstrap.$gray-900,
+    ),
+  // Backward-compatible alias for "gray"
   "grey": (
       "100": bootstrap.$gray-100,
       "200": bootstrap.$gray-200,
@@ -185,6 +209,7 @@ $colors-collection: (
       "green": bootstrap.$green,
       "teal": bootstrap.$teal,
       "cyan": bootstrap.$cyan,
+      // Backward-compatible aliases to the neutral endpoints
       "black": bootstrap.$black,
       "white": bootstrap.$white,
       "gray": bootstrap.$gray-500,
