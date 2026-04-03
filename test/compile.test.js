@@ -112,10 +112,14 @@ describe("COMPILE", function () {
     expect(cssCompiled).to.contain("width: 8px;");
     expect(cssCompiled).to.contain("height: 8px;");
     expect(cssCompiled).to.contain("background-color: #abcdef;");
-    expect(cssCompiled).to.contain(".scrollbar-test::-webkit-scrollbar-thumb {");
+    expect(cssCompiled).to.contain(
+      ".scrollbar-test::-webkit-scrollbar-thumb {",
+    );
     expect(cssCompiled).to.contain("border-radius: 4px;");
     expect(cssCompiled).to.contain("background-color: #123456;");
-    expect(cssCompiled).to.contain(".scrollbar-test::-webkit-scrollbar-corner {");
+    expect(cssCompiled).to.contain(
+      ".scrollbar-test::-webkit-scrollbar-corner {",
+    );
     // --
     expect(cssCompiled).to.contain(
       "--color-opaque-1: rgba(33.0810810811, 33.0810810811, 33.0810810811, 0.84)",
@@ -184,7 +188,9 @@ describe("COMPILE", function () {
     expect(cssCompiled).to.contain("--color-luminance-2: 100%;");
     expect(cssCompiled).to.contain("--color-luminance-3: 100;");
     // --
-    expect(cssCompiled).to.contain("--create-collection-100: 207.6 214.4 221.2;");
+    expect(cssCompiled).to.contain(
+      "--create-collection-100: 207.6 214.4 221.2;",
+    );
     expect(cssCompiled).to.contain("--create-collection-500: 18 52 86;");
     expect(cssCompiled).to.contain("--create-collection-900: 3.6 10.4 17.2;");
   });
