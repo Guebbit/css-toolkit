@@ -16,13 +16,14 @@
   ],
   "scripts": {
     "test": "mocha",
+    "sass:check": "sass src/index.scss --fatal-deprecation",
     "lint": "stylelint \"**/*.scss\" --fix",
     "prettier": "npx prettier . --write",
     "docs:dev": "vitepress dev docs --port 8080",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs --port 8080",
     "update:all": "npx npm-check-updates -u",
-    "complete": "npm run lint && npm run prettier && npm run test && npm run docs:build",
+    "complete": "npm run sass:check && npm run lint && npm run prettier && npm run test && npm run docs:build",
     "publish:public": "npm publish --access public"
   },
   "devDependencies": {
