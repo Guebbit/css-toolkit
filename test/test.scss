@@ -1,4 +1,6 @@
 @use "../src/index" as guebbit;
+@use "sass:list";
+@use "sass:map";
 
 :root {
   @include guebbit.create-colors-vars(guebbit.$colors-collection);
@@ -122,6 +124,10 @@
   }
 }
 
+.scrollbar-test {
+  @include guebbit.build-scrollbar(8px, #123456, #abcdef, 4px);
+}
+
 // check functions
 $test-color--light: #222;
 $test-color--dark: #ddd;
@@ -133,6 +139,8 @@ $map-deep-get-test: (
 
 $map-deep-get-var: guebbit.map-deep-get($map-deep-get-test, "size", "sml");
 $color-get-var: guebbit.color-get(guebbit.$colors-collection, "blue", "500");
+$split-list: guebbit.string-split("find-this-word");
+$generated-collection: guebbit.create-collection(#123456);
 
 :root {
   // --- rgba + rgba = rgba
@@ -185,6 +193,24 @@ $color-get-var: guebbit.color-get(guebbit.$colors-collection, "blue", "500");
   // ---
   --map-deep-get: #{$map-deep-get-var};
   --color-get: #{guebbit.extract-colors($color-get-var)};
-  // --string-split: #{guebbit.string-split())};
-  // --string-split: #{guebbit.string-ends-with("find-this-word", "this"))};
+  // ---
+  --string-split-1: #{list.nth($split-list, 1)};
+  --string-split-2: #{list.nth($split-list, 2)};
+  --string-split-3: #{list.nth($split-list, 3)};
+  --string-ends-with-1: #{guebbit.string-ends-with("find-this-word", "word")};
+  --string-ends-with-2: #{guebbit.string-ends-with("find-this-word", "this")};
+  // ---
+  --color-luminance-1: #{guebbit.color-luminance(#000)};
+  --color-luminance-2: #{guebbit.color-luminance(#fff)};
+  --color-luminance-3: #{guebbit.color-luminance(transparent)};
+  // ---
+  --create-collection-100: #{guebbit.extract-colors(
+      map.get($generated-collection, "100")
+    )};
+  --create-collection-500: #{guebbit.extract-colors(
+      map.get($generated-collection, "500")
+    )};
+  --create-collection-900: #{guebbit.extract-colors(
+      map.get($generated-collection, "900")
+    )};
 }
