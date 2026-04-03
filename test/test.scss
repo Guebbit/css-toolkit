@@ -132,6 +132,7 @@ $map-deep-get-test: (
 );
 
 $map-deep-get-var: guebbit.map-deep-get($map-deep-get-test, "size", "sml");
+$color-get-var: guebbit.color-get(guebbit.$colors-collection, "blue", "500");
 
 :root {
   // --- rgba + rgba = rgba
@@ -183,6 +184,7 @@ $map-deep-get-var: guebbit.map-deep-get($map-deep-get-test, "size", "sml");
   --no-trasparent-3: #{guebbit.no-target-var(transparent, #123456)};
   // ---
   --map-deep-get: #{$map-deep-get-var};
+  --color-get: #{guebbit.extract-colors($color-get-var)};
   // --string-split: #{guebbit.string-split())};
   // --string-split: #{guebbit.string-ends-with("find-this-word", "this"))};
 }

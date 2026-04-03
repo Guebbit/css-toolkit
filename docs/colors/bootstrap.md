@@ -8,7 +8,7 @@ Predefined Bootstrap-inspired color palettes exported by the toolkit.
 @use "@guebbit/css-toolkit" as guebbit;
 
 .button {
-  color: map.get(map.get(guebbit.$colors-collection, "blue"), "500");
+  color: guebbit.color-get(guebbit.$colors-collection, "blue", "500");
 }
 ```
 

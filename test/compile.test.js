@@ -163,5 +163,6 @@ describe("COMPILE", function () {
     expect(cssCompiled).to.contain("--no-trasparent-3: #123456;");
     // --
     expect(cssCompiled).to.contain("--map-deep-get: 10px;");
+    expect(cssCompiled).to.contain("--color-get: 13 110 253;");
   });
 });
