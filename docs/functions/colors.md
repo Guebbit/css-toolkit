@@ -69,3 +69,23 @@ Compares contrast of a given color to the light/dark arguments and returns which
 | `$color` | Color to check       | `color`         | `4px`   |
 | `$dark`  | Dark color to apply  | `color`         | `#000`  |
 | `$light` | White color to apply | `color`         | `#fff`  |
+
+## create-gradient
+
+Build a linear gradient from direction and stops.
+
+```scss
+$gradient-brand-instagram: guebbit.create-gradient(
+  45deg,
+  #f09433 0%,
+  #e6683c 25%,
+  #dc2743 50%,
+  #cc2366 75%,
+  #bc1888 100%
+);
+```
+
+| Variable     | Description                        | Accepted Values | Default  |
+| :----------- | :--------------------------------- | :-------------- | :------- |
+| `$direction` | Linear gradient angle or direction | `angle/string`  | `180deg` |
+| `$stops`     | One or more color stops            | `list`          | `none`   |

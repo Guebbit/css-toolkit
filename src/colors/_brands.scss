@@ -1,3 +1,5 @@
+@use "../functions/colors" as color-functions;
+
 $brand-facebook: #3b5998;
 $brand-youtube: #cc181e;
 $brand-twitter: #3cf;
@@ -16,7 +18,7 @@ $brand-tiktok: #25f4ee;
 $brand-google: #dc4a38;
 $brand-paypal: #003087;
 $brand-paypal2: #f2b938;
-$gradient-brand-instagram: linear-gradient(
+$gradient-brand-instagram: color-functions.create-gradient(
   45deg,
   #f09433 0%,
   #e6683c 25%,
@@ -24,7 +26,7 @@ $gradient-brand-instagram: linear-gradient(
   #cc2366 75%,
   #bc1888 100%
 );
-$gradient-brand-tiktok: linear-gradient(
+$gradient-brand-tiktok: color-functions.create-gradient(
   90deg,
   #25f4ee 0%,
   #000 30%,

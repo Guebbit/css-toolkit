@@ -6,6 +6,11 @@
 @use "customs" as customs;
 @use "brands" as brands;
 
+$gradients-collection: (
+  "brand-instagram": brands.$gradient-brand-instagram,
+  "brand-tiktok": brands.$gradient-brand-tiktok,
+);
+
 $colors-collection: (
   // BOOTSTRAP
   "neutral": (
@@ -218,8 +223,5 @@ $colors-collection: (
       "manga-red": customs.$manga-red,
     ),
   // Gradients are special colors that should not be used in texts and borders (for example)
-  "gradient": (
-      "brand-instagram": brands.$gradient-brand-instagram,
-      "brand-tiktok": brands.$gradient-brand-tiktok,
-    )
+  "gradient": $gradients-collection
 );

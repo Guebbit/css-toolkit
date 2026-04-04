@@ -213,4 +213,5 @@ $generated-collection: guebbit.create-collection(#123456);
   --create-collection-900: #{guebbit.extract-colors(
       map.get($generated-collection, "900")
     )};
+  --create-gradient: #{guebbit.create-gradient(90deg, #000 0%, #fff 100%)};
 }

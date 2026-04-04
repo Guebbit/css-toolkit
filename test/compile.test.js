@@ -193,5 +193,8 @@ describe("COMPILE", function () {
     );
     expect(cssCompiled).to.contain("--create-collection-500: 18 52 86;");
     expect(cssCompiled).to.contain("--create-collection-900: 3.6 10.4 17.2;");
+    expect(cssCompiled).to.contain(
+      "--create-gradient: linear-gradient(90deg, #000 0%, #fff 100%);",
+    );
   });
 });
