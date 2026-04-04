@@ -122,6 +122,26 @@
       content: "this is safari";
     }
   }
+
+  @include guebbit.build-compatibility("webkit") {
+    &::before {
+      content: "this is webkit";
+    }
+  }
+}
+
+.test-breakpoints {
+  @include guebbit.build-breakpoint-up("md") {
+    display: grid;
+  }
+
+  @include guebbit.build-breakpoint-down("md") {
+    display: block;
+  }
+
+  @include guebbit.build-breakpoint-between("sm", "lg") {
+    gap: 12px;
+  }
 }
 
 .scrollbar-test {
@@ -213,4 +233,7 @@ $generated-collection: guebbit.create-collection(#123456);
   --create-collection-900: #{guebbit.extract-colors(
       map.get($generated-collection, "900")
     )};
+  // ---
+  --breakpoint-md: #{guebbit.breakpoint-get("md")};
+  --breakpoint-lg-max: #{guebbit.breakpoint-max("lg")};
 }

@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "sass:list";
+
+$breakpoints-default: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+) !default;
+
+/**
+ * Return a breakpoint value from the collection.
+ */
+@function breakpoint-get($name, $breakpoints: $breakpoints-default) {
+  @return map.get($breakpoints, $name);
+}
+
+/**
+ * Return next breakpoint key from the collection.
+ */
+@function breakpoint-next($name, $breakpoints: $breakpoints-default) {
+  $keys: map.keys($breakpoints);
+  $position: list.index($keys, $name);
+  @if not $position or $position >= list.length($keys) {
+    @return null;
+  }
+  @return list.nth($keys, $position + 1);
+}
+
+/**
+ * Return min width for media query.
+ */
+@function breakpoint-min($name, $breakpoints: $breakpoints-default) {
+  $min: breakpoint-get($name, $breakpoints);
+  @if $min == 0 {
+    @return null;
+  }
+  @return $min;
+}
+
+/**
+ * Return max width (exclusive range helper) for media query.
+ */
+@function breakpoint-max($name, $breakpoints: $breakpoints-default) {
+  $next: breakpoint-next($name, $breakpoints);
+  @if not $next {
+    @return null;
+  }
+  @return breakpoint-get($next, $breakpoints) - 0.02px;
+}

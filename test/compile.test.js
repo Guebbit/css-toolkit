@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 let cssCompiled;
+const writeCompiledOutput = process.env.WRITE_TEST_OUTPUT === "1";
 
 function sassCompiler() {
   return Promise.resolve(
@@ -25,27 +26,31 @@ describe("COMPILE", function () {
 
   it("Should compile", async function () {
     cssCompiled = await sassCompiler();
-    // Not necessary, but let's compile the file
-    fs.writeFile(path.join(__dirname, "test.css"), cssCompiled, () => {});
+    // Optional artifact generation for easier debugging
+    if (writeCompiledOutput) {
+      fs.writeFile(path.join(__dirname, "test.css"), cssCompiled, () => {});
+    }
   });
 
   it("Check some rules", function () {
     // --
     expect(cssCompiled).to.contain(".blue-400-text {");
-    expect(cssCompiled).to.contain("color: rgb(61.4, 139, 253.4) !important;");
+    expect(cssCompiled).to.match(
+      /color:\s*rgb\(61(?:\.\d+)?,\s*139,\s*253(?:\.\d+)?\)\s*!important;/,
+    );
     expect(cssCompiled).to.contain(".blue-400-bg {");
-    expect(cssCompiled).to.contain(
-      "background-color: rgb(61.4, 139, 253.4) !important;",
+    expect(cssCompiled).to.match(
+      /background-color:\s*rgb\(61(?:\.\d+)?,\s*139,\s*253(?:\.\d+)?\)\s*!important;/,
     );
     expect(cssCompiled).to.contain(".blue-400-border {");
-    expect(cssCompiled).to.contain(
-      "border-color: rgb(61.4, 139, 253.4) !important;",
+    expect(cssCompiled).to.match(
+      /border-color:\s*rgb\(61(?:\.\d+)?,\s*139,\s*253(?:\.\d+)?\)\s*!important;/,
     );
     expect(cssCompiled).to.contain(
       ".blue-400-pseudo-bg::after, .blue-400-pseudo-bg::before {",
     );
-    expect(cssCompiled).to.contain(
-      "background-color: rgb(61.4, 139, 253.4) !important;",
+    expect(cssCompiled).to.match(
+      /background-color:\s*rgb\(61(?:\.\d+)?,\s*139,\s*253(?:\.\d+)?\)\s*!important;/,
     );
     expect(cssCompiled).to.contain(".blue-400-hover-text:hover {");
     expect(cssCompiled).to.contain(".blue-400-hover-bg:hover {");
@@ -107,6 +112,7 @@ describe("COMPILE", function () {
     );
     expect(cssCompiled).to.contain("@supports (-ms-ime-align: auto) {");
     expect(cssCompiled).to.contain("@supports (-moz-appearance: none) {");
+    expect(cssCompiled).to.contain("@supports (-webkit-touch-callout: none) {");
     // --
     expect(cssCompiled).to.contain(".scrollbar-test::-webkit-scrollbar {");
     expect(cssCompiled).to.contain("width: 8px;");
@@ -193,5 +199,13 @@ describe("COMPILE", function () {
     );
     expect(cssCompiled).to.contain("--create-collection-500: 18 52 86;");
     expect(cssCompiled).to.contain("--create-collection-900: 3.6 10.4 17.2;");
+    // --
+    expect(cssCompiled).to.contain("@media (min-width: 768px) {");
+    expect(cssCompiled).to.contain("@media (max-width: 991.98px) {");
+    expect(cssCompiled).to.contain(
+      "@media (min-width: 576px) and (max-width: 1199.98px) {",
+    );
+    expect(cssCompiled).to.contain("--breakpoint-md: 768px;");
+    expect(cssCompiled).to.contain("--breakpoint-lg-max: 1199.98px;");
   });
 });

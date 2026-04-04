@@ -1,0 +1,90 @@
+@use "../functions/breakpoints" as breakpoint;
+
+/**
+ * Apply content for min width from named breakpoint.
+ */
+@mixin build-breakpoint-up(
+  $name,
+  $breakpoints: breakpoint.$breakpoints-default
+) {
+  $min: breakpoint.breakpoint-min($name, $breakpoints);
+  @if not $min {
+    @content;
+  } @else {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+}
+
+/**
+ * Apply content for max width from named breakpoint.
+ */
+@mixin build-breakpoint-down(
+  $name,
+  $breakpoints: breakpoint.$breakpoints-default
+) {
+  $max: breakpoint.breakpoint-max($name, $breakpoints);
+  @if not $max {
+    @content;
+  } @else {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+/**
+ * Apply content between two named breakpoints.
+ */
+@mixin build-breakpoint-between(
+  $lower,
+  $upper,
+  $breakpoints: breakpoint.$breakpoints-default
+) {
+  $min: breakpoint.breakpoint-min($lower, $breakpoints);
+  $max: breakpoint.breakpoint-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $min != null {
+    @include build-breakpoint-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $max != null {
+    @include build-breakpoint-down($upper, $breakpoints) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/**
+ * Generic dynamic breakpoint helper by mode.
+ * modes: up | down | between
+ */
+@mixin build-breakpoint(
+  $mode,
+  $from,
+  $to: null,
+  $breakpoints: breakpoint.$breakpoints-default
+) {
+  @if $mode == "up" {
+    @include build-breakpoint-up($from, $breakpoints) {
+      @content;
+    }
+  } @else if $mode == "down" {
+    @include build-breakpoint-down($from, $breakpoints) {
+      @content;
+    }
+  } @else if $mode == "between" {
+    @include build-breakpoint-between($from, $to, $breakpoints) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

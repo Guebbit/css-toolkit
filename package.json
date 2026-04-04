@@ -3,7 +3,9 @@
   "type": "module",
   "version": "1.4.0",
   "description": "A repository containing helpful SCSS functions, mixins, and utilities for streamlining and standardizing CSS development",
-  "main": "vite.config.js",
+  "main": "./index.scss",
+  "style": "./index.scss",
+  "sass": "./index.scss",
   "files": [
     "docs",
     "src",
@@ -11,19 +13,22 @@
     "index.scss",
     "README.md",
     "LICENSE",
-    "CHANGELOG",
+    "CHANGELOG.md",
     "vite.config.ts"
   ],
   "scripts": {
     "test": "mocha",
     "sass:check": "sass src/index.scss",
     "lint": "stylelint \"**/*.scss\" --fix",
+    "lint:check": "stylelint \"**/*.scss\"",
     "prettier": "npx prettier . --write",
+    "prettier:check": "npx prettier . --check",
     "docs:dev": "vitepress dev docs --port 8080",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs --port 8080",
     "update:all": "npx npm-check-updates -u",
     "complete": "npm run sass:check && npm run lint && npm run prettier && npm run test && npm run docs:build",
+    "complete:check": "npm run sass:check && npm run lint:check && npm run prettier:check && npm run test && npm run docs:build",
     "publish:public": "npm publish --access public"
   },
   "devDependencies": {
