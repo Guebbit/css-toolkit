@@ -48,6 +48,10 @@ export default defineConfig({
             text: "Helpers",
             link: "/functions/helpers.md",
           },
+          {
+            text: "Breakpoints",
+            link: "/functions/breakpoints.md",
+          },
         ],
       },
       {
@@ -61,6 +65,10 @@ export default defineConfig({
           {
             text: "Build Compatibility",
             link: "/mixins/build-compatibility.md",
+          },
+          {
+            text: "Build Breakpoint",
+            link: "/mixins/build-breakpoint.md",
           },
           {
             text: "Build Scrollbar",

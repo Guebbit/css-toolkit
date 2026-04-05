@@ -2,10 +2,12 @@
 
 @forward "./functions/colors";
 @forward "./functions/helpers";
+@forward "./functions/breakpoints";
 @forward "./functions/strings";
 
 @forward "./mixins/build-aspect-ratio";
 @forward "./mixins/build-compatibility";
+@forward "./mixins/build-breakpoint";
 @forward "./mixins/build-scrollbar";
 @forward "./mixins/create-colors";
 @forward "./mixins/create-colors-vars";

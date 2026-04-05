@@ -4,36 +4,79 @@
 *	@content
 **/
 @mixin build-compatibility($browser) {
+  // normalize aliases
+  $target: $browser;
+  @if $browser == "internet-explorer" or $browser == "msie" {
+    $target: "ie";
+  }
+  @if $browser == "ms-edge" {
+    $target: "edge";
+  }
+  @if $browser == "ff" {
+    $target: "firefox";
+  }
+
+  // MODERN BROWSER GROUP (supports feature queries)
+  @if $target == "modern" {
+    @supports (display: grid) and (selector(:is(*))) {
+      @content;
+    }
+  }
+
+  // WEBKIT GROUP
+  @if $target == "webkit" {
+    @supports (-webkit-touch-callout: none) {
+      @content;
+    }
+  }
+
+  // LEGACY GROUP
+  @if $target == "legacy" {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+    }
+    @supports (-ms-ime-align: auto) {
+      @content;
+    }
+  }
+
   // INTERNET EXPLORER
-  @if $browser == "ie" {
+  @if $target == "ie" {
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       @content;
     }
   }
   // MICROSOFT EDGE
-  @if $browser == "edge" {
+  @if $target == "edge" {
     @supports (-ms-ime-align: auto) {
       @content;
     }
   }
   // FIREFOX
-  @if $browser == "firefox" {
+  @if $target == "firefox" {
     @supports (-moz-appearance: none) {
       @content;
     }
   }
 
   // OPERA
-  @if $browser == "opera" {
+  @if $target == "opera" {
     @supports (-o-object-fit: fill) {
       @content;
     }
   }
 
   // SAFARI
-  @if $browser == "safari" {
+  @if $target == "safari" {
     @supports (background: -webkit-named-image(i)) and
       (not (-webkit-touch-callout: none)) {
+      @content;
+    }
+  }
+
+  // CHROME (best-effort via webkit + not safari condition)
+  @if $target == "chrome" {
+    @supports (-webkit-appearance: none) and (font: -apple-system-body) {
       @content;
     }
   }
