@@ -2,12 +2,12 @@
 
 Predefined Bootstrap-inspired color palettes exported by the toolkit.
 
-## Notes on neutral and gray scales
+## Notes on neutral and grey scales
 
 - `neutral` is the base black-to-white ramp (`0` through `900`).
 - `core.black` and `core.white` are backward-compatible aliases of the neutral endpoints.
-- `gray` is the canonical Bootstrap gray ramp.
-- `grey` is kept as a backward-compatible alias of `gray`.
+- `grey` is the canonical Bootstrap grey ramp.
+- `gray` is kept as a backward-compatible alias of `grey`.
 
 ## Usage
 

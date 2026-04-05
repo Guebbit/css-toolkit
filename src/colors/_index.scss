@@ -20,7 +20,7 @@ $colors-collection: (
       "800": bootstrap.$gray-200,
       "900": bootstrap.$white,
     ),
-  "gray": (
+  "grey": (
     "100": bootstrap.$gray-100,
     "200": bootstrap.$gray-200,
     "300": bootstrap.$gray-300,
@@ -31,8 +31,8 @@ $colors-collection: (
     "800": bootstrap.$gray-800,
     "900": bootstrap.$gray-900,
   ),
-  // Backward-compatible alias for "gray"
-  "grey": (
+  // Backward-compatible alias for "grey"
+  "gray": (
       "100": bootstrap.$gray-100,
       "200": bootstrap.$gray-200,
       "300": bootstrap.$gray-300,
@@ -212,6 +212,9 @@ $colors-collection: (
       // Backward-compatible aliases to the neutral endpoints
       "black": bootstrap.$black,
       "white": bootstrap.$white,
+      "grey": bootstrap.$gray-500,
+      "grey-dark": bootstrap.$gray-900,
+      // Backward-compatible aliases
       "gray": bootstrap.$gray-500,
       "gray-dark": bootstrap.$gray-900,
       "flatrica-green": customs.$flatrica-green,
