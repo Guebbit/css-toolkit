@@ -14,6 +14,21 @@ npm i @guebbit/css-toolkit
 @use "@guebbit/css-toolkit" as guebbit;
 ```
 
+## Quick Start
+
+```scss
+@use "@guebbit/css-toolkit" as guebbit;
+
+.card {
+  color: guebbit.color-get(guebbit.$colors-collection, "neutral", "100");
+  background: guebbit.color-get(guebbit.$colors-collection, "grey", "900");
+}
+
+.card-title {
+  color: guebbit.color-get(guebbit.$colors-collection, "core", "grey");
+}
+```
+
 ## Scripts
 
 - `npm run complete`: full local checks with auto-fixes
